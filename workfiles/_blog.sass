@@ -1,0 +1,82 @@
+.blog-wrapper
+	position: absolute
+	z-index: 99
+	bottom: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: #333
+	overflow-x: hidden
+	overflow-y: auto
+	border: none
+
+.blog-wrapper-clicked
+	z-index: 999
+
+iframe
+	position: absolute
+	z-index: 98
+	bottom: 0
+	opacity: 0
+	left: 100%
+	// left: 0
+	width: 100%
+	height: 100%
+	background-color: #333
+	overflow: auto
+	border: none
+	// padding-top: 70px
+
+.iframe-clicked
+	left: 0
+	opacity: 1
+
+.blog-header
+	position: fixed
+	z-index: 99
+	top: 50%
+	margin-top: -35px
+	left: -100px
+	// margin-left: -30px
+	height: 70px
+	width: auto
+	background-color: transparent
+
+.blog-header-clicked
+	left: 0px
+	-moz-transition: .6s ease-out all
+	-webkit-transition: .6s ease-out all
+	-o-transition: .6s ease-out all
+	-ms-transition: .6s ease-out all
+	transition: .6s ease-out all
+
+.blog-back-button
+	color: #333
+	background-color: white
+	height: 60px
+	width: 50px
+	margin-left: -5px
+	border-top-right-radius: 50%
+	border-bottom-right-radius: 50%
+	box-shadow: 0px 15px 25px hsla(0, 0%, 0%, .5)
+	-moz-transition: .1s ease-out all
+	-webkit-transition: .1s ease-out all
+	-o-transition: .1s ease-out all
+	-ms-transition: .1s ease-out all
+	transition: .1s ease-out all		
+	&:hover
+		cursor: pointer
+		margin-left: 0px
+		box-shadow: 0px 5px 15px hsla(0, 0%, 0%, .2)	
+
+.blog-back-button:hover .blog-back-button-img
+	opacity: .7
+
+.blog-back-button-img
+	margin-top: 10px
+	margin-left: 15px
+	-moz-transition: .1s ease-out all
+	-webkit-transition: .1s ease-out all
+	-o-transition: .1s ease-out all
+	-ms-transition: .1s ease-out all
+	transition: .1s ease-out all	
