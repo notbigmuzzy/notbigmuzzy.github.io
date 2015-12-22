@@ -1,0 +1,355 @@
+.page2-wrapper
+	position: relative
+	width: 100%
+	height: 100%
+	display: none
+	font-family: 'Source Sans Pro', sans-serif
+
+.page2-body
+	position: absolute
+	top: 0
+	left: 0
+	width: 1300px
+	height: 100%
+	background-color: white
+	background-image: url('menus/2/page.jpg')
+	background-size: cover
+	background-repeat: no-repeat
+	-moz-transition: .4s ease-out all
+	-webkit-transition: .4s ease-out all
+	-o-transition: .4s ease-out all
+	-ms-transition: .4s ease-out all
+	transition: .4s ease-out all
+
+.page2-menu
+	position: absolute
+	left: -290px
+	width: 290px
+	height: 100%
+	color: white
+	background-image: url('menus/2/sidebar.jpg')
+	background-size: cover
+	background-repeat: no-repeat
+	-moz-transition: .4s ease-out all
+	-webkit-transition: .4s ease-out all
+	-o-transition: .4s ease-out all
+	-ms-transition: .4s ease-out all
+	transition: .4s ease-out all	
+
+.page2-menubutton
+	position: absolute
+	top: 20px
+	left: 20px
+	width: 40px
+	height: 40px
+	border: 2px white solid
+	border-radius: 50%
+	box-shadow: 0px 2px 2px #4279BD
+	-moz-transition: .4s ease-out all
+	-webkit-transition: .4s ease-out all
+	-o-transition: .4s ease-out all
+	-ms-transition: .4s ease-out all
+	transition: .4s ease-out all
+
+.page2-menuclose
+	opacity: 0
+	position: absolute
+	top: 20px
+	left: 20px
+	width: 40px
+	height: 40px
+	border: 2px white solid
+	border-radius: 50%	
+	-moz-transition: .4s ease-out all
+	-webkit-transition: .4s ease-out all
+	-o-transition: .4s ease-out all
+	-ms-transition: .4s ease-out all
+	transition: .4s ease-out all
+	&:hover
+		cursor: pointer
+
+// COVER FOR WHOLE MENU
+.page2-menudark
+	width: 100%
+	height: 100%
+	background-color: rgba(0,0,0,.8)
+
+.page2-menutop
+	width: 100%
+	height: 100%
+	overflow: auto
+
+.page2-menu-settings
+	position: absolute
+	top: 20px
+	left: 20px
+	height: 40px
+	width: 40px
+	border-radius: 50%
+	color: white
+	font-size: 1.8em
+	opacity: .3
+	-moz-transition: .2s ease-out all
+	-webkit-transition: .2s ease-out all
+	-o-transition: .2s ease-out all
+	-ms-transition: .2s ease-out all
+	transition: .2s ease-out all	
+	&:hover
+		cursor: pointer
+		opacity: .8
+
+.page2-topmenu
+	display: none
+	position: absolute
+	top: 70px
+	left: 25px
+	list-style: none
+	text-align: left
+	color: #666
+	background-color: white
+	border-radius: 5px
+	font-size: .8em
+	font-weight: 700
+	box-shadow: 0px 0px 10px black
+
+.page2-topmenu li
+	padding: 10px 5px
+	&:nth-child(1)
+		border-radius: 5px 5px 0 0
+	&:nth-child(3)
+		border-radius: 0 0 5px 5px
+	&:hover
+		cursor: pointer
+		background-color: #437ABD
+		color: white
+
+.page2-topmenu-item1:hover .page2-menutriangle
+	border-color: transparent transparent #437ABD transparent 
+
+.page2-menutriangle
+	position: absolute
+	top: -9px
+	left: 8px
+	width: 0
+	height: 0
+	border-style: solid
+	border-width: 0 7.5px 9px 7.5px
+	border-color: transparent transparent #ffffff transparent
+
+.page2-user
+	width: 140px
+	height: 140px
+	margin-top: 50px
+	border-radius: 50%
+	background-color: rgba(0,0,0,.3)
+
+.page2-username
+	margin: 0px
+	font-weight: 700
+	font-size: 1.3em
+
+.page2-menuitems
+	list-style: none
+	text-align: left
+	margin-top: 50px
+	border-top: solid 2px hsla(0, 0%, 100%, .1)
+
+.page2-menuitem
+	position: relative
+	padding: 15px
+	padding-left: 70px
+	border-bottom: solid 2px hsla(0, 0%, 100%, .1)
+	color: hsla(0, 0%, 100%, .6)
+	height: 55px
+	font-size: 1em
+	overflow: hidden
+	-moz-transition: .2s ease-out all
+	-webkit-transition: .2s ease-out all
+	-o-transition: .2s ease-out all
+	-ms-transition: .2s ease-out all
+	transition: .2s ease-out all
+	&:hover
+		background-color: hsla(0, 0%, 100%, .2)
+		box-shadow: inset 0px 0px 25px hsla(0, 0%, 0%, .4)
+		border-bottom: solid 2px hsla(0, 0%, 0%, .4)
+		color: hsla(0, 0%, 100%, 1)
+
+.page2-menuitem-clicked
+	padding: 14px
+	padding-left: 70px
+	font-size: 1.1em
+	font-weight: 700
+	color: hsla(0, 0%, 100%, .9)
+	
+.page2-menuitems li span
+	float: left
+	margin-left: -43px
+	font-size: 1.2em
+
+.page2-menuitem-notifications
+	position: absolute
+	top: 0
+	right: 0
+	padding: 15px
+	color: hsla(0, 0%, 100%, .6)
+
+.page2-menuitem:hover .notif
+	background-color: hsla(3, 95%, 57%, .3)
+
+#notif
+	color: white
+	-moz-transition: .2s ease-out all
+	-webkit-transition: .2s ease-out all
+	-o-transition: .2s ease-out all
+	-ms-transition: .2s ease-out all
+	transition: .2s ease-out all
+	background-color: hsla(3, 85%, 57%, .6)
+	&:hover
+		background-color: hsla(3, 75%, 57%, 1)
+		cursor: pointer
+		color: white
+
+.page2-menubottom
+	position: absolute
+	bottom: calc(-30% + 23px)
+	width: 100%
+	height: 30%
+	padding-top: 25px
+	background-color: #181F1F
+	-moz-transition: .2s ease-out all
+	-webkit-transition: .2s ease-out all
+	-o-transition: .2s ease-out all
+	-ms-transition: .2s ease-out all
+	transition: .2s ease-out all
+
+.page2-notifbody
+	width: 100%
+	height: 100%
+	overflow: auto
+
+.page2-notifications
+	position: absolute
+	top: 0
+	font-size: .6em
+	font-weight: 700
+	background-color: #181F1F
+	padding: 5px 10px 5px 15px
+	text-align: left
+	width: 100%
+	&:hover
+		color: #B2B2B2
+		background-color: #0C0F0F
+
+.page2-notifications-close
+	float: right
+	background-color: transparent
+	padding: 0 5px 0 5px
+	border-radius: 50%
+	color: white
+
+.page2-notifications-closefull
+	background-color: white
+	color: black
+	cursor: pointer
+
+.page-messages, .page-trends
+	display: none
+	width: 100%
+	list-style: none
+
+.page-message, .page-trend
+	position: relative
+	padding: 10px 20px 10px 15px
+	overflow: hidden
+	height: 71px
+	&:hover
+		background-color: #333
+		cursor: pointer
+
+.mess-img
+	float: left
+	height: 45px
+	border-radius: 50%
+	margin-top: 5px
+
+.mess-name
+	text-align: left
+	margin-left: 55px
+
+.mess-prew
+	text-align: left
+	margin-left: 55px
+	font-size: .8em
+	padding-top: 2px
+	opacity: .6
+
+.mess-time
+	position: absolute
+	top: 12px
+	right: 20px
+	font-size: .7em	
+	opacity: .6
+
+.mess-reply
+	position: absolute
+	bottom: 10px
+	left: 10px
+	width: 210px
+	height: 30px
+	display: none
+	border: none
+	background-color: #181F1F
+	color: grey
+	padding-left: 5px
+
+.mess-button
+	position: absolute
+	bottom: 10px
+	right: 10px
+	background-color: red
+	width: 55px
+	height: 30px
+	display: none
+	border: none
+	background-color: #181F1F
+	color: grey
+	cursor: pointer
+
+.message1
+	cursor: pointer
+	background-color: #333
+	cursor: default !important
+
+.trend-img
+	float: left
+	height: 40px
+	border-radius: 50%
+	margin-top: 5px
+
+.trend-name
+	text-align: left
+	margin-left: 55px
+	margin-top: 5px
+
+.trend-prew
+	text-align: left
+	margin-left: 55px
+	font-size: .8em
+	padding-top: 2px
+	opacity: .6
+
+.trend-img2
+	display: none
+	position: absolute
+	bottom: 5px
+	left: 10px
+	width: 270px
+	height: 170px
+	-moz-transition: .3s ease-out all
+	-webkit-transition: .3s ease-out all
+	-o-transition: .3s ease-out all
+	-ms-transition: .3s ease-out all
+	transition: .3s ease-out all	
+	&:hover
+		cursor: pointer
+		opacity: .3

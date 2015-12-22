@@ -1,0 +1,142 @@
+.page1-wrapper
+	width: 100%
+	height: 100%
+	display: none
+
+.page1-body
+	position: relative
+	width: 1300px
+	height: 100%
+	background-color: white
+	background-image: url('menus/1/page.jpg')
+	background-size: cover
+	background-repeat: no-repeat
+	-moz-transition: .4s ease-out all
+	-webkit-transition: .4s ease-out all
+	-o-transition: .4s ease-out all
+	-ms-transition: .4s ease-out all
+	transition: .4s ease-out all
+
+.page1-bodycover
+	display: none
+	width: 100%
+	height: 100%
+	background-color: rgba(0,0,0,.6)
+	box-shadow: -5px 0px 10px rgba(0,0,0,.4)
+
+.page1-menubutton
+	position: absolute
+	top: 82px
+	left: 30px
+	cursor: pointer
+	padding: 10px 35px 16px 0px		
+	&:hover
+		opacity: .5
+		-moz-transition: .2s ease-out all
+		-webkit-transition: .2s ease-out all
+		-o-transition: .2s ease-out all
+		-ms-transition: .2s ease-out all
+		transition: .2s ease-out all
+	span
+		cursor: pointer
+		border-radius: 1px
+		height: 6px
+		width: 50px
+		background: white
+		position: absolute
+		display: block
+		content: ''
+		&:before, &:after
+			cursor: pointer
+			border-radius: 1px
+			height: 6px
+			width: 50px
+			background: white
+			position: absolute
+			display: block
+			content: ''
+		&:before
+			top: -13px
+		&:after
+			bottom: -13px
+		transition: all 500ms ease-in-out
+		&:before, &:after
+			transition: all 500ms ease-in-out
+	&.active span
+		background-color: transparent
+		&:before, &:after
+			top: 0
+		&:before
+			transform: rotate(45deg)
+		&:after
+			transform: rotate(-45deg)
+
+.page1-menu
+	position: absolute
+	left: -50px
+	width: 200px
+	height: 100%
+	list-style: none
+	overflow: auto
+	overflow-x: hidden
+	color: lightgrey
+	background-color: #333
+	-moz-transition: .4s ease-out all
+	-webkit-transition: .4s ease-out all
+	-o-transition: .4s ease-out all
+	-ms-transition: .4s ease-out all
+	transition: .4s ease-out all	
+
+.page1-menucover
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(0,0,0,.8)
+
+.page1-menuitem
+	width: 200px
+	height: 200px
+	padding: 50px	
+	border-bottom: solid 1px #262626
+	background: #333
+	color: grey
+	overflow: hidden
+	border: solid 10px transparent
+	-moz-transition: .2s ease-out all
+	-webkit-transition: .2s ease-out all
+	-o-transition: .2s ease-out all
+	-ms-transition: .2s ease-out all
+	transition: .2s ease-out all	
+	&:hover
+		color: white
+		cursor: pointer
+		background: #2a2a2a
+
+.page1-menuitem-selected
+	// font-size: 1.2em
+	padding: 30px
+	width: 200px
+	height: 200px
+	border: solid 20px #333
+	background-color: #AD3435
+	color: white
+	border-radius: 30px
+	-moz-transition: .2s ease-out all
+	-webkit-transition: .2s ease-out all
+	-o-transition: .2s ease-out all
+	-ms-transition: .2s ease-out all
+	transition: .2s ease-out all
+	&:hover
+		color: white
+		cursor: pointer
+		background: #AD3435
+
+.page1-menuitem-ico
+	font-size: 3em
+
+.page1-menuitem-txt
+	margin-top: -10px
+	font-size: .7em
+	font-weight: bold
