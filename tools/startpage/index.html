@@ -13,30 +13,29 @@
             height: 100vh;
             background-color: #fff;
             overflow: hidden;
-            font-family: droidsans
+            font-family: "Droid Sans"
         }
         a {
             text-decoration: none;
-            color: #333;
-            outline: 0
+            color: #666;
+            outline: 0;
+            padding: 5px 5px;
         }
 
         a:focus {
             color: black;
             border-bottom: solid 5px black;
         }
-
-        @font-face{font-family:droidsans;src:url(droidsans.ttf);src:local('droidsans'),local('droidsans'),url(droidsans.ttf) format('truetype')
     }
     .leftie a {
         text-decoration: none;
-        /*color: #333;*/
-        padding: 5px 15px;
-        opacity: .7;
+        /*color: #CCC;*/
+        padding: 5px 25px;
+        opacity: .2;
     }
     .leftie a:hover {
-        opacity: 1;
-        border-bottom: solid 5px #333;
+        color: black;
+        border-bottom: solid 5px black;
         -webkit-transition: all .2s ease-in-out;
         -moz-transition: all .2s ease-in-out;
         -o-transition: all .2s ease-in-out;
@@ -191,108 +190,21 @@
     #srch:focus {
         outline: 0
     }
-    @media all and (max-width: 500px) {
-        .leftie,
-        .rightie {
-            display: none
-        }
-        #srch {
-            height: 100vh;
-            font-size: 60px
-        }
-        .meni {
-            cursor: pointer;
-            position: absolute;
-            top: 0;
-            left: 0;
-            text-align: center;
-            line-height: 50px;
-            font-size: 30px;
-            width: 100vw;
-            height: 50px;
-            background: #161a1f;
-            color: #ccc;
-            border-bottom: solid 2px #090b0d;
-            z-index: 9999999
-        }
-        .meni-close {
-            cursor: pointer;
-            display: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            text-align: center;
-            line-height: 40px;
-            font-size: 30px;
-            width: 100vw;
-            height: 50px;
-            background: #161a1f;
-            color: #ccc;
-            border-bottom: solid 2px #090b0d;
-            z-index: 99999990;
-            font-family: Verdana
-        }
-        .meni-full {
-            display: none;
-            position: absolute;
-            top: 0;
-            margin-top: 50px;
-            left: 0;
-            width: 100vw;
-            height: 95vh;
-            background: #161a1f;
-            z-index: 9999999
-        }
-        .meni-full ul li {
-            cursor: pointer;
-            text-align: center;
-            line-height: 50px;
-            font-size: 30px;
-            height: 60px;
-            background: #161a1f;
-            color: #ccc;
-            border-bottom: solid 2px #090b0d;
-            z-index: 9999999;
-            list-style: none;
-            padding: 0;
-            margin-left: -40px
-        }
-        .meni-full ul li a {
-            color: #ccc
-        }
-    }
-    @media all and (min-width: 500px) {
-        .meni,
-        .meni-close,
-        .meni-full {
-            display: none
-        }
-    }
     </style>
 </head>
 
 <body>
-    <div class=meni>L I N K S</div>
-    <div class=meni-close>x</div>
-    <div class=meni-full>
-        <ul>
-            <li><a href>Email</a>
-            </li>
-            <li><a href>Cpanel</a>
-            </li>
-            <li><a href>Home</a>
-            </li>
-            <li><a href>Git</a>
-            </li>
-            <li><a href>Drpbx</a>
-            </li>
-            <li><a href>Ga</a>
-            </li>
-        </ul>
-    </div>
-    <p class=leftie><a href=https://mail.google.com/mail/u/1/#inbox>mail</a><a href=http://ivansj.mycpanel.rs/cpanel>cpanel</a> |<a href=http://ivansj.mycpanel.rs/>nbm</a><a href=https://github.com/notbigmuzzy>git</a><a href=https://www.dropbox.com/home>drpbx</a><a href=https://www.google.com/analytics/web/>ga</a> |<a href=http://ivansj.mycpanel.rs/tools/minifyer/>minify</a>
-        <a
-        href=https://coveloping.com/tools>tools</a>
+    <p class=leftie>
+    <a href=https://mail.google.com/mail/u/1/#inbox>mail</a>
+    <a href=http://ivansj.mycpanel.rs/cpanel>cpanel</a> |
+
+    <a href=http://notbigmuzzy.github.io/>nbm</a>
+    <a href=https://github.com/notbigmuzzy>git</a>
+    <a href=https://www.dropbox.com/home>drpbx</a>
+    <a href=https://www.google.com/analytics/web/>ga</a> |
+
+    <a href=http://notbigmuzzy.github.io/tools/minifyer/>minify</a>
+    <a href=https://coveloping.com/tools>tools</a>
     </p>
     <p class=rightie></p>
     <p class=rightie2></p>
@@ -350,7 +262,7 @@
     </div>
     <form class=search method=get action=http://google.com/search>
         <input type=text id=srch name=q value autocomplete=off autofocus/>
-        <script src=jquery-1.10.2.js></script>
+        <script src=http://code.jquery.com/jquery-2.1.4.min.js></script>
         <script type=text/javascript>
             $(document).ready(function() {
                 $(".rightie").click(function() {
