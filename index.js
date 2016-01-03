@@ -60,14 +60,17 @@ $(document).ready(function() {
         }), $(".header-button-contact").click(function() {
             $("header").animate({
                 opacity: .9
-            }, 0), $(".header-cover").addClass("header-cover-clicked"), $(".menu-back-wrapper").show(0), $(".aboutme-wrapper").css("display", "block"), $("header").removeClass("header-start"), $(".aboutme-wrapper").animate({
-                top: "15%",
+            }, 0), $(".header-cover").addClass("header-cover-clicked"), $(".menu-back-wrapper").show(0), $(".aboutme-wrapper, .aboutme-wrapper2").css("display", "block"), $("header").removeClass("header-start"), $(".aboutme-wrapper").animate({
+                top: "10%",
+                opacity: 1
+            }, 400), $(".aboutme-wrapper2").animate({
+                bottom: "10%",
                 opacity: 1
             }, 400)
         }), $(".header-cover").click(function() {
             $("header").removeClass("header-contact-clicked"), $("header").animate({
                 opacity: 1
-            }, 200), $(".header-cover").removeClass("header-cover-clicked"), $(".menu-back-wrapper").css("display", "block"), $(".aboutme-wrapper").css("display", "none"), $(".aboutme-wrapper").css("opacity", "0"), $(".aboutme-wrapper").css("top", "calc(15% + 50px)"), $("header").addClass("header-start")
+            }, 200), $(".header-cover").removeClass("header-cover-clicked"), $(".menu-back-wrapper").css("display", "block"), $(".aboutme-wrapper, .aboutme-wrapper2").css("display", "none"), $(".aboutme-wrapper, .aboutme-wrapper2").css("opacity", "0"), $(".aboutme-wrapper").css("top", "calc(10% - 50px)"), $("header").addClass("header-start"), $(".aboutme-wrapper2").css("bottom", "calc(10% - 50px)")
         }), $(".header-button-blog").click(function() {
             window.location.href = "#blog"
         }), $(".blog-back-button").click(function() {

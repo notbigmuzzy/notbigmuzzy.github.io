@@ -252,6 +252,13 @@ a
 
 // MEDIA QUERIS
 // NETBOOK SHIT
+@media all and (max-height: 900px)
+	.aboutme-wrapper
+		height: 50%
+
+	.aboutme-wrapper2
+		height: 30%
+
 @media all and (max-height: 700px)
 	.work-example-button
 		top: 40% !important
@@ -289,11 +296,16 @@ a
 		margin-left: -600px
 		height: 90%
 
+@media all and (max-width: 1450px)
+	.aboutme-wrapper
+		height: 55%
+
+	.aboutme-wrapper2
+		height: 25%
 
 @media all and (max-width: 1360px)
 	article
 		padding: 0px 100px
-	
 
 @media all and (max-width: 1030px)
 	article
@@ -312,7 +324,7 @@ a
 		width: 40%
 		left: 50%
 
-	.aboutme-wrapper
+	.aboutme-wrapper, .aboutme-wrapper2
 		left: 10%
 		width: 80%
 
@@ -350,7 +362,6 @@ a
 
 	.menu-example
 		height: 65px
-		// padding: 5px 20px
 
 	.menu-left-img
 		top: 10px
@@ -398,11 +409,8 @@ a
 		width: 100%	
 		z-index: 99
 
-	.aboutme-wrapper
+	.aboutme-wrapper, .aboutme-wrapper2
 		display: none
-
-	.mailto.ninja
-		overflow: auto !important
 
 	.header-button-link-wrapper, .header-button-link-wrapper-mobile, .header-button-link-wrapper-tablet
 		margin: 20px
@@ -424,15 +432,24 @@ a
 		transform: scale(1)
 		opacity: 1
 
-	.override.se-modal,	.aboutme-wrapper
+	.aboutme-wrapper
 		position: absolute
 		top: 0 !important
 		left: 0
-		height: 100%
+		height: 60%
 		width: 100%
 		box-shadow: none
 		overflow: auto
-	
+
+	.aboutme-wrapper2
+		position: absolute
+		bottom: 0 !important
+		left: 0
+		height: 40%
+		width: 100%
+		box-shadow: none
+		overflow: auto
+
 	#cancel
 		display: block
 		position: absolute
