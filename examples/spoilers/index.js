@@ -2,12 +2,6 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
-
 	// ABOUT THE GUY POPOUT
 	$('.landpage-popoutbutton').click(function(){
 		$('.landpage-cover').fadeIn(200);
@@ -32,13 +26,6 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
-
-
 	// COPYRIGHT NOTICE
 	$('.menufoot-right').click(function(){
 		$('.copy-notice').show(200);
@@ -49,15 +36,6 @@ $(document).ready(function(){
         	$('.copy-notice').hide(200);
 	     };
 	});
-
-
-	 
-
-
-
-
-
-
 
 
 
@@ -119,17 +97,6 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 	// MAIN MENU OPEN AND CLOSE
 	$('.head-menu').click(function(){
 		if($('.head-menu').hasClass('head-menuclicked')) {
@@ -163,21 +130,6 @@ $(document).ready(function(){
 		$('.button-right').addClass('button-rightclickedposter1');
 		document.body.scrollTop = document.documentElement.scrollTop = 0;
 	});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -288,18 +240,6 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // BUTTON LEFT -----------------------------------------------------------------------------
 	$('.button-left').click(function(){
 
@@ -404,24 +344,6 @@ $(document).ready(function(){
 	
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	// POSTER3
 	$('.poster3-footercover').mouseenter(function(){
 		$('.poster3-footerimg').css('bottom','-200px');
@@ -431,13 +353,6 @@ $(document).ready(function(){
 		$('.poster3-footerimg').css('bottom','0px');
 		$('.poster3-footerimg').css('left','50%');
 	});
-
-
-
-
-
-
-
 
 
 

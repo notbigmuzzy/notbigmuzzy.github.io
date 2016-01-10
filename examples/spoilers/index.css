@@ -560,7 +560,7 @@
   margin-top: 50px;
   width: 600px;
   height: 630px;
-  background-image: url(img/poster1/tileset.jpg);
+  background-image: url(http://notbigmuzzy.github.io/examples/spoilers/img/poster1/tileset.jpg);
   background-repeat: repeat;
   border: solid 10px #003758;
   overflow: hidden; }
@@ -722,7 +722,7 @@
   z-index: 99;
   box-shadow: 0px 20px 10px -10px rgba(0, 0, 0, 0.5);
   background-color: #F2F2F2;
-  background-image: url(img/poster3/tileset.jpg); }
+  background-image: url(http://notbigmuzzy.github.io/examples/spoilers/img/poster3/tileset.jpg); }
 
 .poster3-title {
   padding: 100px;
@@ -839,7 +839,7 @@
   width: 25vw;
   height: 100%;
   background-color: #F2F2F2;
-  background-image: url(img/poster3/tileset.jpg); }
+  background-image: url(http://notbigmuzzy.github.io/examples/spoilers/img/poster3/tileset.jpg); }
 
 .poster3-footerimgright {
   position: absolute;
@@ -898,7 +898,7 @@
   width: 100%;
   color: black;
   background-color: #F5F4F0;
-  background-image: url(img/poster5/tileset.jpg);
+  background-image: url(http://notbigmuzzy.github.io/examples/spoilers/img/poster5/tileset.jpg);
   font-family: "Lora", serif;
   position: relative; }
 
@@ -987,7 +987,7 @@
 .poster6 {
   width: 100%;
   height: 100vh;
-  background-image: url(img/poster6/back.jpg);
+  background-image: url(http://notbigmuzzy.github.io/examples/spoilers/img/poster6/back.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1101,7 +1101,7 @@
 
 .poster7 {
   width: 100%;
-  background-image: url(img/poster7/back.jpg);
+  background-image: url(http://notbigmuzzy.github.io/examples/spoilers/img/poster7/back.jpg);
   font-family: "Ubuntu Condensed", sans-serif;
   color: white;
   background-color: #fafafa;
@@ -1259,5 +1259,3 @@ body, html {
 
 .poster1, .poster2, .poster3, .button-left, .button-right, .poster4, .poster5, .poster6, .poster7 {
   display: none; }
-
-/*# sourceMappingURL=index.css.map */
