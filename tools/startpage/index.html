@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <title>START HERE</title>
@@ -39,8 +39,6 @@
                  z-index: 9;
                 width: 100%;
                 font-size: 1.8em;
-                /*border-bottom: solid 1px #333;*/
-                /*box-shadow: 0px 0px 5px black;*/
                 float: left;
                 background-color: #fff;
             }
@@ -136,7 +134,7 @@
                 overflow: hidden
             }
 
-            .button {
+            .batn {
                 width: 100%;
                 height: 70px;
                 text-align: right;
@@ -148,102 +146,85 @@
                 transition: all .2s;      
             }
 
-            .button:hover {
+            .batn:hover {
                 cursor: pointer;
                 background-color: #333;
                 color: #fff;
             }
 
-            .button p {
+            .batn p {
                 margin-right: 10px
             }
         </style>
     </head>
     <body>
-    <div class="topbar">
-        <!-- TOP LEFT -->
-        <a class="top-left" href="https://mail.google.com/mail/u/0/#inbox">gmail</a>
-        <a class="top-left" href="http://kimai.webbaysolutions.com/index.php?a=logout">kimai</a>
-        <a class="top-left" href="https://trello.com/">trello</a>
-        <a class="top-left" href="https://webmail.webspaceconfig.de/">webmail</a>
-        <a class="top-left" href="https://github.com/notbigmuzzy">git</a>
-        <a class="top-left" href="https://www.dropbox.com/home">drpbx</a>
-        <a class="top-left" href="https://www.google.com/analytics/web/">ga</a>
-        <a class="top-left" href="http://notbigmuzzy.github.io/tools/minifyer/">minify</a>
-        <!-- TOP RIGHT -->
-        <a class="top-right" id="top-right" href="#">+</a>
-    </div>
-    <!-- FULLSCREEN SEARCH -->
-    <form class="search" method="get" action="http://google.com/search">
-        <input type=text id="srch" name="q" value autocomplete="off" autofocus/>
-    <!-- PULLIN LINKS ON RIGHT -->
-    <div class="fioka start" id="fioka">
-        <div class="butt">
-            <a href="http://radiostranice.github.io/">
-            <div class="button">
-                <img id="ico" src=icons/radio.png width=41px height=41px>
-                <p>Radio</p>
-            </div>
-            </a>
-            <a href="http://codepen.io/notbigmuzzy/pens/public/">
-            <div class="button">
-                <img id="ico" src=icons/airdroid.png width=41px height=41px>
-                <p>Codepen</p>
-            </div>
-            </a>
-            <a href="http://www.reddit.com/r/web_design/new/">
-            <div class="button">
-                <img id="ico" src=icons/redd.png width=41px height=41px>
-                <p>Reddit</p>
-            </div>
-            </a>
-            <a href="https://twitter.com/">
-            <div class="button">
-                <img id="ico" src=icons/twit.jpg width=41px>
-                <p>Twitter</p>
-            </div>
-            </a>
-            <a href="https://feedly.com/i/latest">
-                <div class="button">
+	    <div class="topbar">
+	        <!-- TOP LEFT -->
+	        <a class="top-left" href="https://mail.google.com/mail/u/0/#inbox">gmail</a>
+	        <a class="top-left" href="http://kimai.webbaysolutions.com/index.php?a=logout">kimai</a>
+	        <a class="top-left" href="https://trello.com/">trello</a>
+	        <a class="top-left" href="https://webmail.webspaceconfig.de/">webmail</a>
+	        <a class="top-left" href="https://github.com/notbigmuzzy">git</a>
+	        <a class="top-left" href="https://www.dropbox.com/home">drpbx</a>
+	        <a class="top-left" href="https://www.google.com/analytics/web/">ga</a>
+	        <a class="top-left" href="http://notbigmuzzy.github.io/tools/minifyer/">minify</a>
+	        <!-- TOP RIGHT -->
+	        <a class="top-right" id="top-right" href="#">+</a>
+	    </div>
+	    <form class="search" method="get" action="http://google.com/search">
+	    	<input type=text id="srch" autocomplete="off" autofocus/>
+	    </form>
+
+	    <div class="fioka start" id="fioka">
+	        <div class="butt">
+	            <a class="batn" href="http://radiostranice.github.io/">
+	                <img id="ico" src=icons/radio.png width=41px height=41px>
+	                <p>Radio</p>
+	            </a>
+	            <a class="batn" href="http://codepen.io/notbigmuzzy/pens/public/">
+	                <img id="ico" src=icons/airdroid.png width=41px height=41px>
+	                <p>Codepen</p>
+	            </a>
+	            <a class="batn" href="http://www.reddit.com/r/web_design/new/">
+	                <img id="ico" src=icons/redd.png width=41px height=41px>
+	                <p>Reddit</p>
+	            </a>
+	            <a class="batn" href="https://twitter.com/">
+	                <img id="ico" src=icons/twit.jpg width=41px>
+	                <p>Twitter</p>
+	            </a>
+	            <a class="batn" href="https://feedly.com/i/latest">
                     <img id="ico" src=icons/news.jpg width=40px height=41px>
                     <p>News</p>
-                </div>
-            </a>
-            <a href="https://kat.cr">
-            <div class="button">
-                <img id="ico" src=icons/pbay.jpg width=40px height=41px>
-                <p>Torrente</p>
-            </div>
-            </a>
-            <a href="https://secure.kupindo.com/MojKupindo/ListaZelja">
-                <div class="button">
+	            </a>
+	            <a class="batn" href="https://kat.cr">
+	                <img id="ico" src=icons/pbay.jpg width=40px height=41px>
+	                <p>Torrente</p>
+	            </a>
+	            <a class="batn" href="https://secure.kupindo.com/MojKupindo/ListaZelja">
                     <img id="ico" src=icons/kupi.jpg width=40px height=41px>
                     <p>Kupindo</p>
-                </div>
-            </a>
-            <a href="https://www.youtube.com/feed/subscriptions">
-                <div class="button">
+	            </a>
+	            <a class="batn" href="https://www.youtube.com/feed/subscriptions">
                     <img id="ico" src=icons/you.png width=42px height=41px>
                     <p>Youtube</p>
-                </div>
-            </a>
-        </div>
-    </div>
-    <!-- JAVASKRIPTA -->
-    <script type="text/javascript">
-        document.getElementById("top-right").onclick = function(){
-            if (document.getElementById('fioka').classList.contains('start')) {
-                document.getElementById('fioka').classList.remove("start");
-                document.getElementById('fioka').style.right = '0px';
-                document.getElementById("top-right").innerHTML = "x";
-                document.getElementById('top-right').classList.add("top-right-active");
-            } else {
-                document.getElementById('fioka').classList.add("start");
-                document.getElementById('fioka').style.right = '-200px';
-                document.getElementById("top-right").innerHTML = "+";
-                document.getElementById('top-right').classList.remove("top-right-active");
-            }
-        };
-    </script>
-</body>
+	            </a>
+	        </div>
+	    </div>
+	    <script type="text/javascript">
+	        document.getElementById("top-right").onclick = function(){
+	            if (document.getElementById('fioka').classList.contains('start')) {
+	                document.getElementById('fioka').classList.remove("start");
+	                document.getElementById('fioka').style.right = '0px';
+	                document.getElementById("top-right").innerHTML = "x";
+	                document.getElementById('top-right').classList.add("top-right-active");
+	            } else {
+	                document.getElementById('fioka').classList.add("start");
+	                document.getElementById('fioka').style.right = '-200px';
+	                document.getElementById("top-right").innerHTML = "+";
+	                document.getElementById('top-right').classList.remove("top-right-active");
+	            }
+	        };
+	    </script>
+	</body>
 </html>
