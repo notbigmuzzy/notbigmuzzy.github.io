@@ -501,10 +501,12 @@ i[class^=icon-]:before {
 
     .wrapper-right {
         padding: 0 50px;
+        height: 100%;
     }
 
     .wrapper-left {
         position: absolute;
+        height: 100%;
     }
 
     .cv-wrapper {
@@ -544,4 +546,9 @@ i[class^=icon-]:before {
     .bott1 {
         bottom: 18vw;
     }
+
+    html, body {
+        height: 100%;
+    }
+
 }
