@@ -491,3 +491,57 @@ i[class^=icon-]:before {
         font-size: 70px
     }
 }
+
+@media all and (max-width:720px) {
+
+    .wrapper-left,
+    .wrapper-right {
+        width: 100%;
+    }
+
+    .wrapper-right {
+        padding: 0 50px;
+    }
+
+    .wrapper-left {
+        position: absolute;
+    }
+
+    .cv-wrapper {
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+        margin-top: 0;
+        opacity: 0;
+    }
+
+    .cv-wrapper.cv-wrapper-clicked {
+        opacity: 1;
+    }
+
+    .cv-button {
+        position: absolute;
+        top: auto;
+        bottom: 30px;
+        margin-top: 0;
+        right: 30px;
+    }
+
+    .cover {
+        margin: 0;
+        background: transparent;
+        z-index: 999999;
+        width: 120px;
+        height: 200px;
+        right: 0;
+    }
+
+    .cvheader-rezime-clicked {
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
+
+    .bott1 {
+        bottom: 18vw;
+    }
+}
