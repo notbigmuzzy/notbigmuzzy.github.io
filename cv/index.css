@@ -551,4 +551,18 @@ i[class^=icon-]:before {
         height: 100%;
     }
 
+    body.active {
+        overflow: visible;
+    }
+
+    body.active .cv-wrapper {
+        height: auto;
+    }
+
+    .cv-header {
+        min-height: 300px;
+    }
+
+
+
 }
