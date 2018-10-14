@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>message - material</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons-/-messages" transform="translate(-1.000000, -1.000000)" fill="#FFFFFF">
+            <path d="M15,6.68 L15,5 L5,5 L5,6.68 L15,6.68 Z M15,9.18 L15,7.5 L5,7.5 L5,9.18 L15,9.18 Z M15,11.68 L15,10 L5,10 L5,11.68 L15,11.68 Z M16.68,1.68 C17.1333356,1.68 17.5199984,1.8399984 17.84,2.16 C18.1600016,2.4800016 18.32,2.8666644 18.32,3.32 L18.32,13.32 C18.32,13.7733356 18.1600016,14.166665 17.84,14.5 C17.5199984,14.833335 17.1333356,15 16.68,15 L5,15 L1.68,18.32 L1.68,3.32 C1.68,2.8666644 1.8399984,2.4800016 2.16,2.16 C2.4800016,1.8399984 2.8666644,1.68 3.32,1.68 L16.68,1.68 Z" id="message---material"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="18px" viewBox="0 0 16 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>date_range - material</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons-/-calendar" transform="translate(-2.000000, -1.000000)" fill="#1de9b6">
+            <path d="M15.82,16.68 L15.82,7.5 L4.18,7.5 L4.18,16.68 L15.82,16.68 Z M15.82,3.32 C16.2733356,3.32 16.666665,3.486665 17,3.82 C17.333335,4.153335 17.5,4.5466644 17.5,5 L17.5,16.68 C17.5,17.1333356 17.333335,17.5199984 17,17.84 C16.666665,18.1600016 16.2733356,18.32 15.82,18.32 L4.18,18.32 C3.713331,18.32 3.3166683,18.1600016 2.99,17.84 C2.6633317,17.5199984 2.5,17.1333356 2.5,16.68 L2.5,5 C2.5,4.5466644 2.6633317,4.153335 2.99,3.82 C3.3166683,3.486665 3.713331,3.32 4.18,3.32 L5,3.32 L5,1.68 L6.68,1.68 L6.68,3.32 L13.32,3.32 L13.32,1.68 L15,1.68 L15,3.32 L15.82,3.32 Z M14.18,9.18 L14.18,10.82 L12.5,10.82 L12.5,9.18 L14.18,9.18 Z M10.82,9.18 L10.82,10.82 L9.18,10.82 L9.18,9.18 L10.82,9.18 Z M7.5,9.18 L7.5,10.82 L5.82,10.82 L5.82,9.18 L7.5,9.18 Z" id="date_range---material"></path>
+        </g>
+    </g>
+</svg>

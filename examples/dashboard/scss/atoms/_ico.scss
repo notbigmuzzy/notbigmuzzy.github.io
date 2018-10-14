@@ -1,0 +1,46 @@
+.a-ico {
+	cursor: pointer;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: all 0.3s ease-in-out;
+
+	&-close {
+		height: 14px;
+		width: 14px;
+		background-image: url(../images/ico-close.svg);
+
+		&-dark {
+			background-image: url(../images/ico-close-dark.svg);
+		}
+
+		&:hover {
+			transform: rotate(-90deg);
+		}
+	}
+
+	&-back {
+		width: 7px;
+		height: 10px;
+		background-image: url(../images/ico-back.svg);
+	}
+
+	&-plus {
+		height: 12px;
+		width: 12px;
+		background-image: url(../images/ico-plus.svg);
+
+	}
+
+	&-switch {
+		display: block;
+		width: 20px;
+		height: 20px;
+		background-image: url(../images/ico-switch.svg);
+	}
+
+	&-dropdown {
+		height: 7px;
+		width: 10px;
+		background-image: url(../images/ico-dropdown.svg);
+	}
+}

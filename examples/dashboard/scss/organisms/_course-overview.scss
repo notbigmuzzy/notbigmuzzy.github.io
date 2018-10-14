@@ -1,0 +1,43 @@
+.o-course-overview {
+	list-style-type: none;
+	margin: 58px 0 200px;
+	padding-left: 101px;
+
+	@include sc-breakpoint(1200) {
+		padding-left: 115px;
+	}
+
+	@include sc-breakpoint(640) {
+		padding-left: 60px;
+	}
+
+	&::before {
+		content: '';
+		display: block;
+		width: 1px;
+		height: calc(100% + 89px);
+		position: absolute;
+		top: 5px;
+		left: 42px;
+		background-color: $gs-3;
+
+		@include sc-breakpoint(1200) {
+			left: 56px;
+		}
+
+		@include sc-breakpoint(640) {
+			left: 30px;
+		}
+	}
+
+	li {
+		position: relative;
+
+		&:last-child {
+
+			.a-timeline-bullet-icon {
+				background-image: linear-gradient(to right, $c-orange, $c-orange);
+			}
+		}
+	}
+}

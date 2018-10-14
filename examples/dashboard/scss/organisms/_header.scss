@@ -1,0 +1,40 @@
+.o-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	background-color: $white;
+	padding: 10px 10px 10px 90px;
+	box-shadow: none;
+	transform: translateY(-100%);
+	transition: all 0.3s ease-in-out;
+
+	.b-show-header & {
+		transform: translateY(0);
+		box-shadow: 0 1em 3em rgba($black, 0.05);
+
+		@include sc-breakpoint(640) {
+			display: none;
+		}
+	}
+
+	.u-right {
+
+		> * {
+			display: inline-block;
+			vertical-align: middle;
+			width: auto;
+		}
+
+		.a-button {
+			line-height: 41px;
+			height: 44px;
+			min-width: 167px;
+
+			@include sc-breakpoint(768) {
+				min-width: 120px;
+			}
+		}
+	}
+}

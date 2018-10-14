@@ -1,0 +1,142 @@
+.m-notifications-center {
+	padding: 10px;
+
+	@include sc-breakpoint(640) {
+		padding: 20px;
+	}
+
+	.m-notifications-center-title {
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 12px;
+		display: block;
+		margin-bottom: 5px;
+
+		@include sc-breakpoint(640) {
+			font-size: 16px;
+		}
+	}
+
+	.m-notifications-center-items {
+		max-height: 180px;
+		overflow-y: auto;
+		padding: 0 10px;
+		margin-bottom: 10px;
+
+		@include sc-breakpoint(640) {
+			padding: 0;
+			margin-bottom: 20px;
+		}
+
+		li {
+			position: relative;
+			width: 100%;
+			bottom: auto;
+			border-top: 0;
+			padding: 5px 0;
+			border-bottom: 1px solid $gs-2;
+
+			@include sc-breakpoint(640) {
+				padding: 10px 0;
+			}
+
+			&:first-child {
+				border-top: 1px solid $gs-2;
+			}
+
+			.m-notifications-center-item-title {
+				font-size: 12px;
+				font-weight: bold;
+				color: $gs-6;
+
+				@include sc-breakpoint(640) {
+					font-size: 14px;
+				}
+			}
+
+			.m-notifications-center-item-message {
+				margin: 0;
+				font-size: 12px;
+				color: $gs-5;
+
+				@include sc-breakpoint(640) {
+					font-size: 14px;
+				}
+			}
+		}
+
+		@include sc-breakpoint(640) {
+			max-height: 100%;
+		}
+	}
+
+	.m-notifications-center-buttons {
+		@include cf();
+		padding: 0 10px;
+
+		span {
+			display: block;
+			float: left;
+			width: 50%;
+			padding-left: 25px;
+			position: relative;
+
+			&.m-notifications-center-buttons-mute,
+			&.m-notifications-center-buttons-settings {
+
+				a {
+					position: relative;
+					color: $black;
+					outline: none;
+
+					&:before {
+						content: '';
+						position: absolute;
+						left: -25px;
+						top: 0px;
+						width: 15px;
+						height: 15px;
+						background-size: contain;
+						background-image: url(../images/icon-bell-dark-strike.svg);
+						opacity: 0.8;
+
+						@include sc-breakpoint(640) {
+							top: 1px;
+							width: 18px;
+							height: 18px;
+						}
+					}
+
+					@include sc-breakpoint(640) {
+						font-size: 16px;
+					}
+				}
+			}
+
+			&.m-notifications-center-buttons-mute {
+
+				&.muted {
+
+					a {
+						&:before {
+							background-image: url(../images/icon-bell-dark.svg);
+						}
+					}
+				}
+			}
+
+			&.m-notifications-center-buttons-settings {
+
+				a {
+					&:before {
+						background-image: url(../images/icon-cog.svg);
+					}
+				}
+			}
+		}
+
+		@include sc-breakpoint(640) {
+			text-align: center;
+		}
+	}
+}
