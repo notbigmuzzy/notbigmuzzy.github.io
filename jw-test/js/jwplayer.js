@@ -9,8 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         //Init JWPlayer
         jwplayer('myElement').setup({ 
             'file': 'assets/stairs.mp4',
-            'image': 'assets/cover.png',
-            mute: true
+            'image': 'assets/cover.png'
             //,autostart: 'true'
         });
     
