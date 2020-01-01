@@ -1,0 +1,36 @@
+.a-progress {
+	background-color: $gs-1;
+	border-radius: 5px;
+	height: 6px;
+	position: relative;
+	min-width: 150px;
+
+	@include sc-breakpoint(370) {
+		min-width: 47%;
+		margin-right: 20px;
+	}
+
+	span {
+		display: block;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-image: linear-gradient(to right, $g-green);
+		border-radius: 4px;
+		box-shadow: 0 0.5em 2em 0 rgba($black, 0.3);
+	}
+
+	&.a-progress-benchmark {
+
+		span {
+			background-image: linear-gradient(to right, $c-green, $c-green);
+			z-index: 1;
+
+			& + span {
+				background-image: linear-gradient(to right, $c-purple, $c-purple);
+				z-index: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,97 @@
+// PAGE 2 - 110VH
+.page2
+  position: relative
+  overflow: hidden
+  height: 1024px
+  background-image: url(images/page2/back.png)
+  background-position: center middle
+  background-size: cover
+  background-repeat: no-repeat
+
+.page2-wrapper
+  display: inline-block
+  width: 100%
+  height: 100%
+  background: hsla(0, 0%, 100%, .9)
+  overflow: none
+
+.page2-comp 
+  position: absolute
+  top: 0
+  margin-top: 100px
+  right: 0
+  width: 30%
+  // margin-right: 50px
+
+.page2-fag
+  position: absolute
+  bottom: 0
+  right: 0
+  margin-right: 50px
+
+.page2-title
+  margin-top: 80px
+  margin-left: 80px
+  font-size: $title-size
+  font-weight: $title-weight 
+  color: $higlight-color
+
+.page2-title span 
+  font-weight: 700
+  color: hsla(0, 0%, 0%, .9)
+  border-bottom: 2px solid hsla(0, 0%, 0%, .9)
+  border-color: $higlight-color
+
+.page2-undertitle
+  width: 600px
+  margin-left: 80px
+  font-size: $title-size/1.1
+  font-weight: $title-weight 
+
+.page2-undertitle span 
+  font-weight: 700
+  color: hsla(0, 0%, 0%, .9)
+
+.page2-desc
+  margin: 80px
+
+#accordion
+  position: absolute
+  bottom: 0
+  margin-bottom: 60px
+  margin-left: 80px
+  width: 60%
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+
+#accord-1, #accord-2, #accord-3
+  cursor: pointer
+
+.accordion1
+  display: block
+  border-radius: 5px
+  font-weight: 300
+  color: white
+  padding: 5px
+
+.accordion2, .accordion3 
+  display: none
+  border-radius: 5px
+  font-weight: 300
+  color: white
+  padding: 5px
+
+#accordion ul li
+  padding: 10px
+  background: $higlight-color
+  color: white
+  margin-bottom: 10px
+  border-radius: 5px
+  font-weight: 700
+  &:target
+    border-radius: 5px
+
+#accordion ul li span 
+  float: right

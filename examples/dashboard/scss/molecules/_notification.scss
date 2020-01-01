@@ -1,0 +1,86 @@
+.m-notification {
+	position: relative;
+	background-color: $white;
+	border: 1px solid $gs-1;
+	box-shadow: 0 0 12px 0 rgba($black, 0.06);
+	padding: 20px;
+	margin: 20px auto 0;
+	max-width: 1040px;
+	display: flex;
+
+	&:last-child {
+		margin-bottom: 20px;
+	}
+
+	@include sc-breakpoint(1150) {
+		margin: 20px 20px 0;
+	}
+
+	@include sc-breakpoint(940) {
+		display: block;
+	}
+
+	.a-ico-close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+
+	.m-notification-title {
+
+	}
+
+	.m-notification-description {
+    	color: $gs-5;
+
+    	a {
+    		color: $gs-5;
+    		text-decoration: underline;
+    	}
+	}
+
+	input[type=checkbox] {
+
+		&+label {
+			color: $gs-5;
+			text-decoration: underline;
+		}
+
+	}
+	
+	.m-notification-body {
+		flex-grow: 100;
+	}
+
+	.m-notification-buttons {
+		display: flex;
+		align-items: flex-end;
+
+		a {
+			padding: 0 20px;
+			margin-left: 10px;
+			max-width: inherit;
+
+			@include sc-breakpoint(940) {
+				max-width: max-content;
+
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+
+			@include sc-breakpoint(540) {
+				display: block;
+				margin-left: 0;
+				width: 100%;
+				margin-bottom: 10px;
+				max-width: 100%;	
+			}
+		}
+
+		@include sc-breakpoint(540) {
+			display: block;	
+		}
+	}
+
+}

@@ -1,0 +1,43 @@
+.a-image-upload-button {
+	width: 46px;
+	height: 46px;
+	border: 1px solid $c-blue;
+	display: inline-block;
+	border-radius: 50%;
+	line-height: 46px;
+	text-align: center;
+	font-size: 10px;
+	cursor: pointer;
+	position: relative;
+
+	&::before {
+		content: '+';
+		display: block;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background-color: $c-green;
+		color: $white;
+		text-align: center;
+		line-height: 16px;
+		font-size: 14px;
+		font-weight: 700;
+		position: absolute;
+		right: 0;
+		bottom: -2px;
+	}
+
+	&.show-profile-image {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		span {
+			display: none;
+		}
+	}
+
+	span {
+		color: $gs-4;
+	}
+}

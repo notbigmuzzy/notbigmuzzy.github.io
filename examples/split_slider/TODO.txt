@@ -1,0 +1,7 @@
+TBD:
+1. Counter flag ( 01,02,03,04,05 / 05 );
+2. Autoplay w/ pause-play
+3. Refactor that JS ffs.
+
+BUG-FEATURES:
+1. Slider acts funny if all inner sliders don't have equal number of slides(items).

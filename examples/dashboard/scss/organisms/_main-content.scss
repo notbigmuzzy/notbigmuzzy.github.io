@@ -1,0 +1,22 @@
+.o-main-content {
+	height: 100%;
+	padding-left: 270px;
+
+	@include sc-breakpoint(1190) {
+		padding-left: 70px;
+	}
+
+	@include sc-breakpoint(640) {
+		padding-top: 80px;
+		padding-left: 0;
+	}
+
+	.b-sidebar-shrink &,
+	.was-shrink & {
+		padding-left: 70px;
+
+		@include sc-breakpoint(640) {
+			padding-left: 0;
+		}
+	}
+}

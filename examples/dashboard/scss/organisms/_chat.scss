@@ -1,0 +1,10 @@
+.o-chat {
+	position: fixed;
+	right: 2em;
+	bottom: 2em;
+	z-index: 2;
+
+	@include sc-breakpoint(640) {
+		display: none;
+	}
+}

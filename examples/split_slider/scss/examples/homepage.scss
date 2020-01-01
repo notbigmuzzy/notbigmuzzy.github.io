@@ -1,0 +1,36 @@
+* {
+	box-sizing: border-box;
+}
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: 'Lato', sans-serif;
+
+	.page-title {
+		text-align: center;
+		padding: 2em 0;
+		margin: 0;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	section {
+		margin: 0 auto;
+		max-width: 1280px;
+
+		&::before,
+		&::after {
+			content: '';
+			display: table;
+		}
+
+		&::after {
+			clear: both;
+		}
+	}
+}

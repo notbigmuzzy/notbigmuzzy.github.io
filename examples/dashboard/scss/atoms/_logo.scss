@@ -1,0 +1,60 @@
+.a-logo {
+	padding: 25px 30px;
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	transition: all 0.3s ease-in-out;
+
+	.b-sidebar-expand & {
+		padding: 25px 30px !important;
+
+		@include sc-breakpoint(640) {
+			padding: 0 !important;
+			float: left;
+		}
+	}
+
+	@include sc-breakpoint(1190) {
+		padding: 25px 15px;
+	}
+
+	@include sc-breakpoint(640) {
+		padding: 0;
+		float: left;
+	}
+
+	img {
+		height: 42px;
+		width: auto;
+
+
+		&.a-logo-small {
+			display: none;
+
+			@include sc-breakpoint(640) {
+				display: none !important;
+			}
+		}
+	}
+
+	.b-sidebar-shrink & {
+		padding: 25px 15px;
+
+		@include sc-breakpoint(640) {
+			padding: 0;
+		}
+
+		.a-logo-small {
+			display: block;
+		}
+
+		.a-logo-big {
+
+			@include sc-breakpoint(640) {
+				display: block !important;
+				height: 42px;
+				width: auto;
+			}
+		}
+	}
+}

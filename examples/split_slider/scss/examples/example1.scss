@@ -1,0 +1,218 @@
+
+.example1 {
+
+    .slides-wrapper {
+        position: relative;
+        box-shadow: none !important;
+        overflow: hidden;
+
+        .slides.theme-top-to-bottom {
+            height: 25%;
+            border: none;
+            position: relative;
+            z-index: 1;
+
+            h2 {
+                text-align: left;
+                margin-left: 5%;
+                width: 25%;
+                display: inline-block;
+
+                @include breakpoint(850) {
+                    display: block;
+                    font-size: 20px;
+                }
+
+                @include breakpoint(540) {
+                    display: inline-block;
+                    width: 45%;
+                }
+            }
+
+            p {
+                display: inline-block;
+                max-width: 10%;
+                margin-left: 5%;
+
+                @include breakpoint(850) {
+                    max-width: 25%;
+                    display: block;
+                }
+
+                @include breakpoint(540) {
+                    display: inline-block;
+                    max-width: 40%;
+                }
+            }
+
+            &> .slide {
+                transition-timing-function: ease-in;
+            }
+
+            @include breakpoint(540) {
+                height: 50%;
+            }
+        }
+
+        .title {
+            position: absolute;
+            top: 35%;
+            z-index: 1;
+            color: #fff;
+            margin-left: 5%;
+
+            @include breakpoint(540) {
+                top: 75%;
+            }
+        }
+        
+        .slides.theme-bottom-to-top {
+            height: 75%;
+            position: relative;
+            z-index: 0;
+
+            &> .slide {
+                transition-timing-function: ease-in;
+            }
+
+            .frst {
+                @include background('images/example1/arh1.jpg');
+            }
+
+            .scnd {
+                @include background('images/example1/arh2.jpg');
+            }
+
+            .trd {
+                @include background('images/example1/arh2.jpg');
+            }
+
+            @include breakpoint(540) {
+                height: 50%;
+            }
+        }
+
+        .slides.theme-right-to-left {
+            width: 20%;
+            height: 80%;
+            position: absolute;
+            top: 0;
+            z-index: 2;
+
+            &.left {
+                left: 50%;
+                width: 20%;
+                height: 80%;
+                position: absolute;
+                top: 0;
+
+                &> .slide {
+                    transition-delay: .2s;
+                    transition-timing-function: ease-out;
+
+                    h2 {
+                        color: #fff;
+                        margin-left: 10%;
+
+                        @include breakpoint(850) {
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                .frst {
+                    @include background('images/example1/arh3.jpg');
+                }
+        
+                .scnd {
+                    @include background('images/example1/arh4.jpg');
+                }
+
+                .trd {
+                    @include background('images/example1/arh5.jpg');
+                }
+
+                @include breakpoint(850) {
+                    left: 30%;
+                    width: 30%;
+                    height: 70%;
+                }
+
+                @include breakpoint(540) {
+                    left: 5%;
+                    top: 14%;
+                    width: 40%;
+                    height: 60%;
+                }
+
+                @include breakpoint(375) {
+                    top: 17%;
+                    left: 2%;
+                    width: 45%;
+                    height: 55%;
+                }
+            }
+
+            &.right {
+                right: 5%;
+                width: 20%;
+                height: 80%;
+                position: absolute;
+                top: 0;
+
+                &> .slide {
+                    transition-delay: .4s;
+                    transition-timing-function: ease-out;
+                }
+
+                .frst {
+                    @include background('images/example1/arh6.png');
+                }
+        
+                .scnd {
+                    @include background('images/example1/arh7.jpg');
+                }
+
+                .trd {
+                    @include background('images/example1/arh8.jpg');
+                }
+
+                .info {
+                    height: 40%;
+                    width: 100%;
+                    background: #fff;
+                    position: absolute;
+                    bottom: 0;
+                    z-index: 1;
+
+                    p {
+                        margin: 50% 0 0 10%;
+                        font-size: 1.5em;
+
+                        @include breakpoint(850) {
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                @include breakpoint(850) {
+                    width: 30%;
+                    height: 70%;
+                }
+
+                @include breakpoint(540) {
+                    top: 14%;
+                    width: 40%;
+                    height: 60%;
+                }
+
+                @include breakpoint(375) {
+                    top: 17%;
+                    right: 2%;
+                    width: 45%;
+                    height: 55%;
+                }
+            }
+        }
+    }
+}
