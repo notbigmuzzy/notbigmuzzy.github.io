@@ -5,6 +5,18 @@
     right: 0;
     bottom: 0;
     background-color: rgba(black,0.5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    pointer-events: none;
+    transition: opacity 0.25s;
+
+    .show-shell & {
+        opacity: 1;
+        visibility: visible;
+        z-index: initial;
+        pointer-events: initial;
+    }
 
     .switcher {
          .card-wrapper {

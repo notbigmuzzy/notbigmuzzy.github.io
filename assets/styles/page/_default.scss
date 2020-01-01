@@ -1,0 +1,167 @@
+.default-portfolio {
+    height: 100%;
+
+    .main-page {
+        position: relative;
+        height: 100%;
+        background-color: #FFF;
+    }
+
+    .helper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        line-height: 30px;
+        opacity: 0.8;
+
+        a {
+            font-size: 0.8em;
+            text-decoration: none;
+            color: #333;
+            opacity: 0.15;
+
+            &:hover {
+                opacity: 0.3;
+                transition: opacity 0.25s;
+            }
+        }
+    }
+
+    .content {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+
+        .header-img {
+            max-width: 100%;
+            margin: 20px;
+            border-radius: 50%;
+        }
+
+        .texts {
+
+            h1 {
+                font-size: 42px;
+                line-height: 40px;
+                font-weight: 300;
+            }
+    
+            h2 {
+                font-size: 34.8px;
+                line-height: 40px;
+                font-weight: 300;
+                padding-top: 4px;
+            }
+
+            p {
+                padding-top: 5px;
+                font-size: 13px;
+                font-weight: 300;
+
+                span {
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .buttons {
+
+            a {
+                margin: 30px 40px;
+                display: inline-block;
+                font-weight: bold;
+                font-size: 14px;
+                border: 2px solid transparent;
+                text-decoration: none;
+                padding: 10px;
+                color: #333;
+
+                &.work {
+                    border-left-color: #333;
+                    border-bottom-color: #333;
+                }
+
+                &.email {
+                    border-top-color: #333;
+                    border-bottom-color: #333;
+                }
+
+                &.blog {
+                    border-right-color: #333;
+                }
+            }
+        }
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        line-height: 30px;
+        opacity: 0.8;
+
+        .notice {
+            position: relative;
+
+            label {
+                cursor: pointer;
+                font-size: .8em;
+            }
+
+            .copy-notice {
+                display: none;
+                position: absolute;
+                bottom: 35px;
+                left: 0;
+                width: 200px;
+                color: #333;
+                padding: 10px;
+                line-height: 18px;
+                text-align: left;
+                color:#FFF;
+                background-color:#333;
+
+                .copy-noticetriangle {
+                    position: absolute;
+                    bottom: -10px;
+                    left: 10px;
+                    width: 0;
+                    height: 0;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-top: 10px solid #333;
+                }
+            }
+
+            #notice {
+                display: none;
+
+                &:checked + .copy-notice {
+                    display: block;
+                }
+            }
+
+        }
+
+        .icons {
+
+            a:first-child {
+                margin-right: 6px;
+            }
+
+            img {
+                width: 20px;
+                height: auto;
+            }
+        }
+    }
+}

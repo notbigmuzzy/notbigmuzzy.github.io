@@ -1,7 +1,9 @@
 //BASE
-@import "page/reset";
-@import "page/base";
+@import "base/reset";
+@import "base/base";
 
-//PAGE
+//LAYOUT
 @import "layout/shell";
 
+//PAGE
+@import "page/default";
