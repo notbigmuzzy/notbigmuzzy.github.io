@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+    <link rel="stylesheet" href="https://cdn.flowplayer.com/releases/native/stable/style/flowplayer.css">
+    <script src="js/flowplayer.min.js"></script>
+    <script src="js/flowplayer.js"></script></head>
+<body>
+    <h1>Good redirect</h1>
+    <div class="wrapper">
+        <div class="main">
+            <div id="video-js" class="video-wrapper">
+                <div class="video-container">
+                    <div id="player"></div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="title">
+                <span></span>
+                <label>
+                    <input id="autoplay-check" type="checkbox" name="lastname" />
+                    AUTOPLAY
+                </label>
+            </div>
+            <div class="video-list">
+                <a href="index.html" id="next-video" class="item video">
+                    <img src="assets/cover.png">
+                    <span>Next previous video</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer>F O O T E R</footer>
+
+    <script>
+            // flowplayer('#player', {
+            //     src: 'assets/stairs.mp4',
+            //     type: 'video/mp4',
+            //     poster: 'assets/cover.png',
+            //     title: 'Lorem ipsum',
+            //     description: 'Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.',
+            //     token: 'eyJraWQiOiIwazg3bHdMSXRDckwiLCJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJjIjoie1wiYWNsXCI6NixcImlkXCI6XCIwazg3bHdMSXRDckxcIn0iLCJpc3MiOiJGbG93cGxheWVyIn0.zIN2e30sPuyH9k_ojmZ16ZhnBq5IS73pvZGt-WLJBYczWHUdsmFoQzwwl849NqPX46CC0FJwcoDJMqTPrRSOTw'
+            // });
+    
+            // flowplayer('#player', {
+            //     clip: {
+            //         sources: [
+            //               { type: "video/mp4",
+            //                 src:  "https://edge.flowplayer.org/black/470x250.mp4",
+            //                 token: "<MY TOKEN>"
+            //             }
+            //         ]
+            //     }
+            // });
+        </script>
+</body>
+</html>
