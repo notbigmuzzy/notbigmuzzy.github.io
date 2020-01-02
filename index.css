@@ -359,10 +359,13 @@ textarea {
   padding: 0.2em 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
-  box-sizing: border-box;
   color: #333;
   font-family: "Open Sans", sans-serif;
   background-color: #333;
@@ -374,24 +377,49 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   visibility: hidden;
   z-index: -1;
   pointer-events: none;
   transition: opacity 0.25s;
 }
+.the-shell > * {
+  font-family: monospace;
+}
+.the-shell .switcher {
+  position: relative;
+  z-index: 1;
+}
+.the-shell .shell-off {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("examples/menus/img/bodytile.jpg");
+  opacity: 0.75;
+  top: 0;
+  position: absolute;
+  cursor: default;
+}
+.the-shell #shell-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
 .show-shell .the-shell {
   opacity: 1;
   visibility: visible;
-  z-index: initial;
+  z-index: 100;
   pointer-events: initial;
 }
 .the-shell .switcher .card-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 30px;
+  height: 0;
+  margin-top: 30px;
 }
 .the-shell .switcher .card-wrapper .card {
   position: relative;
@@ -400,34 +428,74 @@ body {
   width: 150px;
   margin: 0 20px;
 }
-.the-shell .switcher .card-wrapper .card .content {
+.the-shell .switcher .card-wrapper .card #card-content {
   position: relative;
   display: block;
   height: 100%;
   background-color: white;
-  border: 5px solid black;
+  border-width: 10px;
+  border-style: solid;
   z-index: 1;
+}
+.the-shell .switcher .card-wrapper .card #card-content:hover #card-triangle {
+  bottom: -30px;
+  opacity: 1;
 }
 .the-shell .switcher .card-wrapper .card:after {
   content: "";
   display: block;
   width: 100%;
   height: 100%;
-  background-color: red;
+  background-color: rgba(0, 0, 0, 0.15);
   position: absolute;
-  top: 40px;
-  left: 20px;
+  top: 10px;
+  left: 10px;
+}
+.the-shell .switcher .card-wrapper .card #card-image {
+  display: block;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.25;
+}
+.the-shell .switcher .card-wrapper .card #card-label {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+}
+.the-shell .switcher .card-wrapper .card #card-triangle {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent !important;
+  border-right: 15px solid transparent !important;
+  border-bottom-width: 15px;
+  border-bottom-style: solid;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  opacity: 0;
+  bottom: -40px;
+  pointer-events: none;
+  transition: opacity 0.25s, bottom 0.25s;
 }
 
-.default-portfolio {
-  height: 100%;
-}
-.default-portfolio .main-page {
+.main-page {
   position: relative;
+  z-index: 1;
   height: 100%;
   background-color: #FFF;
+  left: 0;
+  top: 0;
+  transition: left 0.6s ease-out, top 0.6s ease-out;
 }
-.default-portfolio .helper {
+.main-page .helper {
   position: absolute;
   top: 0;
   left: 0;
@@ -436,49 +504,56 @@ body {
   justify-content: space-between;
   padding: 0 10px;
   line-height: 30px;
-  opacity: 0.8;
 }
-.default-portfolio .helper a {
+.main-page .helper a {
   font-size: 0.8em;
   text-decoration: none;
   color: #333;
   opacity: 0.15;
+  outline: none;
 }
-.default-portfolio .helper a:hover {
+.main-page .helper a.highlight {
+  opacity: 0.3;
+}
+.main-page .helper a:hover {
   opacity: 0.3;
   transition: opacity 0.25s;
 }
-.default-portfolio .content {
+.main-page .content {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
 }
-.default-portfolio .content .header-img {
+.main-page .content .header-img {
   max-width: 100%;
   margin: 20px;
   border-radius: 50%;
 }
-.default-portfolio .content .texts h1 {
+.main-page .content .texts h1 {
   font-size: 42px;
   line-height: 40px;
   font-weight: 300;
 }
-.default-portfolio .content .texts h2 {
+.main-page .content .texts h2 {
   font-size: 34.8px;
   line-height: 40px;
   font-weight: 300;
   padding-top: 4px;
 }
-.default-portfolio .content .texts p {
+.main-page .content .texts p {
   padding-top: 5px;
   font-size: 13px;
   font-weight: 300;
 }
-.default-portfolio .content .texts p span {
+.main-page .content .texts p span {
   font-weight: 400;
 }
-.default-portfolio .content .buttons a {
+.main-page .content .texts strong {
+  font-weight: 400;
+}
+.main-page .content .buttons a {
+  position: relative;
   margin: 30px 40px;
   display: inline-block;
   font-weight: bold;
@@ -487,19 +562,87 @@ body {
   text-decoration: none;
   padding: 10px;
   color: #333;
+  overflow: hidden;
+  transition: color 0.25s;
+  outline: none;
 }
-.default-portfolio .content .buttons a.work {
+.main-page .content .buttons a span {
+  position: relative;
+  z-index: 1;
+}
+.main-page .content .buttons a:before, .main-page .content .buttons a:after {
+  content: "";
+  display: block;
+  height: 100%;
+  pointer-events: none;
+  background-color: #333;
+  position: absolute;
+}
+.main-page .content .buttons a.work {
   border-left-color: #333;
   border-bottom-color: #333;
+  border-top: 0;
+  border-right: 0;
 }
-.default-portfolio .content .buttons a.email {
+.main-page .content .buttons a.work:before, .main-page .content .buttons a.work:after {
+  bottom: -100%;
+  left: -5px;
+  right: -5px;
+  transition: transform 0.25s;
+}
+.main-page .content .buttons a.work:hover {
+  color: #FFF;
+}
+.main-page .content .buttons a.work:hover:before, .main-page .content .buttons a.work:hover:after {
+  transform: translateY(-100%);
+}
+.main-page .content .buttons a.email {
   border-top-color: #333;
   border-bottom-color: #333;
+  border-left: 0;
+  border-right: 0;
 }
-.default-portfolio .content .buttons a.blog {
+.main-page .content .buttons a.email:before {
+  top: -100%;
+  left: 0;
+  right: 0;
+  transition: transform 0.25s;
+}
+.main-page .content .buttons a.email:after {
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  transition: transform 0.25s;
+}
+.main-page .content .buttons a.email:hover {
+  color: #FFF;
+}
+.main-page .content .buttons a.email:hover:before {
+  transform: translateY(50%);
+}
+.main-page .content .buttons a.email:hover:after {
+  transform: translateY(-50%);
+}
+.main-page .content .buttons a.blog {
   border-right-color: #333;
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 0;
 }
-.default-portfolio .footer {
+.main-page .content .buttons a.blog:before, .main-page .content .buttons a.blog:after {
+  bottom: 0;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  transition: transform 0.25s;
+}
+.main-page .content .buttons a.blog:hover {
+  color: #FFF;
+}
+.main-page .content .buttons a.blog:hover:before, .main-page .content .buttons a.blog:hover:after {
+  transform: translateX(-100%);
+}
+.main-page .footer {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -510,14 +653,14 @@ body {
   line-height: 30px;
   opacity: 0.8;
 }
-.default-portfolio .footer .notice {
+.main-page .footer .notice {
   position: relative;
 }
-.default-portfolio .footer .notice label {
+.main-page .footer .notice label {
   cursor: pointer;
   font-size: 0.8em;
 }
-.default-portfolio .footer .notice .copy-notice {
+.main-page .footer .notice .copy-notice {
   display: none;
   position: absolute;
   bottom: 35px;
@@ -530,7 +673,7 @@ body {
   color: #FFF;
   background-color: #333;
 }
-.default-portfolio .footer .notice .copy-notice .copy-noticetriangle {
+.main-page .footer .notice .copy-notice .copy-noticetriangle {
   position: absolute;
   bottom: -10px;
   left: 10px;
@@ -540,18 +683,164 @@ body {
   border-right: 10px solid transparent;
   border-top: 10px solid #333;
 }
-.default-portfolio .footer .notice #notice {
+.main-page .footer .notice #notice {
   display: none;
 }
-.default-portfolio .footer .notice #notice:checked + .copy-notice {
+.main-page .footer .notice #notice:checked + .copy-notice {
   display: block;
 }
-.default-portfolio .footer .icons a:first-child {
+.main-page .footer .icons a:first-child {
   margin-right: 6px;
 }
-.default-portfolio .footer .icons img {
+.main-page .footer .icons img {
   width: 20px;
   height: auto;
+}
+
+.blog-page {
+  position: relative;
+  overflow-y: auto;
+  background-color: #333;
+  height: 100%;
+  width: 100%;
+  left: 100%;
+  top: -200%;
+  opacity: 0;
+  transition: left 0.6s ease-out, opacity 0.9s;
+  color: #fff;
+}
+.blog-page .work-back-button {
+  position: fixed;
+  left: -100px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: #b5b5b5;
+  background-color: #fff;
+  margin-left: -10px;
+  font-size: 25px;
+  padding-top: 5px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  box-shadow: 0px 15px 25px #0000004d;
+  transform: rotate(-90deg);
+  transition: all 0.1s ease-out;
+}
+.blog-page .work-back-button:before, .blog-page .work-back-button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 23px;
+  left: 23px;
+  width: 15px;
+  border-bottom: 2px solid #b5b5b5;
+}
+.blog-page .work-back-button:before {
+  transform: rotate(45deg);
+}
+.blog-page .work-back-button:after {
+  transform: rotate(-45deg);
+}
+.blog-page .work-back-button:hover {
+  cursor: pointer;
+  margin-left: -5px;
+  color: #333;
+  box-shadow: 0px 5px 15px #0003;
+}
+.blog-page .work-back-button:hover:before, .blog-page .work-back-button:hover:after {
+  border-bottom-color: #0003;
+  transition: border-bottom-color 0.1s ease-out;
+}
+
+.work-page {
+  position: relative;
+  overflow-y: auto;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  top: -200%;
+  opacity: 0;
+  transition: top 0.6s ease-out, opacity 0.9s;
+}
+.work-page .work-back-button {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: #b5b5b5;
+  background-color: #fff;
+  margin-top: -5px;
+  font-size: 25px;
+  padding-top: 5px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  box-shadow: 0px 15px 25px #0000004d;
+  transition: all 0.1s ease-out;
+}
+.work-page .work-back-button:before, .work-page .work-back-button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 23px;
+  left: 23px;
+  width: 15px;
+  border-bottom: 2px solid #b5b5b5;
+}
+.work-page .work-back-button:before {
+  transform: rotate(45deg);
+}
+.work-page .work-back-button:after {
+  transform: rotate(-45deg);
+}
+.work-page .work-back-button:hover {
+  cursor: pointer;
+  margin-top: 0px;
+  color: #333;
+  box-shadow: 0px 5px 15px #0003;
+}
+.work-page .work-back-button:hover:before, .work-page .work-back-button:hover:after {
+  border-bottom-color: #0003;
+  transition: border-bottom-color 0.1s ease-out;
+}
+
+.default-portfolio {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.show-work .default-portfolio .main-page {
+  top: -100%;
+}
+.show-work .default-portfolio .work-page {
+  top: -100%;
+  opacity: 1;
+}
+.show-work .default-portfolio .work-page .work-back-button {
+  top: 0;
+}
+.show-blog .default-portfolio .main-page {
+  left: -100%;
+}
+.show-blog .default-portfolio .blog-page {
+  left: 0;
+  opacity: 1;
+}
+.show-blog .default-portfolio .blog-page .work-back-button {
+  left: 0;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -4,17 +4,45 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(black,0.5);
     opacity: 0;
     visibility: hidden;
     z-index: -1;
     pointer-events: none;
     transition: opacity 0.25s;
 
+    & > * {
+        font-family: monospace;
+    }
+
+    .switcher {
+        position: relative;
+        z-index: 1;
+    }
+
+    .shell-off {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url("examples/menus/img/bodytile.jpg");
+        opacity: 0.75;
+        top: 0;
+        position: absolute;
+        cursor: default;
+    }
+
+    #shell-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+    }
+
     .show-shell & {
         opacity: 1;
         visibility: visible;
-        z-index: initial;
+        z-index: 100;
         pointer-events: initial;
     }
 
@@ -23,23 +51,31 @@
              display: flex;
              flex-direction: row;
              justify-content: center;
-             padding: 30px;
+             height: 0;
+             margin-top: 30px;
 
              .card {
                 position: relative;
                 position: relative;
                 height: 150px;
                 width: 150px;
-                
                 margin: 0 20px;
 
-                .content {
+                #card-content {
                     position: relative;
                     display: block;
                     height: 100%;
                     background-color: white;
-                    border: 5px solid black;
+                    border-width: 10px;
+                    border-style: solid;
                     z-index: 1;
+
+                    &:hover {
+                        #card-triangle {
+                            bottom: -30px;
+                            opacity: 1;
+                        }
+                    }
                 }
 
                 &:after {
@@ -47,12 +83,48 @@
                     display: block;
                     width: 100%;
                     height: 100%;
-                    background-color: red;
+                    background-color: rgba(black, 0.15);
                     position: absolute;
-                    top: 40px;
-                    left: 20px;
+                    top: 10px;
+                    left: 10px;
                 }
 
+                #card-image {
+                    display: block;
+                    height: 100%;
+                    background-position: center;
+                    background-size: cover;
+                    opacity: 0.25;
+                }
+
+                #card-label {
+                    position: absolute;
+                    top: 45%;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 20px;
+                    color: #333;
+                }
+
+                #card-triangle {
+                    width: 0;
+                    height: 0;
+                    border-left: 15px solid transparent !important;
+                    border-right: 15px solid transparent !important;
+                    border-bottom-width: 15px;
+                    border-bottom-style: solid;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    opacity: 0;
+                    bottom: -40px;
+                    pointer-events: none;
+                    transition: opacity 0.25s, bottom 0.25s;
+                }
              }
          }
     }

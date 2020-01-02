@@ -6,10 +6,9 @@
 <!--CSS-->
 <link href="index.css" rel="stylesheet" type="text/css" />
 <!--TITLE-->
-<title>NBM | Playground</title></head><body><!--BODY --><div class="default-portfolio">
-<div class="main-page">
+<title>NBM | Playground</title></head><body><!--BODY --><div class="default-portfolio" id="portfolio"><div class="main-page">
 <div class="helper">
-<a href="#" id="f1"><strong>Press F1 for help</strong></a>
+<a href="#show-shell" id="f1"><strong>Press F1 for help</strong></a>
 </div>
 <header class="content">
 <img alt="N B M" src="assets/images/leme.jpg" class="header-img">
@@ -19,9 +18,9 @@
 <p>AND I SPECIALIZE IN WRITING <span>CLEAN, ELEGANT AND EFFICIENT CODE.</span></p>
 </div>
 <div class="buttons">
-<a href="#" class="work">WORK</a>
-<a href="mailto:notbigmuzzy@gmail.com" class="email">ME</a>
-<a href="#" class="blog">BLOG </a>
+<a href="#work" class="work"><span>WORK</span></a>
+<a href="#me" class="email"><span>ME</span></a>
+<a href="#blog" class="blog"><span>BLOG</span></a>
 </div>
 </header>
 <footer class="footer">
@@ -35,25 +34,50 @@
 <a target="_blank" href="http://codepen.io/notbigmuzzy/pens/public/"><img alt="image" src="assets/images/ico/codepen.png" class="footer-right"></a>
 </div>
 </footer>
-</div>
-</div><!--SHELL--><aside>
-<div class="the-shell" id="js-the-shell">
+</div><section class="work-page">
+<a href="#" class="work-back-button"></a>
+<p>WORK EXAMPLES</p>
+</section><section class="blog-page">
+<a href="#" class="work-back-button"></a>
+<p>BLOGGGGGGGGGGGGGG</p>
+</section><section class="me-page"><MEEEE>MEEEEEEEEEEE MEEEEEEE</MEEEE></section></div><!--SHELL--><aside>
+<div class="the-shell">
+<div id="shell-overlay"></div>
 <div class="switcher">
 <ul class="card-wrapper">
 <li class="card">
-<a href="index-new.html" class="content">
+<a href="index-new.html" id="card-content">
+<span id="card-image" style="background-image:url(assets/images/cards/default.jpg)"></span>
+<span id="card-label">Default</span>
+<i id="card-triangle"></i>
 </a>
 </li>
 <li  class="card">
-<a href="c64.html" class="content">
-</a>
-</li>
-<li  class="card">
-<a href="#" class="content">
+<a href="c64.html" id="card-content">
+<span id="card-image" style="background-image:url(assets/images/cards/c64.jpg)"></span>
+<span id="card-label">c64</span>
+<i id="card-triangle"></i>
 </a>
 </li>
 </ul>
 </div>
+<a href="#" class="shell-off"></a>
 </div>
-</aside><!-- SCRIPTS--><script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</aside><script>
+
+
+
+
+    var backgroundColor = "#ccc",
+        highlightColor = "#333";
+
+
+
+
+
+
+    document.head.insertAdjacentHTML("beforeend", '<style>#shell-overlay{background-color: ' + backgroundColor + '}</style>')
+    document.head.insertAdjacentHTML("beforeend", '<style>#card-content,#card-triangle{border-color:' + highlightColor + '}</style>')
+    document.head.insertAdjacentHTML("beforeend", '<style>#card-label{color:' + highlightColor + '}</style>')
+</script><!-- SCRIPTS--><script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script async defer src="index.js"></script></body></html>
