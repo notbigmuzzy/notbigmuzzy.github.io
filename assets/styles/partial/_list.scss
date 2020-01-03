@@ -1,0 +1,145 @@
+.page.fullscreen {
+    .the-list .list-item {
+        display: none;
+        padding: 0;
+
+        .item-content {
+            padding: 0;
+        }
+    }
+}
+
+.the-list {
+    position: relative;
+    max-width: 1024px;
+    margin: 0 auto;
+    min-height: 100%;
+
+    .separator {
+        font-size: 40px;
+        padding-bottom: 20px;
+        margin: 40px 0;
+        border-bottom: 4px solid #333;
+
+        &:first-child {
+            margin-top: 20px;
+        }
+    }
+
+    .list-item {
+        position: relative;
+        display: flex;
+        margin-bottom: 20px;
+
+        &:hover {
+            .item-image {
+                filter: grayscale(0);
+                transition: filter 0.25s;
+            }
+        }
+
+        .expand-close {
+            position: relative;
+            padding: 10px;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .item-image {
+            display: block;
+            height: 300px;
+            min-width: 400px;
+            background-position: center;
+            background-size: cover;
+            filter: grayscale(1);
+        }
+
+        .item-content {
+            padding: 0 0 20px 40px
+        }
+
+        .item-title {
+            display: inline-block;
+            position: relative;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .item-tech-icons {
+            display: block;
+            margin-bottom: 20px;
+
+            img {
+                height: 25px;
+                width: auto;
+                margin-right: 10px;
+            }
+
+        }
+
+        .item-decription {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .rte {
+            display: none;
+
+            img,
+            iframe {
+                display: block;
+                margin: 0 auto;
+                max-width: 640px;
+            }
+        }
+    }
+
+    .list-item-action {
+        display: none;
+
+        &:checked + .list-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            display: block;
+
+            .expand-close {
+                z-index: 1;
+            }
+
+            .item-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 100%;
+            }
+
+            .item-content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                overflow-y: auto;
+                z-index: 1;
+                background-color: #fff;                
+
+            }
+
+            .rte {
+                display: block;
+            }
+        }
+    }
+}

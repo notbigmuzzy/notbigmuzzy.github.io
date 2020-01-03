@@ -2,8 +2,11 @@
 @import "base/reset";
 @import "base/base";
 
+//PARTIAL
+@import "partial/shell";
+@import "partial/list";
+
 //LAYOUT
-@import "layout/shell";
 @import "layout/main";
 @import "layout/blog";
 @import "layout/me";
@@ -11,3 +14,4 @@
 
 //PAGE
 @import "page/default";
+@import "page/c64";

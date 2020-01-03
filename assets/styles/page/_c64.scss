@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'C64-MONO';
+    src: url('assets/fonts/c64/C64_Pro_Mono-STYLE.eot'); /* IE9 Compat Modes */
+    src: url('assets/fonts/c64/C64_Pro_Mono-STYLE.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('assets/fonts/c64/C64_Pro_Mono-STYLE.woff2') format('woff2'), /* Super Modern Browsers */
+         url('assets/fonts/c64/C64_Pro_Mono-STYLE.woff') format('woff'), /* Pretty Modern Browsers */
+         url('assets/fonts/c64/C64_Pro_Mono-STYLE.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+
+::-moz-selection { /* Code for Firefox */
+color: #50459b;
+background: #887ecb;
+}
+
+::selection {
+color: #50459b;
+background: #887ecb;
+}
+
+.c64-portfolio {
+    height: 100%;
+    padding: 80px 120px;
+    background-color: #887ecb;
+
+    a {
+        color: #887ecb;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+            text-decoration-style: dotted;
+        }
+    }
+
+    & > * {
+        font-family: 'C64-MONO';
+        font-size: 25px;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+
+    .editor {
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 100%;
+        background-color: #50459b;
+        color: #887ecb;
+        overflow-y: auto;
+
+        .top-of-editor {
+            text-align: center;
+            padding-top: 20px;
+
+            p {
+                margin-bottom: 20px;
+            }
+        }
+
+        .commandbox {
+            margin-bottom: 20px;
+
+            .title {
+                display: block;
+
+                &.hide {
+                    display: none;
+                }
+            }
+
+            &.active {
+                input {
+                    pointer-events: initial;
+                }
+            }
+
+            &.help {
+                .title {
+                    color: #fff;
+
+                    a {
+                        color: #fff;
+                    }
+
+                    span {
+                        color: #cb7e75 ;
+                    }
+
+                    &:first-child {
+                        color: #9ae29b;
+                    }
+                }
+            }
+
+            .no-command {
+                color: #cb7e75;
+            }
+        }
+
+        form {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            border: none;
+            background-color: transparent;
+            color: #887ecb;
+            font-family: 'C64-MONO';
+            text-transform: uppercase;
+            pointer-events: none;
+        }
+    }
+}    
+
+.c64-helper {
+    display: none;
+}

@@ -6,6 +6,7 @@
     width: 100%;
     top: -200%;
     opacity: 0;
+    padding-top: 100px;
     transition: top .6s ease-out, opacity .9s;
 
     .work-back-button {
@@ -15,6 +16,7 @@
         transform: translateX(-50%);
         height: 50px;
         width: 60px;
+        z-index: 1;
         text-align: center;
         text-decoration: none;
         display: inline-block;
@@ -58,6 +60,92 @@
             &:after {
                 border-bottom-color: #0003;
                 transition: border-bottom-color .1s ease-out;
+            }
+        }
+    }
+
+    .the-list {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1200px;
+
+        .list-item {
+            width: 33.333%;
+            padding: 20px;
+            margin: 0;
+            flex-direction: column;
+
+            .item-image {
+                height: 230px;
+                width: 100%;
+                min-width: 100%;
+            }
+
+            .item-content {
+                padding: 0;
+            }
+
+            .item-tech-icons {
+                display: none;
+            }
+
+            .expand-close {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                opacity: 0;
+            }
+        }
+
+        .list-item-action:checked + .list-item {
+            width: 100%;
+
+            .item-content {
+                background-color: transparent;
+            }
+
+            .expand-close {
+                position: fixed;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 50px;
+                width: 60px;
+                text-align: center;
+                display: inline-block;
+                padding-left: 25px;
+                padding-right: 25px;
+                color: #b5b5b5;
+                background-color: #fff;
+                margin-top: -5px;
+                font-size: 25px;
+                padding-top: 5px;
+                border-bottom-left-radius: 50%;
+                border-bottom-right-radius: 50%;
+                font-size: 0;
+                opacity: 1;
+
+                &:before,
+                &:after {
+                    content: '';
+                    display: block;
+                    height: 12px;
+                    width: 2px;
+                    background-color: #b5b5b5;
+                    position: absolute;
+                    top: 18px;
+                }
+
+                &:before {
+                    transform: rotate(30deg);
+                    left: 26px;
+                }
+                &:after {
+                    transform: rotate(-30deg);
+                    left: 32px;
+                }
             }
         }
     }
