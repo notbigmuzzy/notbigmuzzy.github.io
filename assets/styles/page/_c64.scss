@@ -113,6 +113,44 @@ background: #887ecb;
             text-transform: uppercase;
             pointer-events: none;
         }
+
+        i {
+            font-style: normal;
+        }
+    }
+
+    .writeout-text {
+        input,
+        img,
+        label,
+        .rte,
+        title,
+        h1,
+        address,
+        tr:nth-child(-n+3),
+        tr:last-child,
+        th,
+        tr td {
+            display: none;
+        }
+
+        tr td:nth-child(2) {
+            display: block;
+        }
+
+        img {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .item-title {
+            color:  #a1683c;
+            margin-bottom: 10px;
+        }
+
+        .item-decription {
+            color: #fff;
+        }
     }
 }    
 

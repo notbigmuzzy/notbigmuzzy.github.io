@@ -1191,6 +1191,36 @@ body {
   text-transform: uppercase;
   pointer-events: none;
 }
+.c64-portfolio .editor i {
+  font-style: normal;
+}
+.c64-portfolio .writeout-text input,
+.c64-portfolio .writeout-text img,
+.c64-portfolio .writeout-text label,
+.c64-portfolio .writeout-text .rte,
+.c64-portfolio .writeout-text title,
+.c64-portfolio .writeout-text h1,
+.c64-portfolio .writeout-text address,
+.c64-portfolio .writeout-text tr:nth-child(-n+3),
+.c64-portfolio .writeout-text tr:last-child,
+.c64-portfolio .writeout-text th,
+.c64-portfolio .writeout-text tr td {
+  display: none;
+}
+.c64-portfolio .writeout-text tr td:nth-child(2) {
+  display: block;
+}
+.c64-portfolio .writeout-text img {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.c64-portfolio .writeout-text .item-title {
+  color: #a1683c;
+  margin-bottom: 10px;
+}
+.c64-portfolio .writeout-text .item-decription {
+  color: #fff;
+}
 
 .c64-helper {
   display: none;
