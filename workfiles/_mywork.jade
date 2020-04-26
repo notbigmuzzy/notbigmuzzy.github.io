@@ -1,0 +1,286 @@
+//- SECTION == MY WORK WRAPPER
+section
+	div.mywork-header.ease-out8
+			div.mywork-back-button X
+				//- img.mywork-back-button-img(alt="image", src="images/ico/arrow-up.png")
+
+	//- EXAMPLE CLOSE BUTTON
+	div.mywork-left-button <
+	div.mywork-right-button >
+
+	//- WORK EXAMPLE BOXES DESKTOP
+	div.mywork.ease-out6
+		div.work-desktop-examples-wrapper
+
+			//- LIST OF EXAMPLES
+			div.work-example-list
+				div.work-example-desktop.work-example1.ease-out6
+					img.ease-out2(alt="image", src="images/examples/sidemenu.jpg")
+					div.span-title.ease-out2 MENU EXAMPLES
+					div.span-description.ease-out2 some fun side-menu examples
+					div.work-example-open-icon.ease-out2.my-work-example1 CLICK FOR INFO
+				div.work-example-desktop.work-example2.ease-out6
+					img.ease-out2(alt="image", src="images/examples/psd.jpg")
+					div.span-title.ease-out2 PSD CONVERSION
+
+					div.span-description.ease-out2 first time converting full psd
+					div.work-example-open-icon.ease-out2.my-work-example2 CLICK FOR INFO
+				div.work-example-desktop.work-example3.ease-out6
+					img.ease-out2(alt="image", src="images/examples/soundboard.jpg")
+					div.span-title.ease-out2 SOUNDBOARD
+
+					div.span-description.ease-out2 fun, 80's styled soundboard
+					div.work-example-open-icon.ease-out2.my-work-example3 CLICK FOR INFO
+				div.work-example-desktop.work-example4.ease-out6
+					img.ease-out2(alt="image", src="images/examples/photoblog.jpg")
+					div.span-title.ease-out2 PHOTO BLOG
+
+					div.span-description.ease-out2 a simple animated blog
+					div.work-example-open-icon.ease-out2.my-work-example4 CLICK FOR INFO
+				div.work-example-desktop.work-example5.ease-out6
+					img.ease-out2(alt="image", src="images/examples/restoran.jpg")
+					div.span-title.ease-out2 RESTAURANT
+
+					div.span-description.ease-out2 restaurant template
+					div.work-example-open-icon.ease-out2.my-work-example5 CLICK FOR INFO
+				div.work-example-desktop.work-example6.ease-out6
+					img.ease-out2(alt="image", src="images/examples/rsradio.jpg")
+					div.span-title.ease-out2 ONLINE RADIO
+
+					div.span-description.ease-out2 local radio stations
+					div.work-example-open-icon.ease-out2.my-work-example6 CLICK FOR INFO
+				div.work-example-desktop.work-example7.ease-out6
+					img.ease-out2(alt="image", src="images/examples/appage.jpg")
+					div.span-title.ease-out2 APP PRESENT
+					div.span-description.ease-out2 app presentation template
+					div.work-example-open-icon.ease-out2.my-work-example7 CLICK FOR INFO
+				div.work-example-desktop.work-example8.ease-out6#last-desktop-example
+					img.ease-out2(alt="image", src="images/examples/spoilers.jpg")
+					div.span-title.ease-out2 FOR FUN
+					div.span-description.ease-out2 some movie posters
+					div.work-example-open-icon.ease-out2.my-work-example8 CLICK FOR INFO
+
+			//- EXAMPLE 1
+			div.work-full-example1
+				div.work-example-toolbar
+					div.toolaber-arrowleft
+					div.toolaber-arrowright
+					input.browser-toolbar-search(value="www.url.com")
+					div.toolbar-button x
+				div.work-example-wrapper
+					div.work-example-title Menu Examples
+					div.work-example-description Just some fun examples of slide-in menus done in HTML5, CSS3 and JS. These are not original designs, I found them around the web, but the code and implementation are completely done by me.	
+					img.work-example-ico.ico1.ease-out6(alt="image", src="images/ico/jquery.png")
+					img.work-example-ico.ico2.ease-out6(alt="image", src="images/ico/sass.png")
+					img.work-example-ico.ico3.ease-out6(alt="image", src="images/ico/jade.png")
+					a(target="_blank",href="examples/menus/index.html")
+						div.work-example-button VISIT SITE
+					img.work-example-image(alt="image", src="images/headers/example1.jpg")
+
+			//- EXAMPLE 2
+			div.work-full-example2
+				div.work-example-toolbar
+					div.toolaber-arrowleft
+					div.toolaber-arrowright
+					input.browser-toolbar-search(value="www.url.com")
+					div.toolbar-button x
+				div.work-example-wrapper
+					div.work-example-title PSD Conversion
+					div.work-example-description First time converting full PSD design to code. The original design is by 
+						a.work-example-link(href="") THIS GUY
+						|. Did it as an excercise and completed the project from start to finish using JADE and SASS for the first time and I can safely say that I'm not going back to vanilla html or css :)
+					img.work-example-ico.ico1.ease-out6(alt="image", src="images/ico/jquery.png")
+					img.work-example-ico.ico2.ease-out6(alt="image", src="images/ico/sass.png")
+					img.work-example-ico.ico3.ease-out6(alt="image", src="images/ico/jade.png")
+					a(target="_blank",href="examples/psd/index.html")
+						div.work-example-button VISIT SITE
+					img.work-example-image(alt="image", src="images/headers/example2.jpg")
+
+			//- EXAMPLE 3
+			div.work-full-example3
+				div.work-example-toolbar
+					div.toolaber-arrowleft
+					div.toolaber-arrowright
+					input.browser-toolbar-search(value="www.url.com")
+					div.toolbar-button x
+				div.work-example-wrapper
+					div.work-example-title Sound Board
+					div.work-example-description 80's styled sound board. I had a lot of fun with scripting this one because of the limitations of HTML5 audio element in which, a loop is available but not very suitable for a non-stop looping of a track. Basically, you always get a small, couple of milliseconds, pause at the end of the loop which is problematic if you need to produce a certain kind of rhythm and maintain BPM of the track.
+						br
+						|My solution? Two players in an 'if' loop which load and play the first one, stops for a certain amount of time (the duration of a track), loads the source of the first to the second one and plays it. Rinse and repeat :)
+					img.work-example-ico.ico5(alt="image", src="images/ico/html5.png")
+					img.work-example-ico.ico6(alt="image", src="images/ico/css3.png")
+					img.work-example-ico.ico7(alt="image", src="images/ico/jquery.png")
+					a(target="_blank",href="examples/snd/index.html")
+						div.work-example-button VISIT SITE	
+					img.work-example-image(alt="image", src="images/headers/example3.jpg")
+
+			//- EXAMPLE 4
+			div.work-full-example4
+				div.work-example-toolbar
+					div.toolaber-arrowleft
+					div.toolaber-arrowright
+					input.browser-toolbar-search(value="www.url.com")
+					div.toolbar-button x
+				div.work-example-wrapper
+					div.work-example-title Photo Blog
+					div.work-example-description Snapshot of a work in progress. Done in standard frontend lingos (HTML5, CSS3 and jQuery). Design is, to an extent, inline with emerging trends that people ussualy love to hate BUT which provide a really slick and fluid user experience.
+					img.work-example-ico.ico5(alt="image", src="images/ico/html5.png")
+					img.work-example-ico.ico6(alt="image", src="images/ico/css3.png")
+					img.work-example-ico.ico7(alt="image", src="images/ico/jquery.png")
+					a(target="_blank",href="examples/photoblog/index.html")
+						div.work-example-button VISIT SITE	
+					img.work-example-image(alt="image", src="images/headers/example4.jpg")
+
+			//- EXAMPLE 5
+			div.work-full-example5
+				div.work-example-toolbar
+					div.toolaber-arrowleft
+					div.toolaber-arrowright
+					input.browser-toolbar-search(value="www.url.com")
+					div.toolbar-button x
+				div.work-example-wrapper
+					div.work-example-title Restaurant template
+					div.work-example-description HTML5 for structure, CSS3 for style and JS for interesting stuff. Built on top of ideas developed during talks with the client. An effort to strike a balance between "good looking", "lightweight" and "approachable" web site that is consistent and coherent and allows you to quickly get important informations on how to get food :)
+					img.work-example-ico.ico5(alt="image", src="images/ico/html5-dark.png")
+					img.work-example-ico.ico6(alt="image", src="images/ico/css3-dark.png")
+					img.work-example-ico.ico7(alt="image", src="images/ico/jquery-dark.png")
+					a(target="_blank",href="examples/barum/index.html")
+						div.work-example-button.work-example-button-dark VISIT SITE	
+					img.work-example-image(alt="image", src="images/headers/example5.jpg")
+
+			//- EXAMPLE 6
+			div.work-full-example6
+				div.work-example-toolbar
+					div.toolaber-arrowleft
+					div.toolaber-arrowright
+					input.browser-toolbar-search(value="www.url.com")
+					div.toolbar-button x
+				div.work-example-wrapper
+					div.work-example-title Local Radios
+					div.work-example-description A frontend for my collection of radio streams that get me through the day. It's simple, static and responsive. It plays the station and gets out of the way.
+					img.work-example-ico.ico5(alt="image", src="images/ico/html5.png")
+					img.work-example-ico.ico6(alt="image", src="images/ico/css3.png")
+					img.work-example-ico.ico7(alt="image", src="images/ico/jquery.png")
+					a(target="_blank",href="http://radiostranice.github.io/")
+						div.work-example-button VISIT SITE	
+					img.work-example-image(alt="image", src="images/headers/example6.jpg")
+
+			//- EXAMPLE 7
+			div.work-full-example7
+				div.work-example-toolbar
+					div.toolaber-arrowleft
+					div.toolaber-arrowright
+					input.browser-toolbar-search(value="www.url.com")
+					div.toolbar-button x
+				div.work-example-wrapper
+					div.work-example-title App Page
+					div.work-example-description Quick and snappy one-page scroller geared toward a single mobile app launch. Coupled with some nifty paralax tricks to make it more interesting.
+					img.work-example-ico.ico5(alt="image", src="images/ico/html5.png")
+					img.work-example-ico.ico6(alt="image", src="images/ico/css3.png")
+					img.work-example-ico.ico7(alt="image", src="images/ico/jquery.png")
+					a(target="_blank",href="examples/appage/index.html")
+						div.work-example-button VISIT SITE
+					img.work-example-image(alt="image", src="images/headers/example7.jpg")
+
+			//- EXAMPLE 8
+			div.work-full-example8
+				div.work-example-toolbar
+					div.toolaber-arrowleft
+					div.toolaber-arrowright
+					input.browser-toolbar-search(value="www.url.com")
+					div.toolbar-button x
+				div.work-example-wrapper
+					div.work-example-title Movie Posters
+					div.work-example-description This was just a fun little project that I did in my spare time. Just check out the site for yourself, you'll find all the CLICK FOR INFO you need to know :)
+					img.work-example-ico.ico5(alt="image", src="images/ico/html5-dark.png")
+					img.work-example-ico.ico6(alt="image", src="images/ico/css3-dark.png")
+					img.work-example-ico.ico7(alt="image", src="images/ico/jquery-dark.png")
+					a(target="_blank",href="examples/spoilers/index.html")
+						div.work-example-button.work-example-button-dark VISIT SITE
+					img.work-example-image(alt="image", src="images/headers/example8.jpg")
+
+	//- MOBILE EXAMPLES - DISPLAY:BLOCK ON -900PX
+	div.menu-wrapper.ease-out6
+		ul.menu-examples
+			li.menu-example.example-menu1.menu-example-selected 
+				span.menu-left-text Side Menus
+				img.menu-left-img(alt="image", src="images/ico/sidemenu.png")
+			li.menu-example.example-menu2 
+				span.menu-left-text PSD Conversion
+				img.menu-left-img(alt="image", src="images/ico/psd.png")
+			li.menu-example.example-menu3 
+				span.menu-left-text Sound Board
+				img.menu-left-img(alt="image", src="images/ico/soundboard.png")
+			li.menu-example.example-menu4 
+				span.menu-left-text Photo Blog
+				img.menu-left-img(alt="image", src="images/ico/photoblog.png")
+			li.menu-example.example-menu5 
+				span.menu-left-text Restaurant page
+				img.menu-left-img(alt="image", src="images/ico/restaurant.png")
+			li.menu-example.example-menu6 
+				span.menu-left-text Local Radios
+				img.menu-left-img(alt="image", src="images/ico/radio.png")
+			li.menu-example.example-menu7 
+				span.menu-left-text App Page
+				img.menu-left-img(alt="image", src="images/ico/appage.png")
+			li.menu-example.example-menu8 
+				span.menu-left-text Movie Posters
+				img.menu-left-img(alt="image", src="images/ico/posters.png")
+
+	//- BOTTOM BACK BUTTON
+	div.menu-back-wrapper.ease-out6
+		a(href="#")
+			.menu-back-button.ease-out4
+				img(alt="image", src="images/ico/arrow-up.png")
+				div
+				span GO BACK
+	a(href="#")
+		img.mywork-close-button(alt="image", src="images/ico/close.png")
+
+	//- WRAPPER FOR EXAMPLES TABLET AND MOBILE
+	div.examples-wrapper.ease-out8
+		article.example8
+			h2 Menu Examples
+			p Just some fun examples of slide-in menus done in HTML5, CSS3 and JS. These are not original designs, I found them around the web, but the code and implementation are completely done by me.
+			a(target="_blank",href="examples/menus/index.html")
+				img.ease-out6(alt="image", src="images/examples/sidemenu.jpg")
+		article.example7
+			h2 PSD Conversion
+			p First time converting full PSD design to code. The original design is by this guy. Did it as an excercise and completed the project from start to finish with JADE and SASS and I can safely say that I'm not going back to vanilla html or css :)
+			a(target="_blank",href="examples/psd/index.html")
+				img.ease-out6(alt="image", src="images/examples/psd.jpg")
+		article.example6
+			h2 Sound Board
+			p Fun, 80's styled sound board. I had a lot of fun with scripting this one because of the limitations of HTML5 audio element in which, a loop is available but not very suitable for a non-stop looping of a certain track so to produce an effect desired in a sound board. Basically, you always get a small, couple of milliseconds, pause at the end of the loop which is problematic if you need to produce a certain kind of rhythm and maintain BPM of the track.
+				br
+				|My solution? Two players in a "if else" loop which loads and plays the first one, then stops for a certain amount of time (the duration of a track), then loads the source of the first to the second one and plays it. Rinse and repeat :)
+			a(target="_blank",href="examples/snd/index.html")
+				img.ease-out6(alt="image", src="images/examples/soundboard.jpg")
+		article.example5
+			h2 Photo Blog
+			p Snapshot of a work in progress.Done in standard frontend lingos (HTML5, CSS3 and jQuery). Design is, to an extent, inline with emerging trends that people ussualy love to hate BUT which provide a really slick and fluid user experience.
+			a(target="_blank",href="examples/photoblog/index.html")
+				img.ease-out6(alt="image", src="images/examples/photoblog.jpg")
+		article.example4
+			h2 Restaurant webgpage template
+			p HTML5 for structure, CSS3 for style and JS for interesting stuff. Built on top of ideas developed during talks with the client. An effort to strike a balance between "good looking", "lightweight" and very approachable web site that is consistent and coherent and allows you to quickly get important CLICK FOR INFOrmations on how to get food :)
+			a(target="_blank",href="examples/barum/index.html")
+				img.ease-out6(alt="image", src="images/examples/restoran.jpg")
+		article.example3
+			h2 Local Radios
+			p A frontend for my collection of radio streams that get me through the day. It's simple, static and responsive. It plays the station and gets out of the way.
+			a(target="_blank",href="examples/rsradio/index.html")
+				img.ease-out6(alt="image", src="images/examples/rsradio.jpg")
+		article.example2
+			h2 App Page
+			p Quick and snappy one-page scroller geared toward a single mobile app launch. Coupled with some nifty paralax tricks to make it more interesting. Converted from 
+				a(href="http://creativecrunk.com/fion-mobile-app-landing-psd-template/") THIS 
+				|PSDdesign.
+			a(target="_blank",href="examples/appage/index.html")
+				img.ease-out6(alt="image", src="images/examples/appage.jpg")
+		article.article-last.example1
+			h2 Movie Posters
+			p This was just a fun little project that I did in my spare time. Just check out the site for yourself, you'll find all the CLICK FOR INFO you need to know :)
+			a(target="_blank",href="examples/spoilers/index.html")
+				img.ease-out6(alt="image", src="images/examples/spoilers.jpg")

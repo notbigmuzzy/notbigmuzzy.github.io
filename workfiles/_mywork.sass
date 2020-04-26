@@ -1,0 +1,810 @@
+section
+	position: absolute
+	z-index: 99	
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: #333
+	overflow: hidden
+
+.mywork-header
+	position: fixed
+	z-index: 99
+	top: -100px
+	// top: 0px 	
+	left: 50%
+	margin-left: -200px
+	height: 70px
+	width: 400px
+	background-color: transparent
+	text-align: center
+
+.mywork-header-clicked
+	top: 0px
+
+.mywork-back-button
+	display: inline-block
+	padding-left: 25px
+	padding-right: 25px
+	color: #333
+	background-color: white
+	height: 50px
+	margin-top: -5px
+	width: auto
+	font-size: 30px
+	border-bottom-left-radius: 50%
+	border-bottom-right-radius: 50%
+	box-shadow: 0px 15px 25px hsla(0, 0%, 0%, .3)
+	-moz-transition: .1s ease-out all
+	-webkit-transition: .1s ease-out all
+	-o-transition: .1s ease-out all
+	-ms-transition: .1s ease-out all
+	transition: .1s ease-out all		
+	&:hover
+		cursor: pointer
+		margin-top: 0px
+		box-shadow: 0px 5px 15px hsla(0, 0%, 0%, .2)	
+
+.mywork-back-button:hover .mywork-back-button-img
+	opacity: .7
+
+.mywork-back-button-img
+	padding-top: 10px
+	-moz-transition: .1s ease-out all
+	-webkit-transition: .1s ease-out all
+	-o-transition: .1s ease-out all
+	-ms-transition: .1s ease-out all
+	transition: .1s ease-out all	
+
+.mywork
+	position: absolute
+	top: -100%
+	left: 0
+	opacity: 0
+	// left: 0
+	width: 100%
+	height: 100%
+	background-color: #fff
+	color: #333
+	overflow: auto
+	padding-top: 70px
+
+.mywork-clicked
+	top: 0
+	opacity: 1
+
+.work-desktop-examples-wrapper
+	position: relative
+	max-width: 1500px
+	height: auto
+	margin: 0 auto
+	background-color: transparent
+
+.work-example-list
+	margin: 0 !important
+	padding: 0 !important
+	background-color: yellow
+
+.work-example-desktop
+	position: relative
+	float: left
+	width: 400px
+	height: 370px
+	overflow: hidden
+	margin: 50px
+	margin-bottom: 0px
+	&:hover
+		cursor: pointer
+
+.work-example-desktop img
+	width: 400px
+	height: auto
+	filter: gray
+	filter: grayscale(1)
+	-webkit-filter: grayscale(1)
+
+.work-example-desktop:hover img
+	// margin-top: 40px
+	filter: none
+	-webkit-filter: grayscale(0)
+
+.span-title
+	padding-left: 18px
+	font-size: 26px
+	display: inline-block
+	padding-top: 5px
+
+.span-description
+	padding-left: 20px
+	font-size: 12px
+
+.work-example-open-icon
+	display: block
+	width: 100%	
+	height: 80px
+	text-align: center
+	position: absolute
+	bottom: -80px
+	left: 0
+	line-height: 80px
+	font-size: 14px
+	font-weight: bold
+	opacity: 1
+
+.work-example-desktop:hover .work-example-open-icon
+	bottom: 0px
+
+.work-example-desktop:hover .span-title
+	opacity: 0
+
+.work-example-desktop:hover .span-description
+	opacity: 0
+
+.work-example-title
+	text-align: left
+	position: absolute
+	font-size: 5em
+	font-weight: 700
+	padding: 50px
+	opacity: 1
+	z-index: 999
+
+.work-example-description
+	text-align: left
+	position: absolute
+	font-size: 1.2em
+	font-weight: 400
+	padding: 55px
+	margin-top: 6em
+	opacity: 1
+	z-index: 999
+	width: 70%
+
+.work-example-wrapper
+	position: relative
+	text-align: center
+
+.work-example-button
+	position: absolute
+	z-index: 999
+	width: 260px
+	left: 50%
+	margin-left: -130px
+	top: 40%
+	padding: 10px
+	font-size: 3em
+	background-color: transparent
+	border: 5px solid white
+	color: white
+	opacity: 1
+	font-weight: bold
+	// border-radius: 10px
+	&:hover
+		cursor: pointer
+		background-color: white
+		color: #333
+
+.work-example-button-dark
+	border: 5px solid #333
+	color: #333
+	opacity: 1
+	font-weight: bold
+	&:hover
+		cursor: pointer
+		background-color: #333
+		color: #FFF
+
+.work-example-image
+	min-width: 100%
+	max-width: 100%
+	opacity: .15
+	
+
+.work-example-ico
+	position: absolute
+	top: 0
+	right: 0
+	width: 100px
+	opacity: 1
+	z-index: 999
+	margin: 50px
+
+.ico1
+	margin-top: 50px	
+
+.ico2
+	margin-top: 170px
+
+.ico3
+	margin-top: 270px
+
+.ico5
+	margin-top: 50px
+
+.ico6
+	margin-top: 200px
+
+.ico7
+	margin-top: 350px
+
+.work-example-link
+	background-color: transparent
+	color: white
+	font-weight: bold
+	&:hover
+		text-decoration: underline
+
+.mywork-left-button
+	position: absolute
+	top: 50%
+	left: -50px
+	z-index: 999
+	padding: 10px
+	color: #333
+	background-color: white
+	border: 3px solid #333
+	border-left: none
+	font-size: 40px
+	-moz-transition: .1s ease-out all
+	-webkit-transition: .1s ease-out all
+	-o-transition: .1s ease-out all
+	-ms-transition: .1s ease-out all
+	transition: .1s ease-out all		
+	&:hover
+		cursor: pointer
+		margin-top: 0px
+		left: 0px
+
+.mywork-left-button-active
+	left: -5px
+
+.mywork-right-button
+	position: absolute
+	top: 50%
+	right: -50px
+	z-index: 999
+	padding: 10px
+	color: #333
+	background-color: white
+	border: 3px solid #333
+	border-right: none
+	font-size: 40px
+	-moz-transition: .1s ease-out all
+	-webkit-transition: .1s ease-out all
+	-o-transition: .1s ease-out all
+	-ms-transition: .1s ease-out all
+	transition: .1s ease-out all		
+	&:hover
+		cursor: pointer
+		margin-top: 0px
+		right: 0px
+
+.mywork-right-button-active
+	right: -5px
+
+
+
+// RIGHT BUTTON
+.mywork-right-button1
+	background-color: #7CBA27*1.5
+	border: 3px solid #7CBA27/1.5
+	color: #7CBA27/1.5
+	border-right: none
+
+.mywork-right-button2
+	background-color: #E84C3D*1.5
+	border: 3px solid #E84C3D/1.5
+	color: #E84C3D/1.5
+	border-right: none
+
+.mywork-right-button3
+	background-color: #804074*1.2
+	border: 3px solid #804074/1.5
+	color: #804074/2
+	border-right: none
+
+.mywork-right-button4
+	background-color: #B2B2B2/1.1
+	border: 3px solid #B2B2B2/1.5
+	color: #B2B2B2/2
+	border-right: none
+
+.mywork-right-button5
+	background-color: #FAEAC6/1.1
+	border: 3px solid #FAEAC6/2
+	color: #FAEAC6/2
+	border-right: none
+
+.mywork-right-button6
+	background-color: #26303B*2
+	border: 3px solid #26303B/2
+	color: #26303B/2
+	border-right: none
+
+.mywork-right-button7
+	background-color: #3598DB
+	border: 3px solid #3598DB/1.5
+	color: #333
+	border-right: none
+
+.mywork-right-button1:hover, .mywork-right-button2:hover, .mywork-right-button3:hover, .mywork-right-button4:hover, .mywork-right-button5:hover, .mywork-right-button6:hover, .mywork-right-button7:hover, .mywork-right-button8:hover 
+	background-color: #FFF
+	border: 3px solid #333
+	color: #333
+	border-right: none
+
+
+// LEFT BUTTON
+.mywork-left-button1
+	background-color: #7CBA27*1.5
+	border: 3px solid #7CBA27/1.5
+	color: #7CBA27/1.5
+	border-left: none
+
+.mywork-left-button2
+	background-color: #E84C3D*1.5
+	border: 3px solid #E84C3D/1.5
+	color: #E84C3D/1.5
+	border-left: none
+
+.mywork-left-button3
+	background-color: #804074*1.2
+	border: 3px solid #804074/1.5
+	color: #804074/2
+	border-left: none
+
+.mywork-left-button4
+	background-color: #B2B2B2/1.1
+	border: 3px solid #B2B2B2/1.5
+	color: #B2B2B2/2
+	border-left: none
+
+.mywork-left-button5
+	background-color: #FAEAC6/1.1
+	border: 3px solid #FAEAC6/2
+	color: #FAEAC6/2
+	border-left: none
+
+.mywork-left-button6
+	background-color: #26303B*2
+	border: 3px solid #26303B/2
+	color: #26303B/2
+	border-left: none
+
+.mywork-left-button7
+	background-color: #3598DB
+	border: 3px solid #3598DB/1.5
+	color: #333
+	border-left: none
+
+.mywork-left-button1:hover, .mywork-left-button2:hover, .mywork-left-button3:hover, .mywork-left-button4:hover, .mywork-left-button5:hover, .mywork-left-button6:hover, .mywork-left-button7:hover, .mywork-left-button8:hover 
+	background-color: #FFF
+	border: 3px solid #333
+	color: #333
+	border-left: none
+
+
+
+
+
+
+
+
+
+
+
+
+
+// EXAMPLE 1
+.work-full-example1
+	// position: relative
+	// margin-top: 10px
+	position: fixed
+	bottom: 0
+	left: 50%
+	margin-left: -750px
+	width: 1500px
+	height: 92%
+	display: none
+	box-shadow: 0px 0px 15px hsla(0, 0%, 0%, .3)
+	border-top-right-radius: 15px
+	border-top-left-radius: 15px
+
+.my-work-example1
+	background-color: #7CBA27
+	color: #fff
+
+.mywork-left-button1
+	display: none !important
+
+// EXAMPLE 2
+.work-full-example2
+	// position: relative
+	// margin-top: 10px
+	position: fixed
+	bottom: 0
+	left: 50%
+	margin-left: -750px
+	width: 1500px
+	height: 92%
+	display: none
+	box-shadow: 0px 0px 15px hsla(0, 0%, 0%, .3)
+	border-top-right-radius: 15px
+	border-top-left-radius: 15px
+	margin-top: 10px
+
+.my-work-example2
+	background-color: #E84C3D
+	color: #fff
+
+// EXAMPLE 3
+.work-full-example3
+	// position: relative
+	// margin-top: 10px
+	position: fixed
+	bottom: 0
+	left: 50%
+	margin-left: -750px
+	width: 1500px
+	height: 92%
+	display: none
+	box-shadow: 0px 0px 15px hsla(0, 0%, 0%, .3)
+	border-top-right-radius: 15px
+	border-top-left-radius: 15px
+	margin-top: 10px
+
+.my-work-example3
+	background-color: #804074
+	color: #fff
+
+// EXAMPLE 4
+.work-full-example4
+	// position: relative
+	// margin-top: 10px
+	position: fixed
+	bottom: 0
+	left: 50%
+	margin-left: -750px
+	width: 1500px
+	height: 92%
+	display: none
+	box-shadow: 0px 0px 15px hsla(0, 0%, 0%, .3)
+	border-top-right-radius: 15px
+	border-top-left-radius: 15px
+	margin-top: 10px
+
+.my-work-example4
+	background-color: #B2B2B2
+	color: #fff
+
+// EXAMPLE 5
+.work-full-example5
+	// position: relative
+	// margin-top: 10px
+	position: fixed
+	bottom: 0
+	left: 50%
+	margin-left: -750px
+	width: 1500px
+	height: 92%
+	display: none
+	box-shadow: 0px 0px 15px hsla(0, 0%, 0%, .3)
+	border-top-right-radius: 15px
+	border-top-left-radius: 15px
+	margin-top: 10px
+
+.my-work-example5
+	background-color: #FAEAC6
+	color: #333
+
+// EXAMPLE 6
+.work-full-example6
+	// position: relative
+	// margin-top: 10px
+	position: fixed
+	bottom: 0
+	left: 50%
+	margin-left: -750px
+	width: 1500px
+	height: 92%
+	display: none
+	box-shadow: 0px 0px 15px hsla(0, 0%, 0%, .3)
+	border-top-right-radius: 15px
+	border-top-left-radius: 15px
+	margin-top: 10px
+
+.my-work-example6
+	background-color: #26303B
+	color: #fff
+
+// EXAMPLE 7
+.work-full-example7
+	// position: relative
+	// margin-top: 10px
+	position: fixed
+	bottom: 0
+	left: 50%
+	margin-left: -750px
+	width: 1500px
+	height: 92%
+	display: none
+	box-shadow: 0px 0px 15px hsla(0, 0%, 0%, .3)
+	border-top-right-radius: 15px
+	border-top-left-radius: 15px
+	margin-top: 10px
+
+.my-work-example7
+	background-color: #3598DB
+	color: #fff
+
+// EXAMPLE 8
+.work-full-example8
+	// position: relative
+	// margin-top: 10px
+	position: fixed
+	bottom: 0
+	left: 50%
+	margin-left: -750px
+	width: 1500px
+	height: 92%
+	display: none
+	box-shadow: 0px 0px 15px hsla(0, 0%, 0%, .3)
+	border-top-right-radius: 15px
+	border-top-left-radius: 15px
+	margin-top: 10px
+
+.my-work-example8
+	background-color: #F2F2F2
+	color: #333
+
+.mywork-right-button8
+	display: none
+
+#last-desktop-example
+	margin-bottom: 70px
+
+
+
+
+
+
+
+// TOOLBAR
+.work-example-toolbar
+	position: relative
+	width: 100%
+	height: 46px
+	background-color: hsla(0, 0%, 0%, .6)
+	border-top-right-radius: 15px
+	border-top-left-radius: 15px
+	text-align: center	
+	padding-left: 20px
+	padding-right: 20px	
+	font-family: sans-serif
+
+.toolaber-arrowleft
+	float: left
+	margin: 10px
+	width: 0
+	height: 0
+	border-top: 13px solid transparent
+	border-right: 20px solid white
+	border-bottom: 13px solid transparent
+
+.toolaber-arrowright
+	float: left
+	margin: 10px
+	margin-left: 0
+	width: 0
+	height: 0
+	border-top: 13px solid transparent
+	border-left: 20px solid white
+	border-bottom: 13px solid transparent
+
+.browser-toolbar-search
+	position: absolute
+	top: 8px
+	left: 10%
+	width: 80%
+	background-color: white
+	border: solid 0px transparent
+	border-radius: 15px
+	height: 30px
+	text-align: center
+	color: rgba(0,0,0,.6)
+	font-weight: 600
+
+.toolbar-button
+	width: 30px
+	height: 30px
+	float: right
+	border-radius: 50%
+	margin: 8px
+	background-color: white
+	color: #CCCCCC
+	line-height: 28px
+	font-size: 20px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// TABLET ADN MOBILE STUFF
+.menu-wrapper
+	// display: none
+	position: absolute
+	top: 0
+	left: -250px
+	width: 250px
+	height: calc(100% - 80px)
+	background-color: hsla(0, 0%, 100%, .96)
+	overflow: auto
+	box-shadow: inset -20px 0 20px -20px hsla(0, 0%, 0%, .2)
+
+.menu-wrapper-clicked
+	left: 0
+	z-index: 99	
+
+.menu-examples
+	width: 100%
+	text-align: right
+	list-style: none
+
+.menu-example
+	position: relative
+	padding: 20px
+	color: #999
+	font-size: 1.2em
+	font-weight: 300
+	height: 70px
+	&:hover
+		cursor: pointer
+		color: #ccc
+		background-color: hsla(0, 0%, 100%, .2)
+
+.menu-example-selected
+	background-color: white
+	font-weight: 400
+	color: #333
+	box-shadow: 0px 10px 10px hsla(0, 0%, 0%, .1)
+	-moz-transition: .2s ease-out all
+	-webkit-transition: .2s ease-out all
+	-o-transition: .2s ease-out all
+	-ms-transition: .2s ease-out all
+	transition: .2s ease-out all	
+	&:hover
+		cursor: default
+		color: #333
+		background-color: white
+
+.menu-left-img
+	display: block
+	position: absolute
+	top: 20px
+	left: 15px
+	height: 30px
+	opacity: .2
+
+.menu-example-selected .menu-left-img
+	opacity: 1
+
+.examples-wrapper
+	// display: none
+	position: absolute
+	top: -100%
+	// top: 0
+	right: 0%
+	width: calc(100% - 250px)
+	height: 100%
+	overflow: auto
+	background-color: white
+
+.examples-wrapper-clicked
+	top: 0
+
+article
+	text-align: center
+	width: 100%
+	padding: 0px 200px
+	border-bottom: 1px dashed hsla(0, 0%, 0%, .2)
+
+.article-last
+	border-bottom: none
+	margin-bottom: 200px
+
+article img
+	width: 80%
+	max-width: 100%
+	box-shadow: 0px 0px 20px hsla(0, 0%, 0%, .2)
+	margin-top: 10px
+	margin-bottom: 20px 
+	background-color: black
+	opacity: 1
+	&:hover
+		opacity: .5
+
+article h2
+	text-align: left
+	padding-top: 50px
+
+article h2, article p
+	text-align: left
+	padding-bottom: 20px
+
+
+.menu-back-wrapper
+	display: none
+	position: absolute
+	bottom: 0
+	left: -250px
+	// left: 0
+	width: 250px
+	height: 80px
+	background-color: hsla(0, 0%, 100%, .96)
+	overflow: auto
+	box-shadow: inset -20px 0 20px -20px hsla(0, 0%, 0%, .2)
+	text-align: center
+
+.menu-back-wrapper-clicked
+	left: 0
+
+.menu-back-button img
+	opacity: .5
+
+.menu-back-button
+	display: inline-block
+	margin-top: 20px
+	&:hover
+		cursor: pointer
+		opacity: .5
+
+.mywork-close-button
+	display: none
+	position: fixed
+	top: 10px
+	right: 30px
+	z-index: 9999
+	&:hover
+		cursor: pointer
+		opacity: .5		
+
+.mywork-close-button-clicked
+	display: block
+
+.copy-notice
+	display: none
+	position: fixed
+	bottom: 30px
+	left: 10px
+	// border-radius: 3px
+	width: 200px
+	color: #333
+	padding: 10px
+	line-height: 18px
+	text-align: left
+	color: #FFF
+	background-color: #333
+
+.copy-noticetriangle
+	position: absolute
+	bottom: -10px
+	left: 10px
+	width: 0
+	height: 0
+	border-left: 10px solid transparent
+	border-right: 10px solid transparent
+	border-top: 10px solid #333

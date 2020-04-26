@@ -1,0 +1,125 @@
+.m-image-upload-popup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -30%);
+	max-width: 400px;
+	width: 100%;
+	height: 400px;
+	background-color: $white;
+	box-shadow: 0 0 100px 0 rgba($black, 0.2);
+	padding-bottom: 90px;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s 0.5s, opacity 0.5s, transform 0.5s;
+
+	@include sc-breakpoint(425) {
+		max-width: 90%;
+	}
+
+	.show-image-upload & {
+		visibility: visible;
+		opacity: 1;
+		transform: translate(-50%, -50%);
+		transition: visibility 0s, opacity 0.5s, transform 0.5s;
+	}
+
+	.a-button {
+		display: block;
+		position: absolute;
+		bottom: 40px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.m-image-upload-popup-input {
+		display: none;
+	}
+
+	.dz-upload {
+		display: block;
+		background-image: linear-gradient(to right, $g-green);
+		height: 10px;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.dz-preview,
+	.dz-image,
+	.dz-image-preview {
+		height: 100%;
+	}
+
+	.dz-image {
+		position: relative;
+
+		img {
+			@include center;
+		}
+	}
+
+	.dropzone-preview-template {
+
+		.dz-error-message {
+			position: absolute;
+			width: 100%;
+			background-color: $c-red;
+			color: $white;
+			font-size: 10px;
+			text-align: center;
+			bottom: 0;
+			left: 0;
+		}
+	}
+}
+
+.m-image-upload-popup-content {
+	padding: 40px 80px;
+	height: calc(100% - 90px);
+
+	@include sc-breakpoint(480) {
+		padding: 40px;
+	}
+
+	& > p {
+		text-align: center;
+		margin-top: 5px;
+		margin-bottom: 0;
+		color: $gs-3;
+	}
+
+	form {
+		border: 2px dashed $gs-2;
+		height: 100%;
+		text-align: center;
+		background-image: url(../images/ico-upload.svg);
+		background-size: 40px;
+		background-repeat: no-repeat;
+		background-position: center;
+		transition: border 0.3s;
+
+		&:hover {
+			cursor: pointer;
+			border: 2px dashed $gs-3;
+		}
+	}
+}
+
+.m-image-upload-popup-header {
+	padding: 1em;
+	border-bottom: 1px solid $gs-2;
+	position: relative;
+
+	.a-ico-close {
+		@include hide-text;
+		display: block;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+
+	h3 {
+		text-align: center;
+	}
+}

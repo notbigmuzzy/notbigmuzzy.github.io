@@ -1,0 +1,49 @@
+.a-more-options {
+	cursor: pointer;
+	width: 22px;
+	height: 16px;
+	transition: all .3s ease-in-out;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 40px;
+
+	.b-show-menu & {
+		height: 22px;
+	}
+
+	span {
+		display: block;
+		height: 3px;
+		width: 3px;
+		border-radius: 50%;
+		background-color: $gs-4;
+		position: absolute;
+		left: 0;
+		overflow: hidden;
+		transition: all .3s ease-in-out;
+
+		.a-dashboard-box-colored & {
+			background-color: $white;
+		}
+
+		&:nth-child(1) {
+			top: 0px;
+			transform: rotate(0deg);
+		}
+
+		&:nth-child(2) {
+			top: 5px;
+			left: 0;
+		}
+
+		&:nth-child(3) {
+		  top: 10px;
+		  transform: rotate(0deg);
+		}
+	}
+
+	&:hover {
+		opacity: 0.5;
+	}
+}

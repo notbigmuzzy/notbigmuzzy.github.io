@@ -1,0 +1,75 @@
+.o-nav-sidebar-wrapper {
+	background-color: $gs-8;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 270px;
+	height: 100vh;
+	z-index: 30;
+	overflow: hidden;
+	transition: all 0.3s ease-in-out;
+
+	.b-show-menu & {
+		height: 100vh;
+
+		&.b-sidebar-shrink {
+			height: 100vh;
+		}
+	}
+
+	.b-sidebar-shrink & {
+		z-index: 30;
+		width: 70px;
+
+		@include sc-breakpoint(640) {
+			width: 100%;
+			z-index: 10;
+		}
+
+		.b-show-menu & {
+			height: 100vh;
+
+			@include sc-breakpoint(640) {
+				height: 100vh;
+			}
+		}
+	}
+
+	.b-sidebar-expand  & {
+		width: 270px;
+
+		@include sc-breakpoint(640) {
+			width: 100%;
+		}
+	}
+
+	.o-nav-sidebar {
+		width: 270px;
+
+		.b-sidebar-shrink & {
+
+			@include sc-breakpoint(640) {
+				width: 100%;
+			}
+		}
+
+		@include sc-breakpoint(640) {
+			height: 80px;
+			width: 100%;
+		}
+	}
+	
+
+	@include sc-breakpoint(1190) {
+		z-index: 30;
+		width: 70px;
+	}
+
+	@include sc-breakpoint(640) {
+		width: 100%;
+		height: 80px;
+		background-color: transparent;
+		z-index: 10;
+	}
+
+}

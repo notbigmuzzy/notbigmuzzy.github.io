@@ -1,0 +1,265 @@
+header
+	position: absolute
+	z-index: 999
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: white
+	text-align: center
+	overflow: hidden
+
+.header-contact-clicked
+	transform: scale(.9)
+	-moz-transition: .4s ease-out all
+	-webkit-transition: .4s ease-out all
+	-o-transition: .4s ease-out all
+	-ms-transition: .4s ease-out all
+	transition: .4s ease-out all	
+
+.header-mywork-clicked
+	top: -100%
+	-moz-transition: .4s ease-out all
+	-webkit-transition: .4s ease-out all
+	-o-transition: .4s ease-out all
+	-ms-transition: .4s ease-out all
+	transition: .4s ease-out all
+
+.vert-center
+	position: relative
+	top: 50%
+	margin-top: -270px
+
+.header-img
+	width: 300px
+	height: 300px
+	margin: 20px
+	border-radius: 50%
+	max-width: 100%
+	-moz-transition: .4s ease-out all
+	-webkit-transition: .4s ease-out all
+	-o-transition: .4s ease-out all
+	-ms-transition: .4s ease-out all
+	transition: .4s ease-out all
+
+.text-center
+	display: block
+	font-weight: 300
+	text-align: center
+
+header h1
+	font-size: 42px
+	line-height: 40px
+	font-weight: 300
+
+header h2
+	font-size: 34.8px
+	line-height: 40px
+	font-weight: 300
+	padding-top: 4px
+
+header p
+	padding-top: 5px
+	font-size: 13.2px
+
+header h1 span
+	font-weight: 400
+
+header h2 span
+	font-weight: 400
+
+header p span
+	font-weight: 400
+
+header button
+	background-color: white
+	color: #333
+	border: none
+	padding: 10px 20px
+	font-weight: bold
+	&:hover
+		cursor: pointer
+		color: #333
+
+.header-button-link-wrapper
+	margin: 40px
+	margin-top: 20px
+	padding: 10px
+	display: inline-block
+	font-weight: bold
+	font-size: .9em
+
+.header-button-link-wrapper-mobile, .header-button-link-wrapper-tablet
+	display: none !important
+	padding: 10px
+	margin: 40px
+	margin-top: 20px
+	font-weight: bold
+	font-size: .9em
+
+.header-button-mywork
+	cursor: pointer
+	display: none
+	background-color: white
+	border-top: solid 0px transparent
+	border-bottom: solid 2px #333
+	border-left: solid 2px #333
+	border-right: solid 0px transparent
+
+.header-button-mywork-tablet
+	cursor: pointer
+	background-color: white
+	border-top: solid 0px transparent
+	border-bottom: solid 2px #333
+	border-left: solid 2px #333
+	border-right: solid 0px transparent
+
+.header-button-contact
+	cursor: pointer
+	border-top: solid 2px #333
+	border-bottom: solid 2px #333
+	border-left: solid 0px transparent
+	border-right: solid 0px transparent
+
+.header-button-contact-mobile
+	cursor: pointer
+	border-top: solid 2px #333
+	border-bottom: solid 2px #333
+	border-left: solid 0px transparent
+	border-right: solid 0px transparent
+	display: none
+
+.header-button-blog
+	cursor: pointer
+	border-top: solid 0px transparent
+	border-bottom: solid 0px transparent
+	border-left: solid 0px transparent
+	border-right: solid 2px #333
+
+.header-cover
+	display: none
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 99999
+	background-color: hsla(0, 0%, 0%, .8)
+
+.header-cover-clicked
+	display: block
+
+.header-cover-close
+	position: absolute
+	top: 0
+	right: 0
+	font-size: 30px
+	color: hsla(0, 0%, 100%, .5)
+	border: 2px solid hsla(0, 0%, 100%, .5)
+	text-align: center
+	margin: 20px
+	border-radius: 50%
+	height: 80px
+	width: 80px
+	line-height: 70px
+	&:hover
+		color: hsla(0, 0%, 100%, 1)
+		border: 2px solid hsla(0, 0%, 100%, 1)
+		cursor: pointer
+
+
+.footer
+	position: absolute
+	bottom: 0
+	width: 100%
+	height: 25px
+	font-size: .8em
+	font-weight: bold
+	opacity: .8
+	line-height: 25px
+	z-index: 999999
+
+.footer-left
+	float: left
+	padding-left: 10px
+	&:hover
+		cursor: pointer
+		opacity: .8
+
+.footer-right
+	float: right
+	padding-right: 10px
+	height: 20px
+	&:hover
+		opacity: .8
+
+.aboutme-wrapper
+	position: absolute
+	display: none
+	opacity: 0
+	z-index: 999999
+	top: calc(10% - 50px)
+	height: 45%
+	margin-left: 0
+	right: 20%
+	width: 60%
+	border-radius: 0
+	overflow: auto
+	font-family: 'Open Sans', sans-serif
+	background-color: white
+	font-weight: 300
+
+.aboutme-top-innerwrap
+	position: absolute
+	bottom: 0
+	left: 5%
+	width: 90%
+
+.aboutme-wrapper2
+	position: absolute
+	display: none
+	opacity: 0
+	z-index: 999999
+	bottom: calc(10% - 50px)
+	height: 35%
+	margin-left: 0
+	right: 20%
+	width: 60%
+	border-radius: 0
+	overflow: auto
+	font-family: 'Open Sans', sans-serif
+	background-color: white
+	// padding: 50px
+	// padding-top: 0px
+	font-weight: 300
+
+.aboutme-top-innerwrap2
+	position: absolute
+	top: 0
+	left: 5%
+	width: 90%
+
+.aboutme-wrapper h2
+	padding-bottom: 0px
+	font-weight: 400
+
+// .aboutme-wrapper h2 span
+// 	background: #333
+// 	color: white
+
+.aboutme-wrapper p
+	padding-top: 10px
+	padding-bottom: 40px
+
+.aboutme-wrapper2 a
+	color: #CF1017
+	font-weight: bolder
+	&:hover
+		text-decoration: underline
+
+#news
+	padding-top: 10px
+	padding-bottom: 0px
+
+.aboutme-wrapper #news-last
+	padding-bottom: 30px

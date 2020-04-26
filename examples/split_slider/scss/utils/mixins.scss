@@ -1,0 +1,102 @@
+@mixin respond-to($query) {
+
+	@media #{$query} {
+		@content;
+	}
+}
+
+// Media queries mixin
+$media-queries: (
+	320: 320px,
+	350: 350px,
+	375: 375px,
+	425: 425px,
+	480: 480px,
+	540: 540px,
+	640: 640px,
+	700: 700px,
+	740: 740px,
+	768: 768px,
+	782: 782px,
+	800: 800px,
+	850: 850px,
+	900: 900px,
+	950: 950px,
+	980: 980px,
+	1024: 1024px,
+	1080: 1080px,
+	1100: 1100px,
+	1120: 1120px,
+	1180: 1180px,
+	1200: 1200px,
+	1240: 1240px,
+	1280: 1280px,
+	1300: 1300px,
+	1320: 1320px,
+	1400: 1400px
+);
+
+@mixin breakpoint($point, $orientation: width, $type: max) {
+
+	@if map-has-key($media-queries, $point) {
+
+    	@media (#{$type}-#{$orientation}: #{map-get($media-queries, $point)}) {
+      		@content;
+    	}
+	} @else {
+		@error 'There is not value that could be retrieved from "#{$point}". '
+        	+ 'Please make sure that "#{$point}" is defined in $media-queries map.';
+	}
+}
+
+// Hide text mixin
+@mixin hide-text {
+	text-indent: 1000%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+// Clear-fix mixin
+@mixin cf {
+
+	&::before,
+	&::after {
+		content: '';
+		display: table;
+	}
+
+	&::after {
+		clear: both;
+	}
+}
+
+@mixin placeholder {
+
+    &::-webkit-input-placeholder {
+        @content;
+	}
+
+	&:-moz-placeholder {
+	    @content;
+	}
+
+	&::-moz-placeholder {
+	    @content;
+	}
+
+	&:-ms-input-placeholder {
+	    @content;
+	}
+}
+
+@mixin no-list() {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+@mixin background($url) {
+    background: url($url);
+    background-size: cover;
+    background-position: center;
+}

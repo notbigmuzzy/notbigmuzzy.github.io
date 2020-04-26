@@ -1,0 +1,41 @@
+input[type='checkbox'] {
+	display: none;
+
+	+ label {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 20px;
+		font-size: 12px;
+		cursor: pointer;
+
+		&::before {
+			content: '';
+			display: inline-block;
+			height: 20px;
+			width: 20px;
+			margin-right: 10px;
+			cursor: pointer;
+			vertical-align: top;
+		}
+	}
+}
+
+input[type='checkbox'] {
+
+	+ label {
+
+		&::before {
+			background: url(../images/checkbox-checked.svg) center / contain no-repeat;
+		}
+	}
+
+	&:checked {
+
+		+ label {
+
+			&::before {
+				background: url(../images/checkbox-unchecked.svg) center / contain no-repeat;
+			}
+		}
+	}
+}

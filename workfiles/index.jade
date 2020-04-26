@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+	head
+		title NBM | Playground
+		meta(charset='utf-8')
+		meta(name="description" content="")
+		meta(name="author" content="Not Big Muzzy")
+		meta(name="copyright" content="Not Big Muzzy 2015")
+		meta(name="description" content="Personal portfolio site and blog for Not Big Muzzy aka NBM, frontend and javascript developer based in Belgrade, Serbia.")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		link(type="text/css", rel="stylesheet", href="index.css")
+		link(rel="shortcut icon" href="images/ico/icon.png")
+		link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css')
+	body
+
+		//- MY WORK PAGE
+		include _blog.jade
+
+		//- MY WORK PAGE
+		include _mywork.jade
+
+		//- LANDING PAGE
+		include _header.jade
+		
+
+	//- SKRIPTORIJUM
+	script(type='text/javascript', src='http://code.jquery.com/jquery-2.1.4.min.js')
+	script(type='text/javascript', src='index.js')

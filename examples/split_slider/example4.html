@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Example 4</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+		<script src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/split.js"></script>
+	</head>
+	<body class="example4-body">
+		<section>
+			<div class="split example4">
+				<div class="inner-wrapper">
+					<div class="slides-wrapper">
+						<div class="slides top left">
+							<div class="slide first text">
+								<div class="bodytext">
+									<h2>MENU</h2>
+									<div class="subheading">
+										<p class="date">SEPTEMBAR 9</p>
+										<hr>
+										<p class="desc">Today, our chef will take you on a travel around the world, with an entry from Europe, our best American meat and an authentic dessert from Asia.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="slide second text">
+								<div class="bodytext">
+									<div class="content">
+										<hr>
+										<span>APPETIZERS</span>
+										<hr class="short">
+										<hr>
+										<h2>WINE & BRIE</h2>
+										<hr>
+										<hr class="short">
+										<p>Do nulla duis quis commodo ex ut sit ad in elit ex amet duis duis eiusmod sed.</p>
+										<hr>
+									</div>
+									<div class="decoration"></div>
+								</div>
+							</div>
+
+							<div class="slide third decoration">
+								<div class="back"></div>
+							</div>
+						</div>
+
+						<div class="slides bottom right">
+							<div class="slide first image">
+								<div class="bodytext">
+									<img src="images/example4/plate1.png">
+								</div>
+							</div>
+
+							<div class="slide second image">
+								<div class="bodytext">
+									<div class="img-wrapper">
+										<div class="content">
+											<div class="img" style="background-image: url(images/example4/page2.jpg);"></div>
+										</div>
+										<div class="decoration"></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="slide third content">
+								<div class="bodytext">
+									<div class="text">
+										<hr>
+										<span>FROM THE GRILL</span>
+										<hr class="short">
+										<hr>
+										<h2>BEEF STEAK</h2>
+										<hr>
+										<hr class="short">
+										<p>Incididunt deserunt ut anim cillum labore nulla sint mollit eu occaecat dolor.</p>
+										<hr>
+									</div>
+									<div class="image">
+										<div class="img-wrapper">
+											<div class="img" style="background-image: url(images/example4/page3.jpg);"></div>
+										</div>
+									</div>
+								</div>
+							</div>						
+						</div>
+					</div>
+
+					<div id="arrows" class="navigation-wrapper">
+						<div class="title"><span>EXAMPLE 4</span></div>
+						<a href="#" class="navigation-arrow prev">previous</a>
+						<span>.</span>
+						<a href="#" class="navigation-arrow next">next</a>
+					</div>
+				</div>
+			</div> 
+		</section>
+		<script type="text/javascript">
+			$('.example4').split({
+				theme: 'fly-in-top,fly-in-bottom',
+				delay: '150',
+				height: 'full',
+				infinite: 'false'
+			});
+		</script>
+	</body>
+</html>

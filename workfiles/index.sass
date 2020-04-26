@@ -1,0 +1,725 @@
+// IMPORTS
+@import "header"
+@import "mywork"
+@import "blog"
+
+
+// GENERAL
+*
+	padding: 0
+	margin: 0
+	box-sizing: border-box
+	-webkit-margin-before: 0
+	-webkit-margin-after: 0
+	-webkit-margin-start: 0
+	-webkit-margin-end: 0
+	-webkit-padding-start: 0
+
+body, html
+	width: 100%
+	height: 100%
+	background-color: #333
+	color: #333
+	font-family: 'Open Sans', sans-serif
+	overflow: hidden
+	cursor: default	
+
+button
+	font-family: 'Open Sans', sans-serif
+	outline: none
+	&:active
+		outline: none
+	&:focus
+		outline: none
+
+button::-moz-focus-inner
+	border: 0
+
+a
+	color: #333
+	background-color: transparent
+	text-decoration: none
+
+.growlContainer
+	display: none !important
+
+.mCSB_inside > .mCSB_container
+	margin-right: 0 !important
+
+// .youfoundbug
+// 	position: fixed
+// 	top: 0
+// 	left: 0
+// 	color: white
+// 	z-index: 99
+// 	width: 100%
+// 	text-align: center
+// 	margin-top: 300px	
+// 	opacity: 1
+
+
+
+
+// ANIMATIONS
+.ease-out1
+	-moz-transition: .1s ease-out all
+	-webkit-transition: .1s ease-out all
+	-o-transition: .1s ease-out all
+	-ms-transition: .1s ease-out all
+	transition: .1s ease-out all
+
+.ease-out2
+	-moz-transition: .2s ease-out all
+	-webkit-transition: .2s ease-out all
+	-o-transition: .2s ease-out all
+	-ms-transition: .2s ease-out all
+	transition: .2s ease-out all
+
+.ease-out4
+	-moz-transition: .4s ease-out all
+	-webkit-transition: .4s ease-out all
+	-o-transition: .4s ease-out all
+	-ms-transition: .4s ease-out all
+	transition: .4s ease-out all
+
+.ease-out6
+	-moz-transition: .6s ease-out all
+	-webkit-transition: .6s ease-out all
+	-o-transition: .6s ease-out all
+	-ms-transition: .6s ease-out all
+	transition: .6s ease-out all
+
+.ease-out8
+	-moz-transition: .8s ease-out all
+	-webkit-transition: .8s ease-out all
+	-o-transition: .8s ease-out all
+	-ms-transition: .8s ease-out all
+	transition: .8s ease-out all
+
+.ease-out10
+	-moz-transition: 1s ease-out all
+	-webkit-transition: 1s ease-out all
+	-o-transition: 1s ease-out all
+	-ms-transition: 1s ease-out all
+	transition: 1s ease-out all
+
+
+
+
+
+
+
+// BUTTON ANIMATIONS
+// WORK BUTTON
+.hvr-rectangle-in 
+	display: inline-block
+	vertical-align: middle
+	-webkit-transform: translateZ(0)
+	transform: translateZ(0)
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+	-webkit-backface-visibility: hidden
+	backface-visibility: hidden
+	-moz-osx-font-smoothing: grayscale
+	position: relative
+	-webkit-transition-property: color
+	transition-property: color
+	-webkit-transition-duration: .2s
+	transition-duration: .2s
+
+.hvr-rectangle-in:before 
+	content: ""
+	position: absolute
+	z-index: -1
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: #333
+	-webkit-transform: scaleY(0)
+	transform: scaleY(0)
+	-webkit-transform-origin: 50% 100%
+	transform-origin: 50% 100%
+	-webkit-transition-property: transform
+	transition-property: transform
+	-webkit-transition-duration: .2s
+	transition-duration: .2s
+	-webkit-transition-timing-function: ease-out
+	transition-timing-function: ease-out
+
+.hvr-rectangle-in:hover, .hvr-rectangle-in:focus, .hvr-rectangle-in:active
+	color: white
+
+.hvr-rectangle-in:hover:before, .hvr-rectangle-in:focus:before, .hvr-rectangle-in:active:before 
+	-webkit-transform: scaleY(1)
+	transform: scaleY(1)
+
+// CONTACT
+.hvr-shutter-in-vertical 
+	display: inline-block
+	vertical-align: middle
+	-webkit-transform: translateZ(0)
+	transform: translateZ(0)
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+	-webkit-backface-visibility: hidden
+	backface-visibility: hidden
+	-moz-osx-font-smoothing: grayscale
+	position: relative
+	background: #333
+	-webkit-transition-property: color
+	transition-property: color
+	-webkit-transition-duration: .2s
+	transition-duration: .2s
+
+.hvr-shutter-in-vertical:before 
+	content: ""
+	position: absolute
+	z-index: -1
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	background: #fff
+	-webkit-transform: scaleY(1)
+	transform: scaleY(1)
+	-webkit-transform-origin: 50%
+	transform-origin: 50%
+	-webkit-transition-property: transform
+	transition-property: transform
+	-webkit-transition-duration: .2s
+	transition-duration: .2s
+	-webkit-transition-timing-function: ease-out
+	transition-timing-function: ease-out
+
+.hvr-shutter-in-vertical:hover, .hvr-shutter-in-vertical:focus, .hvr-shutter-in-vertical:active 
+	color: white
+
+.hvr-shutter-in-vertical:hover:before, .hvr-shutter-in-vertical:focus:before, .hvr-shutter-in-vertical:active:before 
+	-webkit-transform: scaleY(0)
+	transform: scaleY(0)
+
+// BLOG
+.hvr-sweep-to-left 
+	display: inline-block
+	vertical-align: middle
+	-webkit-transform: translateZ(0)
+	transform: translateZ(0)
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+	-webkit-backface-visibility: hidden
+	backface-visibility: hidden
+	-moz-osx-font-smoothing: grayscale
+	position: relative
+	-webkit-transition-property: color
+	transition-property: color
+	-webkit-transition-duration: .2s
+	transition-duration: .2s
+
+.hvr-sweep-to-left:before 
+	content: ""
+	position: absolute
+	z-index: -1
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: #333
+	-webkit-transform: scaleX(0)
+	transform: scaleX(0)
+	-webkit-transform-origin: 100% 50%
+	transform-origin: 100% 50%
+	-webkit-transition-property: transform
+	transition-property: transform
+	-webkit-transition-duration: .2s
+	transition-duration: .2s
+	-webkit-transition-timing-function: ease-out
+	transition-timing-function: ease-out
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active 
+	color: white
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before 
+	-webkit-transform: scaleX(1)
+	transform: scaleX(1)
+
+
+
+
+
+
+
+
+
+
+
+// MEDIA QUERIS
+// NETBOOK SHIT
+@media all and (max-height: 900px)
+	.aboutme-wrapper
+		height: 50%
+
+	.aboutme-wrapper2
+		height: 30%
+
+@media all and (max-height: 700px)
+	.work-example-button
+		top: 40% !important
+
+
+@media all and (max-height: 620px)
+	.menu-example
+		padding: 15px 20px
+
+@media all and (max-height: 450px)
+	.header-img
+		display: none
+
+	.vert-center
+		margin-top: -100px !important
+
+
+// SMALL DESKTOPS
+@media all and (max-width: 1520px)
+	.work-desktop-examples-wrapper
+		max-width: 1200px
+
+	.work-example-desktop
+		width: 300px
+		height: 290px
+
+	.work-example-desktop img
+		width: 300px
+
+	.work-example-button
+		top: 50%
+
+	.work-full-example1, .work-full-example2, .work-full-example3, .work-full-example4, .work-full-example5, .work-full-example6, .work-full-example7, .work-full-example8
+		width: 1200px
+		margin-left: -600px
+		height: 90%
+
+@media all and (max-width: 1450px)
+	.aboutme-wrapper
+		height: 55%
+
+	.aboutme-wrapper2
+		height: 25%
+
+@media all and (max-width: 1360px)
+	article
+		padding: 0px 100px
+
+@media all and (max-width: 1030px)
+	article
+		padding: 0px 50px
+
+	.menu-wrapper
+		width: 200px
+
+	.examples-wrapper
+		width: calc(100% - 200px)
+
+	.menu-back-wrapper
+		width: 200px
+
+	.override.se-modal
+		width: 40%
+		left: 50%
+
+	.aboutme-wrapper, .aboutme-wrapper2
+		left: 10%
+		width: 80%
+
+	.menu-left-img
+		left: 10px
+
+	.mywork-close-button
+		right: 20px
+
+// TABLET
+@media all and (max-width: 900px)
+	.menu-back-wrapper, .examples-wrapper, .menu-wrapper, .menu-back-wrapper
+		display: block
+
+	#hide-this-in-tablet
+		display: none
+
+	.header-button-link-wrapper-tablet
+		display: inline-block !important
+
+	.menu-wrapper
+		width: 100px
+
+	.examples-wrapper
+		width: calc(100% - 100px)
+
+	.menu-back-wrapper
+		width: 100px
+
+	.menu-left-text
+		display: none
+
+	.menu-examples
+		text-align: center
+
+	.menu-example
+		height: 65px
+
+	.menu-left-img
+		top: 10px
+		left: 50%
+		transform: translateX(-50%)
+		height: 35px
+		width: auto
+		height: auto
+		opacity: .5
+		&:hover
+			opacity: .2
+
+	.menu-example-selected	.menu-left-img
+		opacity: 1
+
+// PHONE STUFF
+@media all and (max-width: 620px)
+	header
+		z-index: 9999
+
+	article img
+		width: 100%
+
+	.vert-center
+		margin-top: -275px
+
+	#hide-this-in-mobile
+		display: none
+
+	.header-button-link-wrapper-mobile, .header-button-contact-mobile
+		display: inline-block !important
+
+	.header-button-contact-mobile:hover
+		background-color: #333
+		color: #fff
+
+	.mywork-close-button-clicked
+		display: none
+
+	.menu-wrapper
+		display: none
+		z-index: 99999
+
+	.examples-wrapper
+		width: 100%	
+		z-index: 99
+
+	.aboutme-wrapper, .aboutme-wrapper2
+		display: none
+
+	.header-button-link-wrapper, .header-button-link-wrapper-mobile, .header-button-link-wrapper-tablet
+		margin: 20px
+		margin-top: 20px
+		display: inline-block
+
+	header button
+		padding: 20px 20px
+		&:hover
+			cursor: auto
+			background-color: white
+			color: #333
+		&:focus
+			cursor: default
+			background-color: #333
+			color: #fff		
+
+	.header-contact-clicked
+		transform: scale(1)
+		opacity: 1
+
+	.aboutme-wrapper
+		position: absolute
+		top: 0 !important
+		left: 0
+		height: 60%
+		width: 100%
+		box-shadow: none
+		overflow: auto
+
+	.aboutme-wrapper2
+		position: absolute
+		bottom: 0 !important
+		left: 0
+		height: 40%
+		width: 100%
+		box-shadow: none
+		overflow: auto
+
+	#cancel
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		color: darkred
+		float: left
+
+	.header-cover-clicked
+		display: none
+
+	.override.se-modal
+		max-height: none
+
+	.ease-out4
+		-moz-transition: 0s ease-out all
+		-webkit-transition: 0s ease-out all
+		-o-transition: 0s ease-out all
+		-ms-transition: 0s ease-out all
+		transition: 0s ease-out all
+
+	.hvr-rectangle-in, .hvr-shutter-in-vertical, .hvr-sweep-to-left 
+		transform: none
+		transition: none
+		background-color: white
+		color: #333
+		&:hover
+			background: #333 !important
+			color: #fff	!important
+
+	.menu-back-wrapper
+		display: none
+
+	.menu-back-wrapper-clicked
+		display: block
+		width: 100%
+		z-index: 99999
+		box-shadow: none
+
+	.mailto.ninja
+		padding-right: 0px !important
+
+@media all and (max-width: 440px)
+	.footer
+		display: none
+
+	.vert-center
+		margin-top: -230px
+
+	.header-img
+		margin: 0
+
+	.header-button-link-wrapper, .header-button-link-wrapper-mobile, .header-button-link-wrapper-tablet
+		margin: 10px
+
+	header h1
+		font-size: 1.8em
+		line-height: 30px
+
+	header h2
+		font-size: 1.5em
+		line-height: 30px
+
+	header p
+		padding-top: 5px
+		font-size: 9px
+
+	article
+		padding: 10px 20px
+
+
+	.article-last
+		margin-bottom: 100px
+
+	article img
+		width: 100%
+		max-width: 100%
+		box-shadow: 0px 0px 20px hsla(0, 0%, 0%, .2)
+		margin-bottom: 20px 
+
+	article h2
+		padding-top: 10px
+
+	article h2, article p
+		padding-bottom: 20px
+
+		
+
+
+// MYWORK SPECIFIC STUFF
+@media all and (max-width: 1230px)
+	.work-example-close-wrapper
+		width: 900px
+
+	.work-desktop-examples-wrapper
+		max-width: 900px
+
+	.work-example-desktop
+		width: 350px
+		height: 330px
+
+	.work-example-desktop img
+		width: 350px
+
+	.work-example-button
+		width: 160px
+		// height: 80px
+		font-size: 1.5em
+		margin-left: -90px
+
+	.work-example-title
+		font-size: 3em
+		font-weight: 700
+		padding: 50px
+
+	.work-example-description
+		font-size: 1em
+		font-weight: 400
+		padding: 55px
+		margin-top: 4em
+		width: 80%
+
+	.work-example-ico
+		position: absolute
+		top: 0
+		right: 0
+		width: 80px
+		opacity: 1
+		z-index: 999
+		margin: 50px
+
+	.ico1
+		margin-top: 50px	
+
+	.ico2
+		margin-top: 170px
+
+	.ico3
+		margin-top: 270px
+
+	.ico5
+		margin-top: 50px
+
+	.ico6
+		margin-top: 200px
+
+	.ico7
+		margin-top: 350px
+
+	.work-full-example1, .work-full-example2, .work-full-example3, .work-full-example4, .work-full-example5, .work-full-example6, .work-full-example7, .work-full-example8
+		width: 900px
+		margin-left: -450px
+		height: 90%
+
+
+@media all and (max-width: 940px)
+	.work-example-close-wrapper
+		width: 580px
+
+	.work-desktop-examples-wrapper
+		max-width: 580px	
+
+	.work-example-desktop img
+		width: 250px
+
+	.work-example-desktop
+		width: 250px
+		height: 270px
+		margin: 20px
+		margin-bottom: 0
+
+	.work-example-button
+		width: 120px
+		font-size: 1em
+		margin-left: -60px
+		border: 2px solid white
+		top: 45%
+
+	.work-example-title
+		font-size: 3em
+		font-weight: 700
+		padding: 50px
+
+	.work-example-description
+		display: none
+
+	.work-example-ico
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 60px
+		margin: 50px
+
+	.ico1
+		margin-top: 50px	
+
+	.ico2
+		margin-top: 170px
+
+	.ico3
+		margin-top: 270px
+
+	.ico5
+		margin-top: 50px
+
+	.ico6
+		margin-top: 200px
+
+	.ico7
+		margin-top: 350px
+
+	.browser-toolbar-search
+		display: none
+
+	.work-full-example1, .work-full-example2, .work-full-example3, .work-full-example4, .work-full-example5, .work-full-example6, .work-full-example7, .work-full-example8
+		width: 580px
+		margin-left: -290px
+		height: 90%
+
+@media all and (max-width: 630px)
+	.work-example-close-wrapper
+		width: 500px
+
+	.work-desktop-examples-wrapper
+		max-width: 500px	
+
+	.work-example-desktop img
+		width: 400px
+
+	.work-example-desktop
+		width: 400px
+		height: 400px
+		margin: 50px
+		margin-bottom: 0
+
+	.work-full-example1, .work-full-example2, .work-full-example3, .work-full-example4, .work-full-example5, .work-full-example6, .work-full-example7, .work-full-example8
+		width: 500px
+		margin-left: -250px
+		height: 90%
+
+@media all and (max-width: 500px)
+	.work-example-close-wrapper
+		width: 300px
+
+	.work-desktop-examples-wrapper
+		max-width: 350px	
+
+	.work-example-desktop img
+		width: 280px
+
+	.work-example-desktop
+		width: 280px
+		height: 300px
+		margin: 20px
+		margin-bottom: 0
+
+	.work-example-title
+		display: none
+		
+	.work-example-ico
+		display: none
+
+	.browser-toolbar-newtab
+		display: none
+
+	.work-full-example1, .work-full-example2, .work-full-example3, .work-full-example4, .work-full-example5, .work-full-example6, .work-full-example7, .work-full-example8
+		width: 300px
+		margin-left: -150px
+		height: 90%
+
+// @media all and (min-width: 901px)
+// 	.mywork-close-button-clicked, .menu-back-wrapper
+// 		display: none !important
