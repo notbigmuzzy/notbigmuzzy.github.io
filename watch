@@ -1,0 +1,5 @@
+//WATCH PUG (HTML)
+pug -w  assets/templates/index.pug -o ../portfolio/
+
+//WATCH SASS (CSS)
+sass --watch assets/styles/index.scss index.css
