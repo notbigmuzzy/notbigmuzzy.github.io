@@ -10,10 +10,6 @@
     pointer-events: none;
     transition: opacity 0.25s;
 
-    & > * {
-        font-family: monospace;
-    }
-
     .switcher {
         position: relative;
         z-index: 1;
@@ -35,57 +31,92 @@
         left: 0;
         width: 100%;
         height: 100%;
-        opacity: 0.5;
-    }
-
-    .show-shell & {
-        opacity: 1;
-        visibility: visible;
-        z-index: 100;
-        pointer-events: initial;
+        opacity: 0.9;
+        background-color: #333;
     }
 
     .switcher {
+        height: 100%;
+
          .card-wrapper {
              display: flex;
              flex-direction: row;
-             justify-content: center;
-             height: 0;
-             margin-top: 30px;
+             justify-content: start;
+             align-items: center;
+             height: 100%;
+             padding: 20px;
+             overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+
+            &:after {
+                content: '.';
+                opacity: 0;
+                width: 0;
+                height: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
 
              .card {
                 position: relative;
                 position: relative;
-                height: 150px;
-                width: 150px;
-                margin: 0 20px;
+                height: 100%;
+                min-width: 320px;
+                max-height: 640px;
+                margin-right: 20px;
+                transform: translateX(50px);
+                opacity: 0;
+                transition: opacity 0.25s, transform 0.25s;
+                transition-delay: 0.6s;
+
+                &:nth-child(1) {
+                    transition-delay: 0.1s;
+                }
+
+                &:nth-child(2) {
+                    transition-delay: 0.2s;
+                }
+
+                &:nth-child(3) {
+                    transition-delay: 0.3s;
+                }
+
+                &:nth-child(4) {
+                    transition-delay: 0.4s;
+                }
+
+                &:nth-child(5) {
+                    transition-delay: 0.5s;
+                }
+
+                &.intro-card {
+                    #card-content {
+                        background-color: transparent;
+                    }
+
+                    &:after {
+                        background-color: transparent;
+                    }
+                }
 
                 #card-content {
                     position: relative;
                     display: block;
                     height: 100%;
                     background-color: white;
-                    border-width: 10px;
-                    border-style: solid;
                     z-index: 1;
+                    overflow: hidden;
+                    border-radius: 5px;
 
-                    &:hover {
-                        #card-triangle {
-                            bottom: -30px;
-                            opacity: 1;
+                    &:hover,
+                    &:focus {
+                        #card-label {
+                            height: 175%;
+                            transition: height 0.15s;
                         }
                     }
-                }
-
-                &:after {
-                    content: "";
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba(black, 0.15);
-                    position: absolute;
-                    top: 10px;
-                    left: 10px;
                 }
 
                 #card-image {
@@ -93,38 +124,110 @@
                     height: 100%;
                     background-position: center;
                     background-size: cover;
-                    opacity: 0.25;
                 }
 
                 #card-label {
                     position: absolute;
-                    top: 45%;
+                    bottom: 0;
                     left: 0;
                     right: 0;
-                    text-align: center;
                     text-transform: uppercase;
-                    font-weight: bold;
-                    font-size: 20px;
-                    color: #333;
+                    font-weight: 400;
+                    font-size: 46px;
+                    color: rgba(0, 0, 0, 0.6);
+                    padding: 20px;
+                    height: 50%;
+                    background-image: linear-gradient(transparent, white);
+                    display: flex;
+                    align-items: flex-end;
                 }
 
-                #card-triangle {
-                    width: 0;
-                    height: 0;
-                    border-left: 15px solid transparent !important;
-                    border-right: 15px solid transparent !important;
-                    border-bottom-width: 15px;
-                    border-bottom-style: solid;
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    margin: 0 auto;
-                    opacity: 0;
-                    bottom: -40px;
-                    pointer-events: none;
-                    transition: opacity 0.25s, bottom 0.25s;
+                #card-bodytext {
+                    margin-bottom: 20px;
+                    color: rgba(#fff, 0.95);
+
+                    &.title {
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        font-size: 40px;
+                        margin-bottom: 40px;
+                    }
+
+                    &.rte {
+                        font-size: 18px;
+                        line-height: 1.4;
+                    }
+
+                    .break {
+                        display: block;
+                    }
+
+                    .button {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        display: inline-block;
+                        font-weight: bold;
+                        font-size: 14px;
+                        border: 2px solid transparent;
+                        text-decoration: none;
+                        padding: 10px;
+                        color: rgba(#fff, 0.95);
+                        overflow: hidden;
+                        transition: color 0.25s;
+                        outline: none;
+                        border-left-color: rgba(#fff, 0.95);
+                        border-top-color: rgba(#fff, 0.95);
+                        border-bottom: 0;
+                        border-right: 0;
+
+                        span {
+                            position: relative;
+                            z-index: 1;
+                        }
+
+                        &:hover {
+                            span {
+                                color: #333;   
+                            }
+
+                            &:after {
+                                transform: translateX(100%);
+                            }
+                        }
+
+                        &:after {
+                            content: "";
+                            display: block;
+                            height: 100%;
+                            pointer-events: none;
+                            background-color: rgba(#fff, 0.95);
+                            position: absolute;
+                            bottom: 0;
+                            top: 0;
+                            left: -100%;
+                            width: 100%;
+                            transition: transform 0.25s;
+                        }
+                    } 
                 }
              }
          }
+    }
+}
+
+.show-shell {
+
+    .the-shell {
+        opacity: 1;
+        visibility: visible;
+        z-index: 100;
+        pointer-events: initial;        
+    }
+
+    .the-shell .switcher .card-wrapper .card {
+        opacity: 1;
+        transform: translateX(0);
+        
     }
 }

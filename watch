@@ -1,5 +1,7 @@
 //WATCH PUG (HTML)
-pug -w  assets/templates/index.pug -o ../portfolio/
+pug -w  assets/templates/index.pug -o ../notbigmuzzy.github.io/
+pug -w  assets/templates/c64.pug -o ../notbigmuzzy.github.io/
+pug -w  assets/templates/vapor.pug -o ../notbigmuzzy.github.io/
 
 //WATCH SASS (CSS)
 sass --watch assets/styles/index.scss index.css

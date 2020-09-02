@@ -371,6 +371,10 @@ body {
   background-color: #333;
 }
 
+a {
+  text-decoration: none;
+}
+
 .the-shell {
   position: fixed;
   top: 0;
@@ -382,9 +386,6 @@ body {
   z-index: -1;
   pointer-events: none;
   transition: opacity 0.25s;
-}
-.the-shell > * {
-  font-family: monospace;
 }
 .the-shell .switcher {
   position: relative;
@@ -405,84 +406,168 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.5;
+  opacity: 0.9;
+  background-color: #333;
 }
-.show-shell .the-shell {
-  opacity: 1;
-  visibility: visible;
-  z-index: 100;
-  pointer-events: initial;
+.the-shell .switcher {
+  height: 100%;
 }
 .the-shell .switcher .card-wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.the-shell .switcher .card-wrapper:after {
+  content: ".";
+  opacity: 0;
+  width: 0;
   height: 0;
-  margin-top: 30px;
+  visibility: hidden;
+  pointer-events: none;
 }
 .the-shell .switcher .card-wrapper .card {
   position: relative;
   position: relative;
-  height: 150px;
-  width: 150px;
-  margin: 0 20px;
+  height: 100%;
+  min-width: 320px;
+  max-height: 640px;
+  margin-right: 20px;
+  transform: translateX(50px);
+  opacity: 0;
+  transition: opacity 0.25s, transform 0.25s;
+  transition-delay: 0.6s;
+}
+.the-shell .switcher .card-wrapper .card:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.the-shell .switcher .card-wrapper .card:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.the-shell .switcher .card-wrapper .card:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.the-shell .switcher .card-wrapper .card:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.the-shell .switcher .card-wrapper .card:nth-child(5) {
+  transition-delay: 0.5s;
+}
+.the-shell .switcher .card-wrapper .card.intro-card #card-content {
+  background-color: transparent;
+}
+.the-shell .switcher .card-wrapper .card.intro-card:after {
+  background-color: transparent;
 }
 .the-shell .switcher .card-wrapper .card #card-content {
   position: relative;
   display: block;
   height: 100%;
   background-color: white;
-  border-width: 10px;
-  border-style: solid;
   z-index: 1;
+  overflow: hidden;
+  border-radius: 5px;
 }
-.the-shell .switcher .card-wrapper .card #card-content:hover #card-triangle {
-  bottom: -30px;
-  opacity: 1;
-}
-.the-shell .switcher .card-wrapper .card:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.15);
-  position: absolute;
-  top: 10px;
-  left: 10px;
+.the-shell .switcher .card-wrapper .card #card-content:hover #card-label, .the-shell .switcher .card-wrapper .card #card-content:focus #card-label {
+  height: 175%;
+  transition: height 0.15s;
 }
 .the-shell .switcher .card-wrapper .card #card-image {
   display: block;
   height: 100%;
   background-position: center;
   background-size: cover;
-  opacity: 0.25;
 }
 .the-shell .switcher .card-wrapper .card #card-label {
   position: absolute;
-  top: 45%;
+  bottom: 0;
   left: 0;
   right: 0;
-  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 46px;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  height: 50%;
+  background-image: linear-gradient(transparent, white);
+  display: flex;
+  align-items: flex-end;
+}
+.the-shell .switcher .card-wrapper .card #card-bodytext {
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.95);
+}
+.the-shell .switcher .card-wrapper .card #card-bodytext.title {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+.the-shell .switcher .card-wrapper .card #card-bodytext.rte {
+  font-size: 18px;
+  line-height: 1.4;
+}
+.the-shell .switcher .card-wrapper .card #card-bodytext .break {
+  display: block;
+}
+.the-shell .switcher .card-wrapper .card #card-bodytext .button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 14px;
+  border: 2px solid transparent;
+  text-decoration: none;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.95);
+  overflow: hidden;
+  transition: color 0.25s;
+  outline: none;
+  border-left-color: rgba(255, 255, 255, 0.95);
+  border-top-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 0;
+  border-right: 0;
+}
+.the-shell .switcher .card-wrapper .card #card-bodytext .button span {
+  position: relative;
+  z-index: 1;
+}
+.the-shell .switcher .card-wrapper .card #card-bodytext .button:hover span {
   color: #333;
 }
-.the-shell .switcher .card-wrapper .card #card-triangle {
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent !important;
-  border-right: 15px solid transparent !important;
-  border-bottom-width: 15px;
-  border-bottom-style: solid;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  opacity: 0;
-  bottom: -40px;
+.the-shell .switcher .card-wrapper .card #card-bodytext .button:hover:after {
+  transform: translateX(100%);
+}
+.the-shell .switcher .card-wrapper .card #card-bodytext .button:after {
+  content: "";
+  display: block;
+  height: 100%;
   pointer-events: none;
-  transition: opacity 0.25s, bottom 0.25s;
+  background-color: rgba(255, 255, 255, 0.95);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  transition: transform 0.25s;
+}
+
+.show-shell .the-shell {
+  opacity: 1;
+  visibility: visible;
+  z-index: 100;
+  pointer-events: initial;
+}
+.show-shell .the-shell .switcher .card-wrapper .card {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .main-page {
@@ -850,6 +935,19 @@ body {
 
 .c64-helper {
   display: none;
+}
+
+.vapor-portfolio {
+  height: 100%;
+  width: 100%;
+  background: #966cff;
+  text-align: right;
+  padding: 10px;
+  font-size: 30px;
+  font-family: monospace;
+}
+.vapor-portfolio a {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 /*# sourceMappingURL=index.css.map */
