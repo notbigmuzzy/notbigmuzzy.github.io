@@ -16,6 +16,11 @@
         justify-content: space-between;
         padding: 0 10px;
         line-height: 30px;
+        z-index: 1;
+
+        @media (max-width: 768px) {
+            padding: 5px 10px;
+        }
 
         a {
             font-size: 0.8em;
@@ -45,27 +50,50 @@
             max-width: 100%;
             margin: 20px;
             border-radius: 50%;
+
+                @media (max-width: 440px) {
+                    max-width: 90%;
+                    margin: 20px 0;
+                }
         }
 
         .texts {
-
             h1 {
                 font-size: 42px;
                 line-height: 40px;
                 font-weight: 300;
+
+                    @media (max-width: 440px) {
+                        font-size: 30px;
+                        line-height: 30px;
+                    }
             }
     
             h2 {
-                font-size: 34.8px;
+                font-size: 35px;
                 line-height: 40px;
                 font-weight: 300;
                 padding-top: 4px;
+                    
+                    @media (max-width: 440px) {
+                        font-size: 25px;
+                        line-height: 30px;
+                    }
             }
 
             p {
                 padding-top: 5px;
                 font-size: 13px;
                 font-weight: 300;
+
+                    @media (max-width: 440px) {
+                        max-width: 320px;
+                        display: block;
+                        margin: 0 auto;
+                        padding-top: 3px;
+                        font-size: 18px;
+                        line-height: 26px;
+                    }
 
                 span {
                     font-weight: 400;
@@ -92,6 +120,10 @@
                 overflow: hidden;
                 transition: color 0.25s;
                 outline: none;
+
+                    @media (max-width: 440px) {
+                        margin: 20px;
+                    }
 
                 span {
                     position: relative;
@@ -203,6 +235,10 @@
         padding: 0 10px;
         line-height: 30px;
         opacity: 0.8;
+
+                @media (max-width: 440px) {
+                    display: none;
+                }
 
         .notice {
             position: relative;

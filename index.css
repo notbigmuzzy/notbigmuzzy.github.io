@@ -588,6 +588,12 @@ a {
   justify-content: space-between;
   padding: 0 10px;
   line-height: 30px;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .main-page .helper {
+    padding: 5px 10px;
+  }
 }
 .main-page .helper a {
   font-size: 0.8em;
@@ -614,21 +620,49 @@ a {
   margin: 20px;
   border-radius: 50%;
 }
+@media (max-width: 440px) {
+  .main-page .content .header-img {
+    max-width: 90%;
+    margin: 20px 0;
+  }
+}
 .main-page .content .texts h1 {
   font-size: 42px;
   line-height: 40px;
   font-weight: 300;
 }
+@media (max-width: 440px) {
+  .main-page .content .texts h1 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
 .main-page .content .texts h2 {
-  font-size: 34.8px;
+  font-size: 35px;
   line-height: 40px;
   font-weight: 300;
   padding-top: 4px;
+}
+@media (max-width: 440px) {
+  .main-page .content .texts h2 {
+    font-size: 25px;
+    line-height: 30px;
+  }
 }
 .main-page .content .texts p {
   padding-top: 5px;
   font-size: 13px;
   font-weight: 300;
+}
+@media (max-width: 440px) {
+  .main-page .content .texts p {
+    max-width: 320px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 3px;
+    font-size: 18px;
+    line-height: 26px;
+  }
 }
 .main-page .content .texts p span {
   font-weight: 400;
@@ -649,6 +683,11 @@ a {
   overflow: hidden;
   transition: color 0.25s;
   outline: none;
+}
+@media (max-width: 440px) {
+  .main-page .content .buttons a {
+    margin: 20px;
+  }
 }
 .main-page .content .buttons a span {
   position: relative;
@@ -736,6 +775,11 @@ a {
   padding: 0 10px;
   line-height: 30px;
   opacity: 0.8;
+}
+@media (max-width: 440px) {
+  .main-page .footer {
+    display: none;
+  }
 }
 .main-page .footer .notice {
   position: relative;
