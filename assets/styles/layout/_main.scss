@@ -236,9 +236,13 @@
         line-height: 30px;
         opacity: 0.8;
 
-                @media (max-width: 440px) {
-                    display: none;
-                }
+        @media (max-width: 768px) {
+            padding: 5px 10px;
+        }
+
+        @media (max-width: 440px) {
+            display: none;
+        }
 
         .notice {
             position: relative;

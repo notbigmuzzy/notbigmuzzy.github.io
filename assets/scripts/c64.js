@@ -13,7 +13,7 @@ $(document).ready(function () {
             e.preventDefault()
         }
     }
-    $(document).on('click', '.editor', function () {
+    $(document).on('click', '.c64-portfolio', function () {
         inputFocus()
     })
     $(document).on('submit', '.editor-input .commandbox.active form', function (e) {

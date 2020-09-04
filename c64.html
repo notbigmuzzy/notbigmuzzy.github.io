@@ -5,7 +5,7 @@
 <!--CSS-->
 <link href="index.css" rel="stylesheet" type="text/css" />
 <!--TITLE-->
-<title>NBM | Playground</title></head><body><!--BODY --><div class="c64-portfolio" id="portfolio">
+<title>NBM | Playground</title></head><body class="c64"><!--BODY --><div class="c64-portfolio" id="portfolio">
 <div class="editor">
 <div class="top-of-editor">
 <p>
@@ -23,23 +23,47 @@
 </div>
 </div>
 </div>
-<div class="hint-button h-d">
+</div>
+<div class="c64-hints">
 <input type="checkbox" id="hb" autocomplete="off"></input>
-<label for="hb" class="the-button">
+<label for="hb">
+<span class="the-button h-d">
 <span class="s-m">i</span>
 <span class="c-m">x</span>
+</span>
+<span class="the-label h-m">Type <i>help</i> to start</span>
 </label>
 <ul class="hint-list">
+<p class="list-title">Hints list</p>
 <li>
 <label for="hb">
-<span>Type help</span>
+<span class="green">F1.</span><span class="lightblue">Site overlay</span>
+<p class="green">Type: shell</p>
 </label>
 </li>
+<li>
+<label for="hb">
+<span class="green">F2.</span><span class="lightblue">Get help</span>
+<p class="green">Type: help</p>
+</label>
+</li>
+<li>
+<label for="hb">
+<span class="green">F3.</span><span class="lightblue">List entries</span>
+<p class="green">Type: list"*"</p>
+</label>
+</li>
+<li>
+<label for="hb">
+<span class="green">F4.</span><span class="lightblue">Load content</span>
+<p class="green">Type: load"*"</p>
+</label>
+</li>
+<p class="list-footer">Select (F1/F4)?</p>
 </ul>
-</div>
 </div><div class="c64-helper">
 <div class="commandbox help"> 
-<span class="title">Available commands:</span> 
+<span class="title">Commands:</span> 
 <span class="title">- <a href="#">SHELL</a></span>
 <span class="title">- <a href="#">LIST</a></span>
 <span class="title">- <a href="#">LOAD"<span>*</span>"</a></span>

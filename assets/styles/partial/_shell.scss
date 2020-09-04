@@ -110,11 +110,12 @@
                     overflow: hidden;
                     border-radius: 5px;
 
-                    &:hover,
-                    &:focus {
+                    &:hover {
                         #card-label {
-                            height: 175%;
-                            transition: height 0.15s;
+                            @media (min-width: 769px) {
+                                height: 175%;
+                                transition: height 0.15s;
+                            }
                         }
                     }
                 }
