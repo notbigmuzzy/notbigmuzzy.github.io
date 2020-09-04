@@ -13,7 +13,7 @@ $(document).ready(function () {
             e.preventDefault()
         }
     }
-    $(document).on('click', 'body', function () {
+    $(document).on('click', '.editor', function () {
         inputFocus()
     })
     $(document).on('submit', '.editor-input .commandbox.active form', function (e) {
