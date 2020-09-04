@@ -3,6 +3,10 @@ $(document).ready(function () {
     shellToggle()
     window.onhashchange = urlEventListeners;
 
+    //SANITIZE HASH ON PAGE LOAD - REMOVE ANY HASH ON PAGE LOAD 
+    history.pushState("", document.title, window.location.pathname);
+
+
     //FUNCTIONS
     function shellToggle() {
         document.addEventListener('keydown', (e) => {
