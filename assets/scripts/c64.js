@@ -9,7 +9,7 @@ $(document).ready(function () {
         if (e.ctrlKey && e.keyCode == 67) {
             clearPrompt();
         }
-        if (e.keyCode == 9) {
+        if (e.keyCode == 9 || e.keyCode == 37 || e.keyCode == 38 || e.keyCode == 39 || e.keyCode == 40) {
             e.preventDefault()
         }
     }
