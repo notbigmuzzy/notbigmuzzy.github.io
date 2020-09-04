@@ -32,7 +32,7 @@ background: #887ecb;
     }
 
     @media (max-width: 640px) {
-        padding: 0px;
+        padding: 0;
     }
 
     a {
@@ -64,9 +64,17 @@ background: #887ecb;
         color: #887ecb;
         overflow-y: auto;
 
+        @media (max-width: 640px) {
+            padding-bottom: 30px;
+        }
+
         .top-of-editor {
             text-align: center;
             padding-top: 20px;
+
+            @media (max-width: 640px) {
+                padding: 20px 5px;
+            }
 
             p {
                 margin-bottom: 20px;

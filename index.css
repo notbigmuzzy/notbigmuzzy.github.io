@@ -899,7 +899,7 @@ a {
 }
 @media (max-width: 640px) {
   .c64-portfolio {
-    padding: 0px;
+    padding: 0;
   }
 }
 .c64-portfolio a {
@@ -929,9 +929,19 @@ a {
   color: #887ecb;
   overflow-y: auto;
 }
+@media (max-width: 640px) {
+  .c64-portfolio .editor {
+    padding-bottom: 30px;
+  }
+}
 .c64-portfolio .editor .top-of-editor {
   text-align: center;
   padding-top: 20px;
+}
+@media (max-width: 640px) {
+  .c64-portfolio .editor .top-of-editor {
+    padding: 20px 5px;
+  }
 }
 .c64-portfolio .editor .top-of-editor p {
   margin-bottom: 20px;
