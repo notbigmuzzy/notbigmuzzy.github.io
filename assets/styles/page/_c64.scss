@@ -23,6 +23,18 @@ background: #887ecb;
     padding: 80px 120px;
     background-color: #887ecb;
 
+    @media (max-width: 960px) {
+        padding: 40px 60px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 40px;
+    }
+
+    @media (max-width: 640px) {
+        padding: 0px;
+    }
+
     a {
         color: #887ecb;
         text-decoration: none;
@@ -38,6 +50,10 @@ background: #887ecb;
         font-size: 25px;
         line-height: 1;
         text-transform: uppercase;
+
+        @media (max-width: 640px) {
+            font-size: 20px;
+        }
     }
 
     .editor {
