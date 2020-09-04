@@ -196,9 +196,24 @@ background: #887ecb;
             font-size: 20px;
             box-shadow: 0 2px 4px rgba(#000, 0.25);
             z-index: 10;
+            cursor: pointer;
         }
-        #hb:checked + .hint-list {
+        #hb:checked + label + .hint-list {
             display: flex;
+        }
+        .s-m {
+            display: block;
+        }
+        .c-m {
+            display: none;
+        }
+        #hb:checked + label {
+            .s-m {
+                display: none;
+            }
+            .c-m {
+                display: block;
+            }
         }
         .hint-list {
             display: none;
