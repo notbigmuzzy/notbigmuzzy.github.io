@@ -1,3 +1,15 @@
+.index {
+    ::-moz-selection {
+        color: #fff;
+        background: #333;
+    }
+
+    ::selection {
+        color: #fff;
+        background: #333;
+    }
+}
+
 .main-page {
     position: relative;
     z-index: 1;

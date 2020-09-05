@@ -1,14 +1,178 @@
+.vapor {
+    ::-moz-selection {
+        color: #fff;
+        background: #ffdd8b;
+    }
+
+    ::selection {
+        color: #fff;
+        background: #ffdd8b;
+    }
+
+    .colors {
+        color: #c774a6;
+        color: #ff6a8a;
+        color: #c774e6;
+        color: #966cff;
+        color: #92cffe;
+        color: #1fdebc;
+        color: #ffdd8b;
+        color: #ffa58b;
+    }
+
+    i {
+        font-style: initial;
+    }
+}
+
 .vapor-portfolio {
 	height: 100%;
 	width: 100%;
 	background: #966cff;
-	
-	text-align: right;
-	padding: 10px;
-	font-size: 30px;
-	font-family: monospace;
+}
 
-	a {
-		color: rgba(#fff, 0.75);
-	}
+.desktop {
+    height: 100%;
+    width: 100%;
+    background-image: url(assets/images/vapor-wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .icons {
+        max-width: 100px;
+        padding: 20px 0;
+        text-align: center;
+
+        li {
+            &:last-child {
+                .icon {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .icon {
+            display: block;
+            margin-bottom: 20px;
+            cursor: pointer;
+
+            img {
+                margin-bottom: 5px;  
+            }
+
+            .label {
+                font-size: 14px;
+                display: block;
+                color: #fff;
+            }
+        }
+    }
+
+}
+
+.taskbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #966cff;
+    display: flex;
+    flex-direction: row;
+    padding: 3px 0;
+
+    i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-style: initial;
+        cursor: pointer;
+        margin: 0;
+        padding: 0 5px;
+        margin: 0 3px;
+        font-size: 14px;
+        font-weight: bold;
+        height: 26px;
+    }
+
+    .start-button {
+        @include vapor-border;
+
+        &:hover {
+            @include vapor-border-hovered;            
+        }
+    }
+
+    .button-bar {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        padding: 0 3px;
+        margin-right: 3px;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 2px;
+            bottom: 5px;
+            background-color: rgba(#fff, 0.15);
+            width: 2px;
+            border-radius: 2px;
+        }
+        &:after {
+            left: auto;
+            right: 0;
+        }
+
+        .icon {
+            width: 30px;
+            padding: 0;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    .tasks {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 100;
+
+        .window {
+            @include vapor-border;
+
+            &:hover {
+                @include vapor-border-hovered;            
+            } 
+        }
+    }
+
+    .tray {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        padding: 0 3px;
+        @include vapor-border-hovered;
+        border-right: initial;
+
+        .icon {
+            width: 16px;
+            height: 20px;
+            padding: 0;
+            margin: 0;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    .clock {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        padding: 0 3px 0 0;
+        @include vapor-border-hovered;
+        border-left: initial;
+        margin-left: 0;
+    }
 }

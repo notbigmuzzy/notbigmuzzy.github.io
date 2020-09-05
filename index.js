@@ -39,7 +39,7 @@ $(document).ready(function () {
                     $('body').addClass('show-shell')
                     break;
                 default:
-                    $('body').removeClass()
+                    $('body').removeClass('show-shell')
                     break;
             }
         }

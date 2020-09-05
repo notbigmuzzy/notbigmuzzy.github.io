@@ -25,3 +25,16 @@ body {
 a {
 	text-decoration: none;
 }
+
+@mixin vapor-border {
+    border-top: 2px solid rgba(#fff, 0.5);
+    border-left: 2px solid rgba(#fff, 0.5);
+    border-right: 2px solid rgba(#000, 0.5);
+    border-bottom: 2px solid rgba(#000, 0.5);
+}
+@mixin vapor-border-hovered {
+    border-top: 2px solid rgba(#000, 0.5);
+    border-left: 2px solid rgba(#000, 0.5);
+    border-right: 2px solid rgba(#fff, 0.5);
+    border-bottom: 2px solid rgba(#fff, 0.5);
+}
