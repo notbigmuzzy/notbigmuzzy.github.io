@@ -1,6 +1,7 @@
 <div class="vapor-portfolio" id="portfolio">
-	<div class="wallpaper clear-all-actions"></div>
-
+	<div class="wallpaper action" data-action="default">
+		<img src="assets/images/vapor-wallpaper.jpg"/>
+	</div>
 	<div class="desktop">
 		<ul class="icons">
 			<li>
@@ -19,7 +20,28 @@
 	</div>    
 
 	<div class="taskbar">
-		<i class="start-button">Start</i>
+		<div class="bar-background action" data-action="default"></div>
+		<div class="start-wrapper">
+			<i class="start-button action" data-action="show-menu"><img src="assets/images/ico/vapor/logo.png"/><span>Start</span></i>
+			<ul class="menu start-menu">
+				<li><span><img src="assets/images/ico/vapor/update.png"/>Windows update</span></li>
+				<br/>
+				<li class="has-submenu">
+					<img src="assets/images/ico/vapor/programs.png"/><span>Programs</span>
+					<ul class="submenu">
+						<li><img src="assets/images/ico/vapor/notepad.png"/><span>Notepad</span></li>
+						<li><img src="assets/images/ico/vapor/calculator.png"/><span>Calculator</span></li>
+						<li><img src="assets/images/ico/vapor/internet.png"/><span>Internet</span></li>
+					</ul>
+				</li>
+				<li class="has-submenu"><img src="assets/images/ico/vapor/favorites.png"/><span>Favourites</span></li>
+				<li class="has-submenu"><img src="assets/images/ico/vapor/documents.png"/><span>Documents</span></li>
+				<li><img src="assets/images/ico/vapor/help.png"/><span>Help</span></li>
+				<br/>
+				<li><img src="assets/images/ico/vapor/logoff.png"/><span>Log off</span></li>
+				<li><img src="assets/images/ico/vapor/shutdown.png"/><span>Shut Down</span></li>
+			</ul>	
+		</div>
 		<ul class="button-bar">
 			<li><i class="icon" style="background-image: url(assets/images/ico/vapor/desktop.png)"></i></li>
 		</ul>
@@ -32,6 +54,6 @@
 			<li><i class="icon" style="background-image: url(assets/images/ico/vapor/calendar.png)"></i></li>
 			<li><i class="icon" style="background-image: url(assets/images/ico/vapor/volume.png)"></i></li>
 		</ul>
-		<i class="clock">14:16</i>
+		<i class="clock" id="clock">00:00</i>
 	</div>
 </div>

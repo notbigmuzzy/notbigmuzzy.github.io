@@ -1,0 +1,66 @@
+.menu,
+.submenu {
+    display: none;
+    background-color: $window-background;
+    @include vapor-border;
+    min-width: 160px;
+
+    br {
+        content: ".";
+        display: block;
+        border-top: 1px solid rgba($black, 0.25);
+        border-bottom: 1px solid rgba($white, 0.5);
+    }
+
+    li {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 5px 5px;
+
+        &.has-submenu {
+            &:after {
+                content: '>';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 5px;
+            }
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+        }
+
+        img {
+            width: 16px;
+            height: 16px;
+            margin: 0 5px 0 0;
+        }
+
+        span {
+            display: block;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: $highlight-background;
+
+            &:after {
+                color: $white;
+            }
+
+            & > .submenu {
+                display: block;
+            }
+
+            & > span {
+                color: $white;
+            }
+        }
+    }
+}

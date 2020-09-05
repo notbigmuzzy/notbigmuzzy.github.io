@@ -1,0 +1,54 @@
+.vapor-portfolio {
+	height: 100%;
+	width: 100%;
+	background: $purple;
+}
+
+.wallpaper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.desktop {
+    height: 100%;
+    width: 100%;
+
+    .icons {
+        max-width: 100px;
+        padding: 20px 0;
+        text-align: center;
+
+        li {
+            &:last-child {
+                .icon {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .icon {
+            display: block;
+            margin-bottom: 20px;
+            cursor: pointer;
+
+            img {
+                margin-bottom: 5px;  
+            }
+
+            .label {
+                font-size: 14px;
+                display: block;
+                color: #fff;
+            }
+        }
+    }
+}
