@@ -31,13 +31,21 @@
 	background: #966cff;
 }
 
-.desktop {
+.wallpaper {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     background-image: url(assets/images/vapor-wallpaper.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.desktop {
+    height: 100%;
+    width: 100%;
 
     .icons {
         max-width: 100px;
