@@ -52,7 +52,6 @@ $(document).ready(function () {
 		var h = today.getHours();
 		var m = today.getMinutes();
 		m = checkTime(m);
-		s = checkTime(s);
 		document.getElementById('clock').innerHTML = h + ":" + m;
 		var t = setTimeout(setClock, 30000);
 	}
