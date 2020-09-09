@@ -15,9 +15,13 @@ $(document).ready(function () {
                 case "#show-menu":
                     $('.start-wrapper').addClass('show-menu')
                     break;
+                case "#popup-menu":
+					$('.popup-menu').addClass('show-menu')
+					break;
                 default:
 					$('.start-wrapper').removeClass('show-menu')
                     $('body').removeClass('show-shell')
+                    $('.popup-menu').removeClass('show-menu')
                     break;
             }
         }
@@ -25,20 +29,12 @@ $(document).ready(function () {
 
 	//SET STUFF TO BE DRAGGABLE
 	$( ".desktop .icons .icon" ).draggable();
-	
-	//DISABLE RIGHT CLICK
-	document.addEventListener('contextmenu', event => event.preventDefault());
 
 	//SET HASH ON VARIOUS CLICK
 	$(".action").click(function() {
 		var $action = $(this).attr('data-action')
 		window.location.hash = $action;
 	})
-
-	//CLEAR HASH ON DESKTOP CLICK
-	// $(".clear-all-actions").click(function() {
-	// 	history.pushState("", document.title, window.location.pathname);
-	// })
 
 	//TASKBAR LOGIC
 	$(".start-button").click(function() {
@@ -59,4 +55,43 @@ $(document).ready(function () {
 		if (i < 10) {i = "0" + i};
 		return i;
 	}
+
+	//RIGHT CLICK MENU
+	$(document).bind("contextmenu", function (e) {
+		e.preventDefault();
+	    
+	    $(".popup-menu").addClass('show').css({
+	        top: event.pageY + "px",
+	        left: event.pageX + "px"
+	    });
+
+	});
+
+	// // If the document is clicked somewhere
+	$(document).bind("mousedown", function (e) {
+	    
+	    // If the clicked element is not the menu
+	    if (!$(e.target).parents(".custom-menu").length > 0) {
+	        
+	        // Hide it
+	        $(".popup-menu").removeClass('show')
+	    }
+	});
+
+
+	// // If the menu element is clicked
+	// $(".custom-menu li").click(function(){
+	    
+	//     // This is the triggered action name
+	//     switch($(this).attr("data-action")) {
+	        
+	//         // A case for each action. Your actions here
+	//         case "first": alert("first"); break;
+	//         case "second": alert("second"); break;
+	//         case "third": alert("third"); break;
+	//     }
+	  
+	//     // Hide it AFTER the action was triggered
+	//     $(".custom-menu").hide(100);
+	//   });
 })

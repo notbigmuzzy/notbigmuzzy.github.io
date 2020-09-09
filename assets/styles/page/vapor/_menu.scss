@@ -64,3 +64,16 @@
         }
     }
 }
+
+.popup-menu {
+    display: none;
+    position: fixed;
+
+    &.show-menu {
+        display: block;
+
+        .menu {
+            display: block;
+        }
+    }
+}
