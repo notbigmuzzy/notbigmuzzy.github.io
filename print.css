@@ -1,0 +1,45 @@
+html {
+	background-color: #fff;
+}
+
+body {
+	background-color: #fff;
+}
+
+.cv-portfolio {
+	background-color: #fff;
+}
+
+.cv-toggle {
+	background-color: #fff;	
+}
+
+.cv-toggle-close {
+	display: none;
+	opacity: 0;
+	color: transparent;
+}
+
+.cv-download-button {
+	display: none;
+}
+
+.cv-header {
+	-webkit-print-color-adjust: exact;	
+}
+
+.highlight {
+	color: #CF1017;
+}
+
+.name {
+	font-size: 30px !important;
+}
+
+.phone {
+	display: block !important;
+}
+
+.resume {
+	font-size: 60px !important;
+}

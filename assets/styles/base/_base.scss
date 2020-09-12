@@ -26,6 +26,13 @@ a {
 	text-decoration: none;
 }
 
+@mixin hide-scrollbars() {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar { display: none; }
+}
+
 @mixin vapor-border {
     border-top: 2px solid rgba(#fff, 0.5);
     border-left: 2px solid rgba(#fff, 0.5);
