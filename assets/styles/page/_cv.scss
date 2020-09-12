@@ -4,21 +4,312 @@
 	background-color: #460002;
 	background-image: url('assets/images/cv-back.jpg');
 	background-size: cover;
+	background-position: center right;
     
     ::-moz-selection {
         color: #460002;
-        background: transparent;
+        background: #fff;
     }
 
     ::selection {
         color: #460002;
-        background: transparent;
+        background: #fff;
     }
 
 	.wrapper-left,
 	.wrapper-right {
 		height: 100%;
-		width: 50%;		
+		width: 50%;
+
+		@media (max-width: 768px) {
+			width: 100%;
+		}
+	}
+
+	.wrapper-left {
+		position: relative;
+
+		@media (max-width: 768px) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+		}
+
+		#cv-toggle {
+			display: none;
+		}
+
+		#cv-toggle:checked + .cv-toggle {
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 9;
+				margin: 0;
+				padding: 0;
+				height: 100%;
+				width: 200%;
+				background-color: rgba(#000, 0.9);
+				overflow: hidden;
+				transition: background-color 0.15s;
+
+				@media (max-width: 768px) {
+					width: 100%;
+					visibility: visible;
+					z-index: 1;
+					pointer-events: initial;
+				}
+
+				&:after {
+					display: none;
+				}
+
+			.the-cv {
+				width: 70%;
+				margin: 0 auto;
+				overflow: auto;
+				opacity: 1;
+				cursor: initial;
+				border: none;
+				@include hide-scrollbars;
+
+				@media (max-width: 768px) {
+					width: 100%;
+				}
+
+				&:hover {
+					.highlight {
+						color: #CF1017;
+					}
+				}
+
+				.cv-header,
+				.cv-experience,
+				.cv-education,
+				.cv-hoby {
+					padding: 0 30px;
+					margin-bottom: 30px;
+
+					& > * {
+						color: #000;
+					}	
+				}
+
+				.cv-header {
+					padding: 30px;
+					height: 300px;
+					background-image: url('assets/images/cv-header.jpg');
+
+					.name {
+						display: block;
+						font-size: 35px;
+						margin-bottom: 5px;
+					}
+					.ocupation {
+						display: block;
+						font-size: 14px;
+					}
+					.resume {
+						color: #fff;
+						font-size: 70px;
+						font-weight: 300;
+						text-align: left;
+						text-transform: initial;
+
+						@media (max-width: 540px) {
+							font-size: 60px;
+							word-break: break-all;
+						}
+					}
+				}
+
+				hr {
+					margin-top: 20px;
+					margin-bottom: 20px;
+					color: #fff;
+					opacity: .2;
+				}
+			}
+
+			.cv-toggle-close,
+			.cv-download-button {
+				display: block;
+			}
+		}
+
+		.cv-toggle {
+			position: relative;
+			display: block;
+			height: 100%;
+			padding: 40px 20px;
+
+			@media (max-width: 768px) {
+				visibility: hidden;
+				z-index: -1;
+				pointer-events: none;
+			}
+
+			&:after {
+				pointer-events: none;
+				content: '⌘';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				color: #4c0004;
+				z-index: 9;
+				font-size: 100px;
+				text-align: center;
+				font-weight: 300;
+				transform: translateY(-50%);
+			}
+		}
+		
+		.the-cv {
+			position: relative;
+			height: 100%;
+			cursor: pointer;
+			background-color: #fff;
+			opacity: 0.5;
+			border: 1px solid #000;
+			overflow: hidden;
+
+			&:hover {
+				opacity: 0.75;
+				transition: opacity 0.15s;
+			}
+
+			.cv-experience,
+			.cv-education,
+			.cv-hoby {
+				padding: 0 10px;
+
+				& > * {
+					color: rgba(#000, 0.15);
+				}	
+			}
+
+			.cv-header {
+				position: relative;
+				padding: 10px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				height: auto;
+				background-color: #340100;
+				background-size: cover;
+				background-position: center right;
+				margin-bottom: 10px;
+
+				p,a {
+					color: #fff;
+					font-weight: 300;
+				}
+
+				.phone {
+					display: none;
+					font-size: 14px;
+				}
+				.name,
+				.ocupation {
+					display: none;
+				}
+				.resume {
+					font-weight: bold;
+					text-align: center;
+					text-transform: uppercase;
+				}
+			}
+
+			.description {
+				font-size: 16px;
+				line-height: 1.5;
+			}
+
+			.highlight {
+				font-weight: bold;
+			}
+
+			hr {
+				opacity: 0;
+			}
+
+			.date {
+			    float: right;
+			    margin-top: -16px;
+			    color: #BFBFBF !important;
+			    min-width: 80px;
+			}
+
+			.place {
+				color: #BFBFBF !important;
+				padding-top: 6px;
+				padding-bottom: 3px;
+			}
+		}
+
+		.cv-toggle-close  {
+			display: none;
+			position: absolute;
+			top: 0;
+			right: 0;
+			color: rgba(#fff, .5);
+			font-size: 40px;
+			font-family: monospace;
+			line-height: 90px;
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+			cursor: pointer;
+			border-radius: 50%;
+			border: 2px solid rgba(#fff, .5);
+			padding: 0;
+			text-align: center;
+
+			@media (max-width: 768px) {
+				top: auto;
+				bottom: 0;
+				color: rgba(#000, .5);
+				border: 2px solid rgba(#000, .5);
+				width: 50px;
+				height: 50px;
+				line-height: 45px;
+				font-size: 20px;
+				margin: 5px;
+			}
+
+			&:hover {
+				opacity: 0.75;
+				transition: opacity 0.15s;
+			}
+		}
+
+		.cv-download-button {
+			display: none;
+			position: absolute;
+			top: 120px;
+			right: 0;
+			color: rgba(#fff, .5);
+			font-size: 20px;
+			font-family: monospace;
+			width: 100px;
+			margin: 10px;
+			cursor: pointer;
+			border-radius: 50%;
+			padding: 0;
+			text-align: center;
+
+			@media (max-width: 768px) {
+				display: none !important;
+			}
+
+			&:hover {
+				opacity: 0.75;
+				transition: opacity 0.15s;
+			}	
+		}
 	}
 
 	.wrapper-right {
@@ -54,6 +345,14 @@
 			font-size: 2.5vw;
 			font-weight: 300;
 			line-height: 1.25;
+
+			@media (max-width: 768px) {
+				font-size: 5vw;
+			}
+
+			@media (max-width: 540px) {
+				font-size: 10vw;
+			}
 		}
 
 		h2 {
@@ -61,191 +360,53 @@
 			font-size: 2vw;
 			font-weight: 300;
 			line-height: 1.25;
+
+			@media (max-width: 768px) {
+				font-size: 3vw;
+			}
+
+			@media (max-width: 540px) {
+				font-size: 5vw;
+			}
 		}
 
 		.sub-title {
+			display: block;
+			color: #fff;
 			position: relative;
 			opacity: .7;
     		font-size: 4vw;
     		bottom: -20px;
     		font-weight: 300;
+
+			@media (max-width: 768px) {
+				font-size: 6vw;
+				bottom: -10px;
+			}
+
+			@media (max-width: 768px) {
+				bottom: 0;
+			}
 		}
 
 		.title {
+			display: block;
+			color: #fff;
 			position: relative;
 			left: -10px;
 			font-size: 12.5vw;
 			font-weight: 300;
+
+			@media (max-width: 768px) {
+				font-size: 15vw;
+			}
+
+			@media (max-width: 540px) {
+				font-size: 24vw;
+			}
 		}
 	}
 
-	.wrapper-left {
-		position: relative;
 
-		#cv-toggle {
-			display: none;
-		}
-
-		#cv-toggle:checked + label {
-				position: absolute;
-				left: 0;
-				top: 0;
-				z-index: 9;
-				margin: 0;
-				padding: 0;
-				height: 100%;
-				width: 200%;
-				background-color: rgba(#000, 0.9);
-				overflow: hidden;
-				transition: background-color 0.15s;
-
-			.the-cv {
-				width: 70%;
-				margin: 0 auto;
-				overflow: auto;
-				opacity: 1;
-				cursor: default;
-				border: none;
-				@include hide-scrollbars;
-
-				.cv-header {
-					padding: 30px;
-					height: 300px;
-					background-image: url('assets/images/cv-header.jpg');
-
-					.name {
-						display: block;
-						font-size: 35px;
-						margin-bottom: 5px;
-					}
-					.ocupation {
-						display: block;
-						font-size: 14px;
-					}
-					.resume {
-						font-size: 70px;
-						font-weight: 300;
-						text-align: left;
-						text-transform: initial;
-					}
-				}
-			}
-
-			.cv-toggle-close,
-			.cv-download-button {
-				display: block;
-			}
-		}
-
-		label {
-			display: block;
-			height: 100%;
-			padding: 40px 20px;
-		}
-		
-		.the-cv {
-			position: relative;
-			height: 100%;
-			cursor: pointer;
-			background-color: #fff;
-			opacity: 0.5;
-			border: 1px solid #000;
-			overflow: hidden;
-
-			&:hover {
-				opacity: 0.75;
-				transition: opacity 0.15s;
-
-				.highlight {
-					color: #CF1017;
-				}
-			}
-
-			.cv-header {
-				position: relative;
-				padding: 10px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				height: auto;
-				background-color: #340100;
-				background-size: cover;
-				background-position: center right;
-
-				p,a {
-					color: #fff;
-					font-weight: 300;
-				}
-
-				.phone {
-					display: none;
-					font-size: 14px;
-				}
-				.name,
-				.ocupation {
-					display: none;
-				}
-				.resume {
-					font-weight: bold;
-					text-align: center;
-					text-transform: uppercase;
-				}
-			}
-
-			.description {
-				font-size: 16px;
-				line-height: 1.25;
-			}
-
-			.highlight {
-				font-weight: bold;
-			}
-		}
-
-		.cv-toggle-close  {
-			display: none;
-			position: absolute;
-			top: 0;
-			right: 0;
-			color: rgba(#fff, .5);
-			font-size: 40px;
-			font-family: monospace;
-			line-height: 90px;
-			width: 100px;
-			height: 100px;
-			margin: 10px;
-			cursor: pointer;
-			border-radius: 50%;
-			border: 2px solid rgba(#fff, .5);
-			padding: 0;
-			text-align: center;
-
-			&:hover {
-				opacity: 0.75;
-				transition: opacity 0.15s;
-			}
-		}
-
-		.cv-download-button {
-			display: none;
-			position: absolute;
-			top: 120px;
-			right: 0;
-			color: rgba(#fff, .5);
-			font-size: 20px;
-			font-family: monospace;
-			width: 100px;
-			margin: 10px;
-			cursor: pointer;
-			border-radius: 50%;
-			padding: 0;
-			text-align: center;
-
-			&:hover {
-				opacity: 0.75;
-				transition: opacity 0.15s;
-			}	
-		}
-	}
 	
 }

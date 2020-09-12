@@ -8,6 +8,7 @@ body {
 
 .cv-portfolio {
 	background-color: #fff;
+	background-image: initial;
 }
 
 .cv-toggle {
@@ -16,12 +17,14 @@ body {
 
 .cv-toggle-close {
 	display: none;
-	opacity: 0;
-	color: transparent;
+	opacity: 0 !important;
+	color: transparent !important;
 }
 
 .cv-download-button {
 	display: none;
+	opacity: 0 !important;
+	color: transparent !important;
 }
 
 .cv-header {
@@ -42,4 +45,24 @@ body {
 
 .resume {
 	font-size: 60px !important;
+}
+
+.cv-experience {
+	padding: 0 !important;
+}
+
+.cv-education {
+	padding: 0 !important;
+}
+
+.cv-hoby {
+	padding: 0 !important;
+}
+
+.cv-toggle {
+	overflow: visible !important;
+}
+
+.the-cv {
+	height: auto !important;
 }

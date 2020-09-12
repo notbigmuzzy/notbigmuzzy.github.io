@@ -1,66 +1,18 @@
 <div class="cv-portfolio" id="portfolio">
 	<div class="wrapper-left">
 		<input type="checkbox" id="cv-toggle" autocomplete="off">
-		<label for="cv-toggle">
+		<label class="cv-toggle" for="cv-toggle">
 			<div class="the-cv">
-				<div class="cv-header">
-					<div>
-						<p class="name">IVAN JOVANOVIC</p>
-						<p class="phone">060/710-9830</p>
-						<p class="ocupation"><a href="mailto:notbigmuzzy@gmail.com">notbigmuzzy@gmail.com</a></p>
-					</div>
-					<p class="resume">Curriculum Vitae</p>
-				</div>
-				<div class="cv-experience">
-					<div class="description">Professional knowledge of <span class="highlight">HTML5 </span>( XHTML ), <span class="highlight">CSS3 </span>( CSS2 ) and front side JS ( <span class="highlight">JQUERY, AJAX</span> ). Strong experience in working with preprocessors, especially <span class="highlight">PUG</span> ( <span class="highlight">JADE</span> ) and <span class="highlight">SASS</span> ( <span class="highlight">SCSS, LESS</span> ). Hands-on experience with more popular frameworks such as <span class="highlight">Foundation </span>and <span class="highlight">Bootstrap</span>.</div>
-					<br>
-					<div class="description">Professional experience with <span class="highlight">TYPO3 Enterprise CMS</span>, both with integration and development sides of this system. Also, working knowledge of <span class="highlight">Wordpress</span> ( Frontend ). Firm grasp of <span class="highlight">responsive design</span> and of the latest trends in web design.</div>
-					<br>
-					<div class="description">Knowledge of version control systems ( <span class="highlight">SVN,GIT </span>) and experience in using build tools ( <span class="highlight">Composer,Grunt </span>). Testing of <span class="highlight">cross-browser </span>i <span class="highlight">cross-device </span>compatibility. Experience in working with various tools for preparing and <span class="highlight">optimizing graphics </span>for web.</div>
-					<br>
-					<div class="description">Strong <span class="highlight">background in IT</span>. Hardware and software installation, maintenance and upgrades. Working knowledge of <span class="highlight">Linux and CLI environment</span>.</div>
-					<br>
-					<div class="description">Professional <span class="highlight">working proficiency </span>in <span class="highlight">english language </span>. I subscribe to <span class="highlight">team spirit </span>while maintaining capability to complete large chunks of work on my own. Also, I am able to take the initiative to be <span class="highlight">productive </span>and <span class="highlight">efficient </span>and I consider myself <span class="highlight">responsible and goal oriented.</span></div>
-				</div>
-				<div class="cv-education">
-					<div class="title highlight">StuntCokders</div>
-					<div class="date">2017-2019</div>
-					<div class="place">Belgrade, Serbia</div>
-					<div class="description"><strong>Frontend / Magento Developer</strong></div>
-					<div class="description">I worked as independent Frontend developer on various <span class="highlight">E-commerce</span> projects mainly focusing on <span class="highlight">Magento</span> (1 & 2) and <span class="highlight">Woocommerce</span> projects written from scratch. Also, I created number of customized standalone elements which were used across large number of projects including <span class="highlight">dashboards, calendars, sliders, onepage checkouts and logins</span>, etc. Similarly, I took part in creating number of <span class="highlight">Woocommerce plugins</span> and <span class="highlight">Magento modules</span> which were highly customized per client requests.</div>
-					<hr>
-					<div class="title highlight">WebBay Solutions</div>
-					<div class="date">2016-2017</div>
-					<div class="place">Belgrade, Serbia</div>
-					<div class="description"><strong>Frontend / TYPO3 Developer</strong></div>
-					<div class="description">I began my work as a <span class="highlight">Frontend developer</span> and for a good part of the first year that was my main focus. In parallel I was learning TYPO3 CMS and in that same period, I also performed the role of <span class="highlight">TYPO3 integrator and developer</span> where I wrote couple of smaller PHP / Extbase extensions for various projects. Also, on several occasions I was given the part of a <span class="highlight">Project lead</span> on several website which I saw through until their successful launch. Towards the end, I participated in <span class="highlight">client meetings, project conception and mock-ups / wireframes sessions</span> and I did a whole lot of other miscellaneous tasks.</div>
-					<hr>
-					<div class="title highlight">Serbia Broadband, "SBB"</div>
-					<div class="date">2009-2011</div>
-					<div class="place">Belgrade, Serbia</div>
-					<div class="description">Call agent / Coordinator / Technical support</div>
-					<div class="description">Job consisted of registering inbound calls, quckly and precisely labeling them and preforming Tier 1 tech support. Later, I participated in coordination of technical teams and Tier 2 / in-office support.</div>
-					<hr>
-					<div class="title highlight">Sigma Shop</div>
-					<div class="date">2004-2007</div>
-					<div class="place">Obrenovac, Serbia</div>
-					<div class="description">Assistant worker and salesperson in a small IT shop.</div>
-					<hr>
-					<div class="title">High School, Gymnasium</div>
-					<div class="date">1998-2002</div>
-					<div class="place">Obrenovac, Serbia</div>
-				</div>
-				<div class="cv-hoby">
-					<div class="description">I treat my hobbies with a little less focus and a bit more diversity so my spare time is split between great passion for <span class="highlight">literature </span> and a need to be physically active ( read: avid and quite competetive <span class="highlight">basketball </span>player ). Also I love the <span class="highlight">80's </span>music :)</div>
-				</div>
+				include ../partials/cv/header.pug
+				include ../partials/cv/experience.pug
+				include ../partials/cv/education.pug
+				include ../partials/cv/hoby.pug
 			</div>
 			<label class="cv-toggle-close" for="cv-toggle">x</label>
-			<a href="javascript:window.print()" download>
-				<span class="cv-download-button">print<br>copy</span>
+			<a href="javascript:window.print()" download><span class="cv-download-button">print<br>copy</span>
 			</a>
 		</label>
 	</div>
-
 	<div class="wrapper-right">
 		<div>
 			<h1>IVAN JOVANOVIC</h1>
@@ -68,9 +20,8 @@
 			<a href="mailto:notbigmuzzy@gmail.com">📫</a>
 		</div>
 		<div>
-			<span class="sub-title">THIS IS MY</span>
-			<span class="title">RESUME</span>		
+			<label class="sub-title" for="cv-toggle">THIS IS MY</label>
+			<label class="title" for="cv-toggle">RESUME</label>		
 		</div>
 	</div>
-
 </div>

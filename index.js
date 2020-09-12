@@ -49,6 +49,11 @@ $(document).ready(function () {
     $('#cv-toggle + label .the-cv').click(function(e) {
         if ( $('#cv-toggle').is(":checked") ) {
             e.preventDefault()
+            e.stopPropagation()
         }
+    })
+    $('.cv-toggle-close, #cv-toggle + label').click(function(e) {
+        e.stopPropagation()
+        $('.the-cv').scrollTop(0)    
     })
 })
