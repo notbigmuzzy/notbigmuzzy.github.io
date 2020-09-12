@@ -66,3 +66,15 @@ body {
 .the-cv {
 	height: auto !important;
 }
+
+.wrapper-right {
+	display: none !important;
+}
+
+.cv-header {
+	display: flex !important;
+}
+
+.cv-cta {
+	display: none !important;
+}

@@ -32,6 +32,117 @@
 		}
 	}
 
+	.wrapper-right {
+		position: relative;
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: space-between;
+
+		@media (max-width: 768px) {
+			order: 1;
+
+			&:after {
+				content: "⇣";
+				position: absolute;
+				bottom: 6px;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				color: #fff;
+				text-align: center;
+				font-size: 23px;
+			}
+		}
+
+	    & > div {
+	    	padding: 40px 20px;
+	    }
+
+		h1,h2,span {
+			color: #fff;
+			display: block;
+		}
+		a {
+			display: inline-block;
+			color: #fff;
+			filter: grayscale(1);
+			opacity: 0.5;
+			margin-top: 5px;
+			outline: none;
+
+			&:hover {
+				opacity: 1;
+				transition: opacity 0.15s;
+			}
+		}
+
+		h1 {
+			opacity: .8;
+			font-size: 2.5vw;
+			font-weight: 300;
+			line-height: 1.25;
+
+			@media (max-width: 768px) {
+				font-size: 5vw;
+			}
+
+			@media (max-width: 540px) {
+				font-size: 10vw;
+			}
+		}
+
+		h2 {
+			opacity: .8;
+			font-size: 2vw;
+			font-weight: 300;
+			line-height: 1.25;
+
+			@media (max-width: 768px) {
+				font-size: 3vw;
+			}
+
+			@media (max-width: 540px) {
+				font-size: 5vw;
+			}
+		}
+
+		.sub-title {
+			display: block;
+			color: #fff;
+			position: relative;
+			opacity: .7;
+    		font-size: 4vw;
+    		bottom: -20px;
+    		font-weight: 300;
+
+			@media (max-width: 768px) {
+				font-size: 6vw;
+				bottom: -10px;
+			}
+
+			@media (max-width: 768px) {
+				bottom: 0;
+			}
+		}
+
+		.title {
+			display: block;
+			color: #fff;
+			position: relative;
+			left: -10px;
+			font-size: 12.5vw;
+			font-weight: 300;
+
+			@media (max-width: 768px) {
+				font-size: 15vw;
+			}
+
+			@media (max-width: 540px) {
+				font-size: 24vw;
+			}
+		}
+	}
+
 	.wrapper-left {
 		position: relative;
 
@@ -198,7 +309,7 @@
 				padding-bottom: 50px;
 				opacity: 1;
 				cursor: initial;
-				padding: 20px;
+				padding: 20px 20px 0 20px;
 				border: none;
 			}
 
@@ -365,115 +476,55 @@
 				transition: opacity 0.15s;
 			}	
 		}
-	}
 
-	.wrapper-right {
-		position: relative;
-	    display: flex;
-	    flex-direction: column;
-	    justify-content: space-between;
-
-		@media (max-width: 768px) {
-			order: 1;
-
-			&:after {
-				content:"⇣";
-				position: absolute;
-				bottom: 5px;
-				left: 0;
-				right: 0;
-				margin: 0 auto;
-				color: rgba(#fff, 0.2);
-				text-align: center;
-				font-size: 16px;
-			}
-		}
-
-	    & > div {
-	    	padding: 40px 20px;
-	    }
-
-		h1,h2,span {
-			color: #fff;
-			display: block;
-		}
-		a {
-			display: inline-block;
-			color: #fff;
-			filter: grayscale(1);
-			opacity: 0.5;
-			margin-top: 5px;
-			outline: none;
-
-			&:hover {
-				opacity: 1;
-				transition: opacity 0.15s;
-			}
-		}
-
-		h1 {
-			opacity: .8;
-			font-size: 2.5vw;
-			font-weight: 300;
-			line-height: 1.25;
-
-			@media (max-width: 768px) {
-				font-size: 5vw;
-			}
-
-			@media (max-width: 540px) {
-				font-size: 10vw;
-			}
-		}
-
-		h2 {
-			opacity: .8;
-			font-size: 2vw;
-			font-weight: 300;
-			line-height: 1.25;
-
-			@media (max-width: 768px) {
-				font-size: 3vw;
-			}
-
-			@media (max-width: 540px) {
-				font-size: 5vw;
-			}
-		}
-
-		.sub-title {
-			display: block;
-			color: #fff;
+		.cv-cta {
 			position: relative;
-			opacity: .7;
-    		font-size: 4vw;
-    		bottom: -20px;
-    		font-weight: 300;
+			padding: 60px 30px;
+			background-color: #cf1017;
+			background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
 
 			@media (max-width: 768px) {
-				font-size: 6vw;
-				bottom: -10px;
+				left: -20px;
+				width: calc(100% + 40px);
+				padding: 40px 20px;
+
 			}
 
-			@media (max-width: 768px) {
-				bottom: 0;
-			}
-		}
-
-		.title {
-			display: block;
-			color: #fff;
-			position: relative;
-			left: -10px;
-			font-size: 12.5vw;
-			font-weight: 300;
-
-			@media (max-width: 768px) {
-				font-size: 15vw;
+			p, span {
+				color: #fff;
 			}
 
-			@media (max-width: 540px) {
-				font-size: 24vw;
+			.title {
+				font-size: 50px;
+				font-weight: 300;
+				margin-bottom: 20px;
+				max-width: 600px;
+			}
+
+			.cv-actions {
+				display: block;
+				max-width: 500px;
+
+				li {
+					display: inline-block;
+
+					span {
+						display: inline-block;
+						padding: 10px 20px;
+						background-color: #fff;
+						color: #cf1017;
+						text-transform: uppercase;
+						font-size: 12px;
+						font-weight: bold;
+						cursor: pointer;
+						margin: 0 5px 8px 0;
+
+						&:hover {
+							background-color: darken(#cf1017, 5);
+							color: #fff;
+						}
+					}
+				}
 			}
 		}
 	}
