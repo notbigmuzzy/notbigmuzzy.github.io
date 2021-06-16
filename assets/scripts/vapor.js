@@ -28,7 +28,7 @@ $(document).ready(function () {
     }
 
 	//SET STUFF TO BE DRAGGABLE
-	$( ".desktop .icons .icon" ).draggable();
+	//$( ".desktop .icons .icon" ).draggable();
 
 	//TASKBAR LOGIC
 	$(".start-button").click(function() {
@@ -54,21 +54,22 @@ $(document).ready(function () {
 	$(document).bind("contextmenu", function (e) {
 		e.preventDefault();
 	    
-	    $(".popup-menu").addClass('show').css({
-	        top: event.pageY + "px",
-	        left: event.pageX + "px"
-	    });
+	    // $(".popup-menu").addClass('show').css({
+	    //     top: event.pageY + "px",
+	    //     left: event.pageX + "px"
+	    // });
 
 	});
 
 	// // If the document is clicked somewhere
-	$(document).bind("mousedown", function (e) {
+	$(".desktop").bind("mousedown", function (e) {
 	    
 	    // If the clicked element is not the menu
 	    if (!$(e.target).parents(".custom-menu").length > 0) {
 	        
 	        // Hide it
 	        $(".popup-menu").removeClass('show')
+			window.location.hash = 'default';
 	    }
 	});
 
