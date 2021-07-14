@@ -1,0 +1,98 @@
+.default-portfolio {
+    background-image: url('assets/images/darkmode.png');
+    background-position: center center;
+    background-size: cover;
+    background-color: #000;
+
+    .main-page {
+        background-color: transparent;
+
+        .header-img {
+            display: none;
+        }
+
+        .content {
+            top: 19%;
+            filter: invert(1) hue-rotate(180deg);
+
+            @media (max-width: 768px) {
+                top: 0;
+                transform: initial;
+                height: 100%;
+                padding-top: 15%;
+            }
+
+            .buttons {
+                @media (max-width: 440px) {
+                    position: absolute;
+                    bottom: 10%;
+                    left: 0;
+                    right: 0;
+                }   
+            }
+
+            .texts {
+                strong {
+                    color: #ad00ad;
+                }
+
+                p  {
+                    font-weight: initial;
+                }
+            }
+
+            .buttons a {
+                margin: 30px 65px;
+
+                @media (max-width: 768px) {
+                    margin: 30px;
+                }
+
+                &:after,
+                &:before {
+                    opacity: 0.4;
+                    background-color: #28a4ff;
+                }
+
+                span {
+                    color: #001c30;
+                }
+
+                &:hover {
+                    &:after,
+                    &:before {
+                        opacity: 0.1;
+                    }
+                    span {
+                        color: #000;
+                    }
+                }
+
+                &.work {
+                    border-left: 2px solid #28a4ff;
+                    border-bottom: 2px solid #28a4ff;
+                }
+
+                &.email {
+                    border-top: 2px solid #28a4ff;
+                    border-bottom: 2px solid #28a4ff;
+                }
+
+                &.blog {
+                    border-right: 2px solid #28a4ff;
+                }
+            }
+        }
+
+        .helper a {
+            color: #e87c7c;
+            opacity: 1;
+            font-family: monospace;
+            font-size: .6214em;
+        }
+    }
+}
+
+aside .the-shell #shell-overlay {
+    background-color: rgba(0,0,0,0.85);
+}
