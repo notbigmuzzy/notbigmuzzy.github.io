@@ -19,13 +19,13 @@
                 top: 0;
                 transform: initial;
                 height: 100%;
-                padding-top: 15%;
+                padding-top: 20%;
             }
 
             .buttons {
                 @media (max-width: 440px) {
                     position: absolute;
-                    bottom: 10%;
+                    bottom: 8%;
                     left: 0;
                     right: 0;
                 }   
