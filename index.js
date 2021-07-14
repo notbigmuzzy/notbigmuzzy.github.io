@@ -6,6 +6,10 @@ $(document).ready(function () {
     //SANITIZE HASH ON PAGE LOAD - REMOVE ANY HASH ON PAGE LOAD 
     history.pushState("", document.title, window.location.pathname);
 
+    //TEMPORARY DARK MODE
+    $('.dark-mode').click(function() {
+        $('html').addClass('dark-mode')
+    })
 
     //FUNCTIONS
     function shellToggle() {

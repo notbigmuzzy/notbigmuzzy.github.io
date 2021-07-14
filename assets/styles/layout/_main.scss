@@ -321,14 +321,15 @@
         }
 
         .icons {
-
-            a:first-child {
-                margin-right: 6px;
-            }
-
-            img {
-                width: 20px;
-                height: auto;
+            .dark-mode {
+                border: none;
+                background-color: transparent;
+                font-size: .8em;
+                text-decoration: none;
+                color: #333;
+                opacity: .15;
+                outline: none;
+                padding: 0;
             }
         }
     }
