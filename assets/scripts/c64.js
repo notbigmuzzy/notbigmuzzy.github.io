@@ -125,10 +125,16 @@ $(document).ready(function () {
             success: function (response) {
                 restartPromptAfterSuccess('content')
                 writeOut(response)
+                scrollEditor()
             },
             error: function (response) {
                 restartPromptLoadError(response.status)
+                scrollEditor()
             }
         });
+    }
+    function scrollEditor() {
+        var editor = document.getElementById("editor");
+        editor.scrollTop = editor.scrollHeight;
     }
 })
