@@ -102,6 +102,10 @@
                 &.hide {
                     display: none;
                 }
+
+                i {
+                    color: #887ecb;
+                }
             }
 
             &.active {
@@ -131,6 +135,33 @@
 
             .no-command {
                 color: #cb7e75;
+            }
+
+            .le-me {
+                position: relative;
+                font-family: monospace;
+                color: #50459b;
+                font-weight: bold;
+                background: #887ecb;
+                text-align: right;
+
+                .info-text {
+                    position: absolute;
+                    left: 0;
+                    width: 45%;
+                    height: 100%;
+                    padding-top: 120px;
+                    text-align: left;
+                    line-height: 1.25;
+
+                    span {
+                        display: block;
+
+                        i {
+                            color: #fff;
+                        }
+                    }
+                }
             }
         }
 

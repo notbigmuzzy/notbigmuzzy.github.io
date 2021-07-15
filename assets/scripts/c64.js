@@ -37,10 +37,16 @@ $(document).ready(function () {
             case "help":
                 help()
                 break;
+            case "ls":
+                help()
+                break;
             case "?":
                 help()
                 break;
             case "clear":
+                clearPrompt();
+                break;
+            case "c":
                 clearPrompt();
                 break;
             case "shell":
@@ -49,23 +55,26 @@ $(document).ready(function () {
                 break;
             case "list":
                 if ($submitParam) {
-                    console.log($submitParam)
-
-                    if ($submitParam == 'blog') {
-                        getShit('creative/blogposts')
-                    } else if ($submitParam == 'work') {
-                        getShit('creative/worklists')
+                    if ($submitParam == 'all') {
+                        getShit('assets/templates/partials/c64/')
                     } else {
                         getShit($submitParam)
                     }
-
                 } else {
                     restartPromptNoLoadParams($submitCondition)
                 }
                 break;
             case "load":
                 if ($submitParam) {
-                    getShit($submitParam)
+
+                    if ($submitParam == 'work') {
+                        getShit('assets/templates/partials/c64/work')
+                    } else if ($submitParam == 'me') {
+                        getShit('assets/templates/partials/c64/me')
+                    } else {
+                        getShit($submitParam)
+                    }
+
                 } else {
                     restartPromptNoLoadParams($submitCondition)
                 }
