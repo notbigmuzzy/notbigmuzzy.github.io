@@ -57,21 +57,25 @@ $(document).ready(function () {
                 if ($submitParam) {
                     if ($submitParam == 'all') {
                         getShit('assets/templates/partials/c64/all')
+                        break;
                     }
                 } else {
                     restartPromptNoLoadParams($submitCondition)
+                    break;
                 }
                 break;
             case "load":
                 if ($submitParam) {
                     if ($submitParam == 'work') {
                         getShit('assets/templates/partials/c64/work')
+                        break;
                     } else if ($submitParam == 'me') {
-                        console.log('2')
                         getShit('assets/templates/partials/c64/me')
+                        break;
                     }
                 } else {
                     restartPromptNoLoadParams($submitCondition)
+                    break;
                 }
                 break;
             default:
@@ -121,7 +125,6 @@ $(document).ready(function () {
                 restartPromptAfterSuccess('content')
                 writeOut(response)
                 scrollEditor()
-                console.log('1')
             },
             error: function (response) {
                 restartPromptLoadError(response.status)
@@ -131,8 +134,17 @@ $(document).ready(function () {
     }
     function scrollEditor() {
         setTimeout(function(){
-            var editor = document.getElementById("editor");
-            editor.scrollTop = editor.scrollHeight;
-        },125)
+            var editor = document.getElementById("editor"),
+                scrollInterval = window.setInterval(scrollEditorAfterSuccess, 100);
+
+            function scrollEditorAfterSuccess() {
+                if (editor.scrollTop + editor.offsetHeight < editor.scrollHeight) {
+                    editor.scrollBy(0,25)
+                } else {
+                    clearInterval(scrollInterval)
+                }
+            }
+            scrollEditorAfterSuccess();
+        },200)
     }
 })
