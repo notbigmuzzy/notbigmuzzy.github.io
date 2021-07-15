@@ -1,0 +1,12 @@
+<div class="all">
+    <div class="commandbox help"> 
+        <span class="title">Available info:</span> 
+        <span class="title">- <a href="#">ME</a> <i>-- load"me"</i></span>
+        <span class="title">- <a href="#">WORK</a> <i>-- load"work"</i></span>
+    </div>
+    <div class="commandbox active"> 
+        <span class="title">Ready.</span>
+        <form autocomplete="off">
+            <input type="text" id="editor" name="editor" autofocus="true" /> </form>
+    </div>
+</div>

@@ -56,9 +56,7 @@ $(document).ready(function () {
             case "list":
                 if ($submitParam) {
                     if ($submitParam == 'all') {
-                        getShit('assets/templates/partials/c64/')
-                    } else {
-                        getShit($submitParam)
+                        getShit('assets/templates/partials/c64/all')
                     }
                 } else {
                     restartPromptNoLoadParams($submitCondition)
@@ -66,15 +64,12 @@ $(document).ready(function () {
                 break;
             case "load":
                 if ($submitParam) {
-
                     if ($submitParam == 'work') {
                         getShit('assets/templates/partials/c64/work')
                     } else if ($submitParam == 'me') {
+                        console.log('2')
                         getShit('assets/templates/partials/c64/me')
-                    } else {
-                        getShit($submitParam)
                     }
-
                 } else {
                     restartPromptNoLoadParams($submitCondition)
                 }
@@ -126,6 +121,7 @@ $(document).ready(function () {
                 restartPromptAfterSuccess('content')
                 writeOut(response)
                 scrollEditor()
+                console.log('1')
             },
             error: function (response) {
                 restartPromptLoadError(response.status)
@@ -134,7 +130,9 @@ $(document).ready(function () {
         });
     }
     function scrollEditor() {
-        var editor = document.getElementById("editor");
-        editor.scrollTop = editor.scrollHeight;
+        setTimeout(function(){
+            var editor = document.getElementById("editor");
+            editor.scrollTop = editor.scrollHeight;
+        },125)
     }
 })
