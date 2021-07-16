@@ -57,7 +57,7 @@
     & > * {
         font-family: 'C64-MONO';
         font-size: 25px;
-        line-height: 1.15;
+        line-height: 1.2;
         text-transform: uppercase;
 
         @media (max-width: 640px) {
@@ -151,6 +151,32 @@
                 color: #50459b;
                 background: #887ecb;
 
+                .mega-title {
+                    display: block;
+                    text-align: center;
+                    margin-bottom: 50px;
+                    font-size: 35px;
+                }
+                
+                .info-text {
+                    position: absolute;
+                    left: 0;
+                    width: 45%;
+                    height: 100%;
+                    padding-top: 140px;
+                    padding-left: 25px;
+                    text-align: left;
+                    line-height: 1.2;
+
+                    span {
+                        display: block;
+
+                        i {
+                            color: #fff;
+                        }
+                    }
+                }
+
                 &.me {
                     background: #d0dc71;
                     color: #626262;
@@ -201,12 +227,6 @@
                         margin-bottom: 5px;
                     }
 
-                    .mega-title {
-                        text-align: center;
-                        margin-bottom: 50px;
-                        font-size: 35px;
-                    }
-
                     .exp {
                         position: relative;
                     }
@@ -238,22 +258,15 @@
                     }
                 }
 
-                .info-text {
-                    position: absolute;
-                    left: 0;
-                    width: 45%;
-                    height: 100%;
-                    padding-top: 140px;
-                    padding-left: 25px;
-                    text-align: left;
-                    line-height: 1.25;
+                &.cv-experience {
+                    padding: 25px;
+                    background: #acea88;
+                    color: #274118;
 
-                    span {
-                        display: block;
-
-                        i {
-                            color: #fff;
-                        }
+                    .highlight {
+                        background: #7aab61;
+                        color: #fff;
+                        padding: 0 5px;
                     }
                 }
             }
@@ -320,7 +333,7 @@
     & > * {
         font-family: 'C64-MONO';
         font-size: 25px;
-        line-height: 1;
+        line-height: 1.2;
         text-transform: uppercase;
 
         @media (max-width: 640px) {

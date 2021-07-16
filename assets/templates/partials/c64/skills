@@ -1,0 +1,17 @@
+<div class="prompt cv-experience">
+
+<span class="mega-title">« My skills so far »</span> 
+
+	<div class="description">Professional knowledge of <span class="highlight">HTML5</span>( XHTML ), <span class="highlight">CSS3</span>( CSS2 ) and front side JS ( <span class="highlight">JQUERY, AJAX</span> ). Strong experience in working with preprocessors, especially <span class="highlight">PUG</span> ( <span class="highlight">JADE</span> ) and <span class="highlight">SASS</span> ( <span class="highlight">SCSS, LESS</span> ). Hands-on experience with more popular frameworks such as <span class="highlight">Foundation</span> and <span class="highlight">Bootstrap</span>.</div>
+	<br>
+	<div class="description">Professional experience with <span class="highlight">TYPO3, Wordpress, Magento and various other custom CMS</span>, both with integration and development sides of these systems. Firm grasp of <span class="highlight">responsive design</span> and of the latest trends in web design.</div>
+
+	<br>
+	<div class="description">Knowledge of version control systems ( <span class="highlight">SVN,GIT</span> ) and experience in using build tools ( <span class="highlight">Webpack,Composer,Grunt</span> ). Testing of <span class="highlight">cross-browser</span> i <span class="highlight">cross-device</span> compatibility. Experience in working with various tools for preparing and <span class="highlight">optimizing graphics</span> for web.</div>
+	<br>
+	<div class="description">Strong<span class="highlight"> background in IT</span>. Hardware and software installation, maintenance and upgrades. Working knowledge of <span class="highlight">Linux and CLI environment</span>.</div>
+	<br>
+	<div class="description">Professional <span class="highlight">working proficiency</span> in <span class="highlight">english language</span>.</div>
+	<br>
+	<div class="description">I subscribe to <span class="highlight">team spirit</span> while maintaining capability to complete large chunks of work on my own. Also, I am able to take the initiative to be <span class="highlight">productive</span> and <span class="highlight">efficient</span> and I consider myself <span class="highlight">responsible and goal oriented.</span></div>
+</div>

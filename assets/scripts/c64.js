@@ -61,8 +61,14 @@ $(document).ready(function () {
                     if ($submitParam == 'work') {
                         getShit('assets/templates/partials/c64/work')
                         break;
+                    } else if ($submitParam == "skills") {
+                        getShit('assets/templates/partials/c64/skills')
+                        break;
                     } else if ($submitParam == 'me') {
                         getShit('assets/templates/partials/c64/me')
+                        break;
+                    } else if ($submitParam == 'radio') {
+                        getShit('assets/templates/partials/c64/radio')
                         break;
                     } else {
                         getShit($submitParam);
