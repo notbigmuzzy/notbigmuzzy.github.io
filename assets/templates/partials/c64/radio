@@ -1,10 +1,30 @@
 <div class="prompt radio">
+<span>&nbsp;</span>
+<span class="mega-title">♫¸♪♫♪¸¸♬·¯·♩¸¸♪·¯·♫¸ PLAYING ¸♬·¯·♩¸¸♪·¯·♫¸¸♫♪♫¸♪</span>
+<span>&nbsp;</span>
+<video style="display:none;" autoplay><source src="assets/images/radio/c64.mp3" type="audio/mp3"></video>
 
+<div class="art">````````<span class="ray">.</span>```````<span class="ray">.</span>````````<span class="ray">.</span>````````````````````````````````````````````</div>
+<div class="art">`````````<span class="ray">.</span>``````<span class="ray">.</span>```````<span class="ray">.</span>````````.'```````````````<span class="car">.--.</span>````````````````</div>
+<div class="art">`<span class="ray">'.</span>```````<span class="ray">.</span>`````<span class="ray">.</span>``````<span class="ray">.</span>```````<span class="ray">.'</span>```````<span class="car">________.'_.'_____.--.___</span>`````</div>
+<div class="art">```<span class="ray">'.</span>``````<span class="ray">.</span>````<span class="ray">.</span>`````<span class="ray">.</span>``````<span class="ray">.'</span>````````<span class="car">()_()`ooo```~/```-.|``````"-._</span>`</div>
+<div class="art">`````<span class="ray">'.</span>`````<span class="ray">.</span>```<span class="ray">.</span>````<span class="ray">.</span>`````<span class="ray">.'</span>``````````<span class="car">((((<____```|``````|``____``=`)</span></div>
+<div class="art">```````<span class="ray">'.</span>````<span class="ray">.</span>``<span class="ray">.</span>```<span class="ray">.</span>````<span class="ray">.'</span>```````<span class="ray">.-'</span>``<span class="car">(__)/`()`\___\_____|_/`()`\__/)</span></div>
+<div class="art">.````````<span class="ray">'`</span>``______````<span class="ray">.'</span>``````<span class="ray">.-'</span>````___<span class="car">'.'.__.'_________'.'.__.'</span>____</div>
+<div class="art"><span class="ray">`'-.</span>``````.-~<span class="sun">@@@@@@</span>~-.``````<span class="ray">.-'</span>``````/<span class="hill">/////////////////////////////////</span></div>
+<div class="art">````<span class="ray">'-.`.'</span><span class="sun">@@@@@@@@@@@@</span>'.`<span class="ray">.-'</span>``````__/<span class="hill">//////////////////////////////////</span></div>
+<div class="art">_``````.<span class="sun">@@@@@@@@@@@@@@@@</span>.``````_./<span class="hill">/////////////////////////////////////</span></div>
+<div class="art"><span class="ray">`'-._`.</span><span class="sun">@@@@@@@@@@@@@@@@@@</span>.`<span class="ray">_.-'``</span>|<span class="hill">/////////////////////////////////////</span></div>
+<div class="art">``````:<span class="sun">@@@@@@@@@@@@@@@@@@</span>:``````/<span class="hill">//////////////////////////////////////</span></div>
+<div class="art">``<span class="ray">.-'`.</span><span class="sun">@@@@@@@@@@@@@@@@@@</span>.<span class="ray">`'-`.</span>'<span class="hill">///////////////////////////////////////</span></div>
+<div class="art"><span class="ray">-'</span>`````.<span class="sun">@@@@@@@@@@@@@@@@</span>.`<span class="ray">.</span>`.'<span class="hill">/////////////////////////////////////////</span></div>
+<div class="art">````<span class="ray">.'</span>``'.<span class="sun">@@@@@@@@@@@@</span>.'`_.'<span class="hill">///////////////////////////////////////////</span></div>
+<div class="art">``<span class="ray">.'</span>``<span class="ray">.'</span>``'__________'.-'<span class="hill">//////////////////////////////////////////////</span></div>
+<div class="art"><span class="sea">~~~~~~~~~~~~~~~~~~~~~</span>/<span class="hill">/////////////////////////////////////////////////</span></div>
+<div class="art"><span class="sea">~~``~~~````~~~`~~`~`</span>/<span class="hill">//////////////////////////////////////////////////</span></div>
+<div class="art"><span class="sea">``~~```~~~~``~~~~`~</span>/<span class="hill">///////////////////////////////////////////////////</span></div>
 
-<span class="mega-title">« Radio »</span> 
-
-<video autoplay>
-  <source src="assets/images/radio/c64.mp3" type="audio/mp3">
-</video>
-
+<span>&nbsp;</span>
+<span class="mega-title">♫¸♪♫♪¸¸♬·¯·♩¸¸♪·¯·♫¸¸ RADIO ¸¸♬·¯·♩¸¸♪·¯·♫¸¸♫♪♫¸♪</span> 
+<span>&nbsp;</span>
 </div>

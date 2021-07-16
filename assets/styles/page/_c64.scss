@@ -269,6 +269,42 @@
                         padding: 0 5px;
                     }
                 }
+
+                &.radio {
+                    font-size: 1.95vw;
+                    background: #000;
+                    color: #2b2553;
+
+                    .mega-title {
+                        margin-bottom: 0;
+                        color: #fff;
+                        text-transform: initial;
+                    }
+
+                    .art {
+                        text-align: center;
+                    }
+
+                    .car {
+                        color: #894036;
+                    }
+
+                    .hill {
+                        color: #317b08;
+                    }
+
+                    .sun {
+                        color: #d0dc71;
+                    }
+
+                    .sea {
+                        color: #15edff;
+                    }
+
+                    .ray {
+                        color: #d0dc71;
+                    }
+                }
             }
         }
 
