@@ -1,12 +1,10 @@
-<div>
-
-
+<div class="prompt text-box">
+<span class="title">Drive A: user 0</span>
+	
 <ul>
-
-	<li>ME</li>
-	<li>WORK</li>
-
+	<li>ME<i>.BIN</i><i>2k</i></li>
+	<li>WORK<i>.BIN</i><i>1k</i></li>
 </ul>
 
-
-</div>
+<span class="stats">168K free -- © </span>
+</div>	

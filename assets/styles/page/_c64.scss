@@ -57,7 +57,7 @@
     & > * {
         font-family: 'C64-MONO';
         font-size: 25px;
-        line-height: 1;
+        line-height: 1.15;
         text-transform: uppercase;
 
         @media (max-width: 640px) {
@@ -75,7 +75,8 @@
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
         -ms-overflow-style: none;
-
+        cursor: text;
+        
         @media (max-width: 640px) {
             padding-bottom: 30px;
         }
@@ -137,20 +138,57 @@
                 color: #cb7e75;
             }
 
-            .le-me {
+            .prompt {
                 position: relative;
                 font-family: monospace;
-                color: #50459b;
                 font-weight: bold;
+                color: #50459b;
                 background: #887ecb;
-                text-align: right;
+
+                &.me {
+                    color: #50459b;
+                    background: #887ecb;
+                    text-align: right;        
+                }
+
+                &.text-box {
+                    text-align: left;
+                    padding: 25px;
+                    line-height: 1.5;
+                    font-size: 30px;
+
+                    .title {
+                        display: inline-block;
+                        border-bottom: 5px solid;
+                        margin-bottom: 25px;
+                    }
+
+                    .stats {
+                        border-top: 5px solid;
+                        display: inline-block;
+                        margin-top: 25px;
+                    }
+
+                    li {
+                        position: relative;
+
+                        i {
+                            position: absolute;
+                            left: 250px;
+
+                            & + i {
+                                left: 350px;
+                            }
+                        }
+                    }
+                }
 
                 .info-text {
                     position: absolute;
                     left: 0;
                     width: 45%;
                     height: 100%;
-                    padding-top: 120px;
+                    padding-top: 140px;
                     text-align: left;
                     line-height: 1.25;
 

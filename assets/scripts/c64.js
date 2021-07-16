@@ -53,17 +53,9 @@ $(document).ready(function () {
                 window.location.hash = '#show-shell';
                 restartPromptAfterSuccess('shell')
                 break;
-            case "list":
-                if ($submitParam) {
-                    if ($submitParam == 'all') {
-                        getShit('assets/templates/partials/c64/all')
-                        break;
-                    }
-                } else {
-                    restartPromptNoLoadParams($submitCondition)
-                    break;
-                }
-                break;
+            case "cat":
+                getShit('assets/templates/partials/c64/all')
+                break;''
             case "load":
                 if ($submitParam) {
                     if ($submitParam == 'work') {
@@ -72,6 +64,8 @@ $(document).ready(function () {
                     } else if ($submitParam == 'me') {
                         getShit('assets/templates/partials/c64/me')
                         break;
+                    } else {
+                        getShit($submitParam);
                     }
                 } else {
                     restartPromptNoLoadParams($submitCondition)
@@ -133,18 +127,26 @@ $(document).ready(function () {
         });
     }
     function scrollEditor() {
-        setTimeout(function(){
-            var editor = document.getElementById("editor"),
-                scrollInterval = window.setInterval(scrollEditorAfterSuccess, 100);
-
-            function scrollEditorAfterSuccess() {
-                if (editor.scrollTop + editor.offsetHeight < editor.scrollHeight) {
-                    editor.scrollBy(0,25)
-                } else {
-                    clearInterval(scrollInterval)
-                }
+        var editor = document.getElementById("editor"),
+            scrollInterval = window.setInterval(scrollEditorAfterSuccess, 100);
+        
+        function scrollEditorAfterSuccess() {
+            if (editor.scrollTop + editor.offsetHeight < editor.scrollHeight) {
+                editor.scrollBy(0,25);
+            } else {
+                clearInterval(scrollInterval)
             }
-            scrollEditorAfterSuccess();
-        },200)
+        }
+        scrollEditorAfterSuccess();
+
+        //STOP PROMPT AUTO-SCROLL ON CLICK
+        $(document).on('click', '.c64-portfolio', function () {
+            clearInterval(scrollInterval)
+        })
+
+        //STOP PROMPT AUTO-SCROLL ON MOUSE/TOUCHPAD SCROLL
+        document.getElementById("editor").onwheel = function() {
+            clearInterval(scrollInterval)
+        };
     }
 })
