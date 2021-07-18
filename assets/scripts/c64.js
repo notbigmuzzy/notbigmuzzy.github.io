@@ -68,6 +68,7 @@ $(document).ready(function () {
                         getShit('assets/templates/partials/c64/me')
                         break;
                     } else if ($submitParam == 'radio') {
+                        $('.prompt.radio video').remove()
                         getShit('assets/templates/partials/c64/radio')
                         break;
                     } else {
@@ -153,6 +154,12 @@ $(document).ready(function () {
         //STOP PROMPT AUTO-SCROLL ON MOUSE/TOUCHPAD SCROLL
         document.getElementById("editor").onwheel = function() {
             clearInterval(scrollInterval)
+            console.log('123')
         };
+        document.getElementById("editor").ontouchmove = function() {
+            clearInterval(scrollInterval)
+            console.log('456')
+        };
+
     }
 })

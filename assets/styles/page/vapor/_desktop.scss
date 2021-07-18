@@ -23,7 +23,8 @@
 }
 
 .desktop {
-    height: 100%;
+    position: relative;
+    height: calc(100% - 30px);
     width: 100%;
 
     .icons {
@@ -59,6 +60,91 @@
                 font-size: 14px;
                 display: block;
                 color: #fff;
+            }
+        }
+    }
+
+    .root {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        pointer-events: none;
+        overflow: hidden;
+
+        .window {
+            position: absolute;
+            background-color: #fff;
+            pointer-events: initial;
+            display: flex;
+            flex-direction: column;
+            background-color: $window-background;
+            @include vapor-border;
+            padding: 1px;
+
+            &.minimize {
+                display: none;
+            }
+
+            &.maximize {
+                width: 100% !important;
+                height: 100% !important;
+                left: 0 !important;
+                right: 0 !important;
+                top: 0 !important;
+                bottom: 0 !important;
+                padding: 0 !important;
+                border: none !important;
+            }
+
+            &:focus {
+                z-index: 999;
+
+                .titlebar {
+                    background-color: #00007a;
+                    color: #fff;
+                }
+            }
+
+            .titlebar {
+                display: flex;
+                align-items: center;
+                cursor: default;
+                background-color: #7b7b7b;
+                color: #ccc;
+
+                .ico {
+                    margin-left: 5px;
+                }
+
+                .label {
+                    flex-grow: 9;
+                    padding-left: 5px;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+
+                .buttons {
+                    display: flex;
+
+                    button {
+                        background-color: $window-background;
+                        @include vapor-border;
+
+                        &:hover {
+                            @include vapor-border-hovered;
+                        }
+                    }
+                }
+            }
+
+            .content {
+                flex-grow: 9;
+                background-color: #fff;
+                @include vapor-border-hovered;
+                padding: 2px;
             }
         }
     }

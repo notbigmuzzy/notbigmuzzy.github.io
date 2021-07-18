@@ -142,13 +142,33 @@
         display: flex;
         flex-direction: row;
         flex-grow: 100;
+        z-index: 9;
+        align-items: center;
 
-        .window {
+        li {
+            display: flex;
+            align-items: center;
+            height: 26px;
+            line-height: 1.25;
+            padding: 0 10px;
+            cursor: pointer;
+            min-width: 180px;
             @include vapor-border;
 
-            &:hover {
-                @include vapor-border-hovered;            
-            } 
+            .ico {
+                width: 16px;
+                height: 16px;
+                margin-right: 5px;
+            }
+
+            &.minimize {
+                @include vapor-border;
+            }
+
+            &:hover,
+            &.minimize:hover {
+                @include vapor-border-hovered;
+            }
         }
     }
 
