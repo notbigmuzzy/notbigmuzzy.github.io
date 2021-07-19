@@ -27,12 +27,15 @@ $(document).ready(function () {
         }
     }
 
-    /////////// TASKBAR INTERACTIONS ///////////
-
 	//STARTBUTTON LOGIC
 	$(".start-button").click(function() {
 		var $action = $(this).attr('data-action')
 		window.location.hash = $action;
+	})
+
+	//CLICK ON WINDOW
+	$(document).on('click','.desktop .root .window', function() {
+		focus($(this))
 	})
 
 	//UNMINIMIZE LOGIC
@@ -46,9 +49,6 @@ $(document).ready(function () {
 		$(this).removeClass('minimize');
 		matchedWindow.removeClass('minimize');
 	});
-
-
-	/////////// DESKTOP STUF ///////////
 
 	//DESKTOP ICONS + MENU ITEM LAUNCHER
 	$('.launch').click(function(e) {
@@ -93,7 +93,6 @@ $(document).ready(function () {
 		}
 	});
 
-
 	//MISC FUNCTIONS
 	function setClock() {
 		var today = new Date();
@@ -107,6 +106,11 @@ $(document).ready(function () {
 	function checkTime(i) {
 		if (i < 10) {i = "0" + i};
 		return i;
+	}
+
+	function focus(element) {
+		$('.desktop .root .window').removeClass('focus');
+		$(element).addClass('focus');
 	}
 
 	function closeMenu() {
@@ -165,6 +169,7 @@ $(document).ready(function () {
 			$xalign = element.attr('data-left') ? "left" : "right",
 			$width = element.attr('data-width') ? element.attr('data-width') : 600,
 			$height = element.attr('data-height') ? element.attr('data-height') : 400,
+			$skin = element.attr('data-skin') ? element.attr('data-skin') : 'default',
 			$desktopRoot = $('.desktop .root'),
 			$taskbarList = $('.taskbar .tasks'),
 			$windowName = $name;
@@ -175,7 +180,7 @@ $(document).ready(function () {
 			$windowID = generateUniqueID(20);
 
 		//ADD NEW WINDOW TO DESKTOP ROOT SURFACE
-		$desktopRoot.append('<div class="window" id="' + $windowID + '" tabindex="0" data-url="' + $url + '" style="top:' + $windowTop + 'px;' + $xalign + ':' + $windowLeft + 'px;width:' + $windowWidth + 'px;height:' + $windowHeight + 'px;"><div class="titlebar" id="' + $windowID + '_titlebar"><img class="ico" src="' + $img + '"/><span class="label">' + $windowName + '</span><ul class="buttons"><li><button id="minimize">_</button></li><li><button id="maximize">=</button></li><li><button id="close">x</button></li></ul></div><div class="content"></div></div>');
+		$desktopRoot.append('<div class="window ' + $skin + '" id="' + $windowID + '" tabindex="0" data-url="' + $url + '" style="top:' + $windowTop + 'px;' + $xalign + ':' + $windowLeft + 'px;width:' + $windowWidth + 'px;height:' + $windowHeight + 'px;"><div class="titlebar" id="' + $windowID + '_titlebar"><img class="ico" src="' + $img + '"/><span class="label">' + $windowName + '</span><ul class="buttons"><li><button id="minimize">_</button></li><li><button id="maximize">=</button></li><li><button id="close">x</button></li></ul></div><div class="content"></div></div>');
 
 		//ADD NEW WINDOW TO TASKBAR LIST
 		$taskbarList.append('<li id="' + $windowID + '"><img class="ico" src="' + $img + '"/><span>' + $windowName + '</span></li>')

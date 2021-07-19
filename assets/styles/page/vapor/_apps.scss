@@ -1,15 +1,35 @@
-.notepad {
-	position: relative;
-	width: 100%;
-	height: 100%;
-
-	#editor {
-		display: block;
+.desktop .root {
+	.notepad {
+		position: relative;
 		width: 100%;
 		height: 100%;
-		border: none;
-		font-family: monospace;
-		font-size: 20px;
-		resize: none;
+
+		#editor {
+			display: block;
+			width: 100%;
+			height: 100%;
+			border: none;
+			font-family: monospace;
+			font-size: 20px;
+			resize: none;
+		}
 	}
+
+	.window.video {
+		.titlebar {
+			background-color: #000;
+		}
+
+		.content {
+			padding: 0;
+			border: none;
+			background-color: #000;
+		}
+
+		video {
+			width: 100%;
+			height: 100%;
+			background-color: #000;
+		}
+	}	
 }
