@@ -111,20 +111,11 @@
                 border: none !important;
             }
 
-            &.focus {
-                z-index: 999;
-
-                .titlebar {
-                    background-color: #00007a;
-                    color: #fff;
-                }
-            }
-
             .titlebar {
                 display: flex;
                 align-items: center;
                 cursor: default;
-                background-color: #7b7b7b;
+                background-color: #00007a;
                 color: #ccc;
 
                 .ico {

@@ -34,33 +34,28 @@ $(document).ready(function () {
 		var $action = $(this).attr('data-action')
 		window.location.hash = $action;
 	})
+
 	//UNMINIMIZE LOGIC
-	$(document).on('click','.taskbar .tasks .minimize', function() {
+	$(document).on('click','.taskbar .tasks .minimize', function(e) {
+		e.stopPropagation();
+
+		var windowID = '#' + $(this).attr('id');
+			matchedWindow = $('.desktop .root').find(windowID),
+			allWindows = $('.desktop .root .window');
+
 		$(this).removeClass('minimize');
-		var windowID = '#' + $(this).attr('class');
-		$('.desktop .root').find(windowID).removeClass('minimize').focus();
+		matchedWindow.removeClass('minimize');
 	});
-	//SET CLOCK
+
 
 	/////////// DESKTOP STUF ///////////
 
 	//DESKTOP ICONS + MENU ITEM LAUNCHER
-	$('.launch').click(function() {
+	$('.launch').click(function(e) {
+		e.stopPropagation();
 		spawnNewWindow($(this))
 		closeMenu()
 	})
-
-	//FOCUS/UNFOCUS WINDOWS
-	$(document).on('click','.desktop .root .window', function(e){
-		e.stopPropagation();
-
-		var allWindows = $('.desktop .root .window'),
-			thisWindow = $(this),
-			thisWindowID = thisWindow.attr('id');
-
-		focusWindow(allWindows, 'off');
-		focusWindow(thisWindow,'on');
-	});
 
 	//RIGHT CLICK MENU
 	$(document).bind("contextmenu", function (e) {
@@ -72,20 +67,21 @@ $(document).ready(function () {
 	// CLICK ON DESKTOP
 	$(".wallpaper").click(function () {
 		closeMenu()
-		focusWindow($('.desktop .root .window'), 'off');
 	});
 
 	//WINDOW BUTTONS CLICK LOGIC
 	$(document).on('click', '.window .buttons button', function(e) {
+		e.stopPropagation();
+
 		var buttonAction = $(this).attr('id'),
 			window = $(this).parents('.window'),
-			windowID = '.' + window.attr('id'),
+			windowID = '#' + window.attr('id'),
 			taskbarTask = $('.taskbar .tasks').find(windowID);
 
 		switch (buttonAction) {
 			case "minimize":
 				window.addClass(buttonAction);
-				taskbarTask.addClass(buttonAction)
+				taskbarTask.addClass(buttonAction);
 				break;
 			case "maximize":
 				window.toggleClass(buttonAction);
@@ -116,14 +112,6 @@ $(document).ready(function () {
 	function closeMenu() {
 		$(".popup-menu").removeClass('show')
 		window.location.hash = 'default';
-	}
-
-	function focusWindow(element, focus) {
-		if (focus == 'on') {
-			$(element).addClass('focus');
-		} else {
-			$(element).removeClass('focus');
-		}
 	}
 
 	function dragElement(element) {
@@ -190,18 +178,12 @@ $(document).ready(function () {
 		$desktopRoot.append('<div class="window" id="' + $windowID + '" tabindex="0" data-url="' + $url + '" style="top:' + $windowTop + 'px;' + $xalign + ':' + $windowLeft + 'px;width:' + $windowWidth + 'px;height:' + $windowHeight + 'px;"><div class="titlebar" id="' + $windowID + '_titlebar"><img class="ico" src="' + $img + '"/><span class="label">' + $windowName + '</span><ul class="buttons"><li><button id="minimize">_</button></li><li><button id="maximize">=</button></li><li><button id="close">x</button></li></ul></div><div class="content"></div></div>');
 
 		//ADD NEW WINDOW TO TASKBAR LIST
-		$taskbarList.append('<li class="' + $windowID + '"><img class="ico" src="' + $img + '"/><span>' + $windowName + '</span></li>')
+		$taskbarList.append('<li id="' + $windowID + '"><img class="ico" src="' + $img + '"/><span>' + $windowName + '</span></li>')
 
 		var newWindow = document.getElementById($windowID)
 
 		//SET NEW WINDOW TO BE DRAGGABLE
 		dragElement(newWindow);
-
-		//UNFOCUS OTHER WINDOWS
-		focusWindow($('.desktop .root .window'), 'off');
-
-		//FOCUS NEW WINDOW
-		focusWindow(newWindow, 'on');
 
 		//ADD CONTENT TO WINDOW
 		populateWindowContent(newWindow);
