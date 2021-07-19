@@ -1,0 +1,3 @@
+<div class="notepad">
+<textarea id="editor" name="editor"></textarea>
+</div>

@@ -10,7 +10,6 @@
     left: 0;
     height: 100%;
     width: 100%;
-    pointer-events: none;
     text-align: center;
 
     img {
@@ -26,11 +25,24 @@
     position: relative;
     height: calc(100% - 30px);
     width: 100%;
+    pointer-events: none;
+
+    & > * {
+        pointer-events: initial;
+    }
 
     .icons {
+        position: absolute;
+        top: 0;
+        left: 0;
         max-width: 100px;
         padding: 20px 0;
         text-align: center;
+
+        &.right {
+            left: auto;
+            right: 0;
+        }
 
         li {
             position: relative;
@@ -99,7 +111,7 @@
                 border: none !important;
             }
 
-            &:focus {
+            &.focus {
                 z-index: 999;
 
                 .titlebar {
@@ -117,6 +129,8 @@
 
                 .ico {
                     margin-left: 5px;
+                    height: 16px;
+                    width: 16px;
                 }
 
                 .label {

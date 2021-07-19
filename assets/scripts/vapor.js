@@ -1,8 +1,8 @@
 $(document).ready(function () {
+
 	//INDEX
 	setClock()
     window.onhashchange = urlEventListeners;
-
     //ON HASH CHANGE
     function urlEventListeners() {
         if (document.getElementById('portfolio')) {
@@ -27,64 +27,53 @@ $(document).ready(function () {
         }
     }
 
-	//TASKBAR LOGIC
+    /////////// TASKBAR INTERACTIONS ///////////
+
+	//STARTBUTTON LOGIC
 	$(".start-button").click(function() {
 		var $action = $(this).attr('data-action')
 		window.location.hash = $action;
 	})
-
+	//UNMINIMIZE LOGIC
+	$(document).on('click','.taskbar .tasks .minimize', function() {
+		$(this).removeClass('minimize');
+		var windowID = '#' + $(this).attr('class');
+		$('.desktop .root').find(windowID).removeClass('minimize').focus();
+	});
 	//SET CLOCK
-	function setClock() {
-		var today = new Date();
-		var h = today.getHours();
-		var m = today.getMinutes();
-		m = checkTime(m);
-		document.getElementById('clock').innerHTML = h + ":" + m;
-		var t = setTimeout(setClock, 30000);
-	}
-	function checkTime(i) {
-		if (i < 10) {i = "0" + i};
-		return i;
-	}
+
+	/////////// DESKTOP STUF ///////////
+
+	//DESKTOP ICONS + MENU ITEM LAUNCHER
+	$('.launch').click(function() {
+		spawnNewWindow($(this))
+		closeMenu()
+	})
+
+	//FOCUS/UNFOCUS WINDOWS
+	$(document).on('click','.desktop .root .window', function(e){
+		e.stopPropagation();
+
+		var allWindows = $('.desktop .root .window'),
+			thisWindow = $(this),
+			thisWindowID = thisWindow.attr('id');
+
+		focusWindow(allWindows, 'off');
+		focusWindow(thisWindow,'on');
+	});
 
 	//RIGHT CLICK MENU
 	$(document).bind("contextmenu", function (e) {
 		e.preventDefault();
 	    
-	    // $(".popup-menu").addClass('show').css({
-	    //     top: event.pageY + "px",
-	    //     left: event.pageX + "px"
-	    // });
-
+		spawnRightClickMenu();
 	});
 
-	// // If the document is clicked somewhere
-	$(".desktop").bind("mousedown", function (e) {
-	    
-	    // If the clicked element is not the menu
-	    if (!$(e.target).parents(".custom-menu").length > 0) {
-	        
-	        // Hide it
-	        $(".popup-menu").removeClass('show')
-			window.location.hash = 'default';
-	    }
+	// CLICK ON DESKTOP
+	$(".wallpaper").click(function () {
+		closeMenu()
+		focusWindow($('.desktop .root .window'), 'off');
 	});
-
-	// // If the menu element is clicked
-	// $(".custom-menu li").click(function(){
-	    
-	//     // This is the triggered action name
-	//     switch($(this).attr("data-action")) {
-	        
-	//         // A case for each action. Your actions here
-	//         case "first": alert("first"); break;
-	//         case "second": alert("second"); break;
-	//         case "third": alert("third"); break;
-	//     }
-	  
-	//     // Hide it AFTER the action was triggered
-	//     $(".custom-menu").hide(100);
-	//   });	
 
 	//WINDOW BUTTONS CLICK LOGIC
 	$(document).on('click', '.window .buttons button', function(e) {
@@ -108,18 +97,38 @@ $(document).ready(function () {
 		}
 	});
 
-	//UNMINIMIZE LOGIC
-	$(document).on('click','.taskbar .tasks .minimize', function() {
-		$(this).removeClass('minimize');
 
-		var windowID = '#' + $(this).attr('class');
+	//MISC FUNCTIONS
+	function setClock() {
+		var today = new Date();
+		var h = today.getHours();
+		var m = today.getMinutes();
+		m = checkTime(m);
+		document.getElementById('clock').innerHTML = h + ":" + m;
+		var t = setTimeout(setClock, 30000);
+	}
 
-		$('.desktop .root').find(windowID).removeClass('minimize').focus();
-	});
+	function checkTime(i) {
+		if (i < 10) {i = "0" + i};
+		return i;
+	}
 
-	function dragElement(elmnt) {
+	function closeMenu() {
+		$(".popup-menu").removeClass('show')
+		window.location.hash = 'default';
+	}
+
+	function focusWindow(element, focus) {
+		if (focus == 'on') {
+			$(element).addClass('focus');
+		} else {
+			$(element).removeClass('focus');
+		}
+	}
+
+	function dragElement(element) {
 		var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-		document.getElementById(elmnt.id + "_titlebar").onmousedown = dragMouseDown;
+		document.getElementById(element.id + "_titlebar").onmousedown = dragMouseDown;
 
 		function dragMouseDown(e) {
 			e = e || window.event;
@@ -137,8 +146,8 @@ $(document).ready(function () {
 			pos2 = pos4 - e.clientY;
 			pos3 = e.clientX;
 			pos4 = e.clientY;
-			elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-			elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+			element.style.top = (element.offsetTop - pos2) + "px";
+			element.style.left = (element.offsetLeft - pos1) + "px";
 		}
 
 		function stopDragElement() {
@@ -159,37 +168,67 @@ $(document).ready(function () {
 		return result;
 	}
 
-	function spawnNewWindow(name,top,left,width,height) {
-		var $desktopRoot = $('.desktop .root'),
+	function spawnNewWindow(element) {
+		var $url = element.attr('data-url') ? 'assets/templates/partials/vapor/' + element.attr('data-url') : 'assets/templates/partials/vapor/default',
+			$name = element.attr('data-name') ? element.attr('data-name') : 'New Window',
+			$img = element.attr('src') ? element.attr('src') : element.find('img').attr('src');
+			$top = element.attr('data-top') ? element.attr('data-top') : 50,
+			$position = element.attr('data-left') ? element.attr('data-left') : element.attr('data-right'),
+			$xalign = element.attr('data-left') ? "left" : "right",
+			$width = element.attr('data-width') ? element.attr('data-width') : 600,
+			$height = element.attr('data-height') ? element.attr('data-height') : 400,
+			$desktopRoot = $('.desktop .root'),
 			$taskbarList = $('.taskbar .tasks'),
-			$windowName = name;
-			$windowTop = top ? top : 50,
-			$windowLeft = left ? left : 100,
-			$windowWidth = width ? width : 600,
-			$windowHeight = height ? height : 400,
+			$windowName = $name;
+			$windowTop = $top ? $top : 50,
+			$windowLeft = $position ? $position : 100,
+			$windowWidth = $width ? $width : 600,
+			$windowHeight = $height ? $height : 400,
 			$windowID = generateUniqueID(20);
 
 		//ADD NEW WINDOW TO DESKTOP ROOT SURFACE
-		$desktopRoot.append('<div class="window" id="' + $windowID + '" tabindex="0" style="top:' + $windowTop + 'px;left:' + $windowLeft + 'px;width:' + $windowWidth + 'px;height:' + $windowHeight + 'px;"><div class="titlebar" id="' + $windowID + '_titlebar"><img class="ico" src="#"/><span class="label">' + $windowName + '</span><ul class="buttons"><li><button id="minimize">_</button></li><li><button id="maximize">=</button></li><li><button id="close">x</button></li></ul></div><div class="content"></div></div>');
+		$desktopRoot.append('<div class="window" id="' + $windowID + '" tabindex="0" data-url="' + $url + '" style="top:' + $windowTop + 'px;' + $xalign + ':' + $windowLeft + 'px;width:' + $windowWidth + 'px;height:' + $windowHeight + 'px;"><div class="titlebar" id="' + $windowID + '_titlebar"><img class="ico" src="' + $img + '"/><span class="label">' + $windowName + '</span><ul class="buttons"><li><button id="minimize">_</button></li><li><button id="maximize">=</button></li><li><button id="close">x</button></li></ul></div><div class="content"></div></div>');
 
 		//ADD NEW WINDOW TO TASKBAR LIST
-		$taskbarList.append('<li class="' + $windowID + '"><img class="ico" src="#"/><span>' + $windowName + '</span></li>')
+		$taskbarList.append('<li class="' + $windowID + '"><img class="ico" src="' + $img + '"/><span>' + $windowName + '</span></li>')
+
+		var newWindow = document.getElementById($windowID)
 
 		//SET NEW WINDOW TO BE DRAGGABLE
-		dragElement(document.getElementById($windowID));
+		dragElement(newWindow);
+
+		//UNFOCUS OTHER WINDOWS
+		focusWindow($('.desktop .root .window'), 'off');
 
 		//FOCUS NEW WINDOW
-		document.getElementById($windowID).focus();
+		focusWindow(newWindow, 'on');
+
+		//ADD CONTENT TO WINDOW
+		populateWindowContent(newWindow);
 	}
 
-	//DESKTOP ICONS LAUNCHER
-	$('.launch').click(function() {
-		var name = $(this).attr('data-name') ? $(this).attr('data-name') : 'New Window',
-			top = $(this).attr('data-top') ? $(this).attr('data-top') : 50,
-			left = $(this).attr('data-left') ? $(this).attr('data-left') : 100,
-			width = $(this).attr('data-width') ? $(this).attr('data-width') : 600,
-			height = $(this).attr('data-height') ? $(this).attr('data-width') : 400;
+	function populateWindowContent(newWindow) {
+		var whereToPutContent = $(newWindow).find('.content'),
+			fromWhereToGetTheContent = $(newWindow).attr('data-url');
 
-		spawnNewWindow(name,top,left,width,height)
-	})
+		getShit(whereToPutContent,fromWhereToGetTheContent);
+	}
+
+    function getShit(whereToPutContent,fromWhereToGetTheContent) {
+        $.ajax({
+            url: fromWhereToGetTheContent,
+            dataType: "html",
+            success: function (content) {
+                writeOut(whereToPutContent, content)
+            }
+        });
+    }
+
+	function writeOut(whereToPutContent, content) {
+        whereToPutContent.append(content)
+    }
+
+    function spawnRightClickMenu() {
+    	console.log('123')
+    }
 })

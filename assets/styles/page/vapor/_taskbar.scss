@@ -153,6 +153,8 @@
             padding: 0 10px;
             cursor: pointer;
             min-width: 180px;
+            font-size: 14px;
+            font-weight: bold;
             @include vapor-border;
 
             .ico {
