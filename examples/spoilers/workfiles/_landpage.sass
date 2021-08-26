@@ -1,0 +1,346 @@
+// LANDPAGE STUFF
+.landpage
+	position: absolute
+	top: 0
+	left: 50%
+	transform: translatex(-50%)
+	width: 100%
+	max-width: 1500px
+	height: 100%
+	overflow: hidden
+	text-align: center
+	z-index: 999
+	background-color: white
+	// box-shadow: 0px 10px 20px hsla(0, 0%, 0%, .5)
+	overflow-y: auto
+	font-family: courier new,courier,monospace
+
+
+.landpage-clicked
+	left: -50%
+
+.landpage a
+	text-decoration: none
+	color: red
+	&:hover
+		text-decoration: underline
+
+.landpage-hr
+	margin: 0 auto
+	width: 80%
+	opacity: .5
+	margin-top: 50px
+	border: 1px dashed grey
+
+.landpage-desc
+	padding: 50px 100px
+
+
+.landpage-scrollbutton
+	display: inline-block
+	position: relative
+	border: 2px dashed hsla(0, 0%, 0%, .2)
+	padding: 10px
+	border-radius: 5px
+	-moz-transition: .2s ease-in-out all
+	-webkit-transition: .2s ease-in-out all
+	-o-transition: .2s ease-in-out all
+	-ms-transition: .2s ease-in-out all
+	transition: .2s ease-in-out all
+	&:hover
+		cursor: pointer
+		opacity: .5
+
+.landpage-scrolltxt
+	font-weight: bold
+	color: darkgrey - 50
+
+.landpage-scrollimg
+	height: 50px
+	width: auto
+	margin-top: 15px
+
+.landpage-wrapper
+	position: relative
+	top: 50%
+	transform: translatey(-50%)
+	width: 100%
+	-moz-transition: .6s ease-in-out all
+	-webkit-transition: .6s ease-in-out all
+	-o-transition: .6s ease-in-out all
+	-ms-transition: .6s ease-in-out all
+	transition: .6s ease-in-out all
+
+.landpage-wrapperclicked	
+	margin-left: -50%
+
+.landpage-wrapclose
+	height: 100%
+	width: 100%
+
+.landpage-popoutbutton
+	color: red
+	&:hover
+		cursor: pointer
+		text-decoration: underline
+
+.landpage-cover
+	display: none
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: hsla(0, 0%, 100%, .8)
+
+.landpage-iframe
+	position: absolute
+	top: 50%
+	transform: translatey(-50%)
+	left: 50%
+	margin-left: -300px	
+	height: 90%
+	width: 600px
+	background-color: white
+	box-shadow: 0 0 50px hsla(0, 0%, 0%, .2)
+	border-radius: 10px
+	overflow: auto
+
+.landpage-iframe img
+	max-width: 100%
+
+.landpage-menu
+	overflow: hidden
+	position: absolute
+	top: 0
+	right: -50%
+	height: 100%
+	width: 50%
+	background-color: black
+	color: white
+	font-family: 'Oswald', sans-serif
+	-moz-transition: .6s ease-in-out all
+	-webkit-transition: .6s ease-in-out all
+	-o-transition: .6s ease-in-out all
+	-ms-transition: .6s ease-in-out all
+	transition: .6s ease-in-out all
+
+.landpage-menu a 
+	color: white
+
+.landpage-menuclicked
+	right: 0%
+
+.menu-ul
+	display: inline-block
+	width: 340px
+	margin-top: 50px
+	margin-left: 50px
+	text-align: left
+	line-height: 25px
+	text-shadow: 0px 0px 3px black
+
+#clouds
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	height: 40%
+
+.cloud
+	width: 250px
+	height: 60px
+	background-color: white
+	border-radius: 200px
+	-moz-border-radius: 200px
+	-webkit-border-radius: 200px
+	position: relative
+	opacity: .3
+
+.cloud:before, .cloud:after
+	content: ''
+	position: absolute
+	background-color: white
+	width: 120px
+	height: 120px
+	top: -75px
+	
+	border-radius: 100px
+	-moz-border-radius: 100px
+	-webkit-border-radius: 100px
+	
+	transform: rotate(30deg)
+	-moz-transform: rotate(30deg)
+	-webkit-transform: rotate(30deg)
+
+.cloud:after
+	width: 90px
+	height: 90px
+	top: -45px
+	right: 25px
+
+.cloud:before
+	left: 25px
+
+.x1
+	-webkit-animation: moveclouds 45s linear infinite
+	-moz-animation: moveclouds 45s linear infinite
+	-o-animation: moveclouds 45s linear infinite
+
+.x2
+	left: 200px
+	transform: scale(0.6)
+	-webkit-transform: scale(0.6)
+	-moz-transform: scale(0.6)
+	-o-transform: scale(0.6)	
+	
+	-webkit-animation: moveclouds 40s linear infinite
+	-moz-animation: moveclouds 40s linear infinite
+	-o-animation: moveclouds 40s linear infinite
+
+.x3
+	left: -250px
+	top: -200px
+	transform: scale(0.3)
+	-webkit-transform: scale(0.3)
+	-moz-transform: scale(0.3)
+	-o-transform: scale(0.3)
+	opacity: .8
+	
+	-webkit-animation: moveclouds 35s linear infinite
+	-moz-animation: moveclouds 35s linear infinite
+	-o-animation: moveclouds 35s linear infinite
+
+.x4
+	left: 300px
+	transform: scale(0.8)
+	-webkit-transform: scale(0.8)
+	-moz-transform: scale(0.8)
+	-o-transform: scale(0.8)
+	
+	-webkit-animation: moveclouds 48s linear infinite
+	-moz-animation: moveclouds 48s linear infinite
+	-o-animation: moveclouds 48s linear infinite
+
+.x5
+	left: -200px
+	transform: scale(0.6)
+	-webkit-transform: scale(0.6)
+	-moz-transform: scale(0.6)
+	-o-transform: scale(0.6)
+	
+	-webkit-animation: moveclouds 35s linear infinite
+	-moz-animation: moveclouds 35s linear infinite
+	-o-animation: moveclouds 35s linear infinite
+
+.x6
+	left: 470px
+	top: -200px
+	transform: scale(0.2)
+	-webkit-transform: scale(0.2)
+	-moz-transform: scale(0.2)
+	-o-transform: scale(0.2)
+	opacity: 0.7
+	
+	-webkit-animation: moveclouds 31s linear infinite
+	-moz-animation: moveclouds 31s linear infinite
+	-o-animation: moveclouds 31s linear infinite
+
+.x7
+	left: 20px
+	top: -400px
+	transform: scale(0.2)
+	-webkit-transform: scale(0.2)
+	-moz-transform: scale(0.2)
+	-o-transform: scale(0.2)
+	opacity: .7
+	
+	-webkit-animation: moveclouds 30s linear infinite
+	-moz-animation: moveclouds 30s linear infinite
+	-o-animation: moveclouds 30s linear infinite
+
+
+@-webkit-keyframes moveclouds
+	0%
+		margin-left: 800px
+
+	100%
+		margin-left: -800px
+
+@-moz-keyframes moveclouds
+	0%
+		margin-left: 800px
+
+	100%
+		margin-left: -800px
+
+@-o-keyframes moveclouds
+	0%
+		margin-left: 800px
+
+	100%
+		margin-left: -800px
+
+.menu-footer
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	height: 30px
+	line-height: 30px
+	padding-left: 10px
+	padding-right: 10px
+
+
+.menufoot-right
+	float: right
+	font-size: .9em
+	-moz-transition: .2s ease-in-out all
+	-webkit-transition: .2s ease-in-out all
+	-o-transition: .2s ease-in-out all
+	-ms-transition: .2s ease-in-out all
+	transition: .2s ease-in-out all		
+	&:hover
+		cursor: pointer
+		opacity: .5
+
+.menufoot-left
+	float: left
+	font-size: 20px !important
+	height: 30px
+	margin-top: 5px
+	-moz-transition: .2s ease-in-out all
+	-webkit-transition: .2s ease-in-out all
+	-o-transition: .2s ease-in-out all
+	-ms-transition: .2s ease-in-out all
+	transition: .2s ease-in-out all		
+	&:hover
+		cursor: pointer
+		opacity: .5	
+
+.copy-notice
+	display: none
+	position: absolute
+	bottom: 35px
+	right: 5px
+	background-color: white
+	padding: 10px
+	width: 225px
+	height: 65px
+	font-size: .7em
+	text-align: left
+	color: hsla(0, 0%, 0%, .6)
+
+.copy-notice a 
+	color: hsla(0, 0%, 0%, .9)
+	font-weight: bold
+
+.copy-triangle
+	position: absolute
+	bottom: -10px
+	right: 33px
+	width: 10px
+	height: 10px
+	border-style: solid
+	border-width: 10px 10px 0 10px
+	border-color: #ffffff transparent transparent transparent
