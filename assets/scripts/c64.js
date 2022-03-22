@@ -71,6 +71,8 @@ $(document).ready(function () {
                         $('.prompt.radio video').remove()
                         getShit('assets/templates/partials/c64/radio')
                         break;
+                    } else if ($submitParam == 'game') {
+                        window.open('https://notbigmuzzy.github.io/riveraid/','_self')
                     } else {
                         getShit($submitParam);
                     }
@@ -154,12 +156,9 @@ $(document).ready(function () {
         //STOP PROMPT AUTO-SCROLL ON MOUSE/TOUCHPAD SCROLL
         document.getElementById("editor").onwheel = function() {
             clearInterval(scrollInterval)
-            console.log('123')
         };
         document.getElementById("editor").ontouchmove = function() {
             clearInterval(scrollInterval)
-            console.log('456')
         };
-
     }
 })
