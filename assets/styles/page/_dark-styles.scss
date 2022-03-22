@@ -86,13 +86,26 @@
 
         .helper a {
             color: #e87c7c;
-            opacity: 1;
-            font-family: monospace;
-            font-size: .6214em;
         }
     }
 }
 
 aside .the-shell #shell-overlay {
     background-color: rgba(0,0,0,0.85);
+}
+
+aside .the-shell {
+    .default-card {
+        &#card-content {
+            background-image: url('assets/images/cards/default-dark.jpg');
+            background-position: center top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 1px solid #f49bf5;
+        }
+
+        #card-image {
+            opacity: 0;
+        }
+    }
 }
