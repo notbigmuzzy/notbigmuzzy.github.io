@@ -34,7 +34,7 @@ $(document).ready(function () {
 	})
 
 	//CLICK ON WINDOW
-	$(document).on('click','.desktop .root .window', function() {
+	$(document).on('mousedown','.desktop .root .window', function() {
 		focus($(this))
 	})
 
@@ -74,21 +74,40 @@ $(document).ready(function () {
 		e.stopPropagation();
 
 		var buttonAction = $(this).attr('id'),
-			window = $(this).parents('.window'),
-			windowID = '#' + window.attr('id'),
+			windowElement = $(this).parents('.window'),
+			windowID = '#' + windowElement.attr('id'),
 			taskbarTask = $('.taskbar .tasks').find(windowID);
 
 		switch (buttonAction) {
 			case "minimize":
-				window.addClass(buttonAction);
+				windowElement.addClass(buttonAction);
 				taskbarTask.addClass(buttonAction);
 				break;
 			case "maximize":
-				window.toggleClass(buttonAction);
+				windowElement.toggleClass(buttonAction);
 				break;
 			default:
-				window.remove();
+				windowElement.remove();
 				taskbarTask.remove();
+				break;
+		}
+	});
+
+	//ACTION FROM MENU ITEM CLICK
+	$(document).on('click', '.menuaction', function(e) {
+		var $clickedMenuItem = $(this),
+			menuItemLaunch = $clickedMenuItem.attr('data-launch'),
+			windowElement = $clickedMenuItem.parents('.window'),
+			windowID = '#' + windowElement.attr('id'),
+			taskbarTask = $('.taskbar .tasks').find(windowID);
+
+		switch (menuItemLaunch) {
+			case "close_window":
+				windowElement.remove();
+				taskbarTask.remove();
+				break;
+			default:
+				console.log('menuaction not defined - ' + menuItemLaunch)
 				break;
 		}
 	});
@@ -191,11 +210,14 @@ $(document).ready(function () {
 		//ADD NEW WINDOW TO TASKBAR LIST
 		$taskbarList.append($windowInTaskbar)
 
-		//SECLECT NEWLY CREATED WINDOW
+		//SELECT NEWLY CREATED WINDOW
 		var newWindow = document.getElementById($windowID)
 
 		//SET NEW WINDOW TO BE DRAGGABLE
 		dragElement(newWindow);
+
+		//FOCUS NEW WINDOW
+		focus(newWindow)
 
 		//ADD MENU TO NEW WINDOW
 		spawnWindowMenu(newWindow);
@@ -219,18 +241,27 @@ $(document).ready(function () {
 		fetch(menuType)
 			.then((response) => response.json())
 			.then((data) => {
-				$.each(data, function(menu) {
-					var whereToPutMenuWrapper = $(newWindow).find('.window-menu'),
-						menuWrapper = '<div class="menu-wrapper"></div>';
-					writeOut(whereToPutMenuWrapper, menuWrapper);
-					$.each(data[menu], function(item) {
-						var whereToPutMenuItems = $(whereToPutMenuWrapper).find('.menu-wrapper'),
-							menuItemName = data[menu][item]['name'],
-							menuItem = '<div class="menu-item">' + menuItemName + '</div>';
-						
-						writeOut(whereToPutMenuItems, menuItem);
-					});
-				});
+				var menuItems = data.menu,
+					whereToPutMenuWrapper = $(newWindow).find('.window-menu'),
+					menuWrapper = '<div class="menu-wrapper"></div>';
+				writeOut(whereToPutMenuWrapper, menuWrapper);
+				for(var menuItem in menuItems) {
+					var whereToPutMenuItems = $(whereToPutMenuWrapper).find('.menu-wrapper'),
+						menuItemName = menuItems[menuItem].name,
+						menuUniqueID = generateUniqueID(10),
+						menuItemHTML = '<div id="' + menuUniqueID + '" class="menu-item"><div class="menu-item-label">' + menuItemName + '</div><div class="submenu-wrapper"></div></div>';
+					writeOut(whereToPutMenuItems, menuItemHTML);
+
+					var submenuItems = menuItems[menuItem].submenu;
+					for(var submenuItem in submenuItems) {
+						var whereToPutSubMenuItems = $(whereToPutMenuItems).find('#' + menuUniqueID).find('.submenu-wrapper'),
+							subMenuItemName = submenuItems[submenuItem].name,
+							subMenuItemAction = submenuItems[submenuItem].action == 'true' ? 'menuaction' : '', 
+							subMenuItemLaunch = submenuItems[submenuItem].launch,
+							subMenuItemHTML = '<div class="submenu-item ' + subMenuItemAction + '" data-launch="' + subMenuItemLaunch + '">' + subMenuItemName + '</div>';
+						writeOut(whereToPutSubMenuItems, subMenuItemHTML);
+					}
+				}
 			});	
 	}
 

@@ -2,23 +2,63 @@
 	"menu": {
 			"item1": {
 					"name" : "File",
-					"action": "",
-					"launch": ""
+					"submenu": {
+						"subitem1": {
+								"name" : "New Window",
+								"action": "",
+								"launch": ""
+						},
+						"subitem2": {
+								"name" : "Properties",
+								"action": "",
+								"launch": ""
+						},
+						"subitem3": {
+								"name" : "Exit",
+								"action": "true",
+								"launch": "close_window"
+						}
+					}
 			},
 			"item2": {
 					"name" : "Edit",
-					"action": "",
-					"launch": ""
+					"submenu": {
+						"subitem1": {
+								"name" : "Settings",
+								"action": "",
+								"launch": ""
+						}
+					}
 			},
 			"item3": {
 					"name" : "View",
-					"action": "",
-					"launch": ""
+					"submenu": {
+						"subitem1": {
+								"name" : "List",
+								"action": "",
+								"launch": ""
+						},
+						"subitem2": {
+								"name" : "Small Icons",
+								"action": "",
+								"launch": ""
+						},
+						"subitem3": {
+								"name" : "Big Icons",
+								"action": "",
+								"launch": ""
+						}
+					}
 			},
 			"item4": {
 					"name" : "Help",
-					"action": "",
-					"launch": ""
+					"submenu": {
+						"subitem1": {
+								"name" : "About",
+								"action": "",
+								"launch": ""
+						}
+					}
 			}
 	}
 }

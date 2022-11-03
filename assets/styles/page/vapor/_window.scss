@@ -1,16 +1,53 @@
 .window {
 	.window-menu {
 		.menu-wrapper {
+			position: relative;
+			z-index: 1;
+
 			.menu-item {
+				position: relative;
 				display: inline-block;
 				font-size: 12px;
 				line-height: 1;
 				padding: 2px 4px;
 				border: 2px solid transparent;
 
+				.submenu-wrapper {
+					display: none;
+					position: absolute;
+					top: 18px;
+					left: -2px;
+					background-color: $window-background;
+					@include vapor-border;
+
+					.submenu-item {
+						white-space: nowrap;
+						padding: 4px 12px;
+						border: 2px solid transparent;
+
+						&:hover {
+							cursor: pointer;
+							@include vapor-border-hovered;
+						}
+					}
+				}
+
 				&:hover {
 					cursor: pointer;
 					@include vapor-border-hovered;
+
+					.submenu-wrapper {
+						display: block;
+					}
+				}
+
+				.submenu-item {
+					&:hover {
+						cursor: pointer;
+						background-color: $blue;
+						color: $white;
+						border: 2px solid $blue !important;
+					}
 				}
 			}
 		}
