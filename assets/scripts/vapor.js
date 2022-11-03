@@ -170,7 +170,10 @@ $(document).ready(function () {
 			$width = element.attr('data-width') ? element.attr('data-width') : 600,
 			$height = element.attr('data-height') ? element.attr('data-height') : 400,
 			$skin = element.attr('data-skin') ? element.attr('data-skin') : 'default',
-			$menu = element.attr('data-menu') ? element.attr('data-menu') : "false",
+			$menu = element.attr('data-menu') ? element.attr('data-menu') : "true",
+			$menuType = element.attr('data-menu-type') ? 'assets/templates/partials/vapor/' + element.attr('data-menu-type') + '.json' : "assets/templates/partials/vapor/default-window-menu.json",
+			$statusbar = element.attr('data-statusbar') ? element.attr('data-statusbar') : "true",
+			$statusbarContent = element.attr('data-statusbar-content') ? '<span class="statusbar-text">' + element.attr('data-statusbar-content') + '</span>' : '<span class="statusbar-text">' + $name + '</span>',
 			$desktopRoot = $('.desktop .root'),
 			$taskbarList = $('.taskbar .tasks'),
 			$windowName = $name;
@@ -178,13 +181,15 @@ $(document).ready(function () {
 			$windowLeft = $position ? $position : 100,
 			$windowWidth = $width ? $width : 600,
 			$windowHeight = $height ? $height : 400,
-			$windowID = generateUniqueID(20);
+			$windowID = generateUniqueID(20),
+			$windowOnDesktop = '<div class="window menu-' + $menu + ' ' + $skin + '" id="' + $windowID + '" tabindex="0" data-url="' + $url + '" style="top:' + $windowTop + 'px;' + $xalign + ':' + $windowLeft + 'px;width:' + $windowWidth + 'px;height:' + $windowHeight + 'px;"><div class="titlebar" id="' + $windowID + '_titlebar"><img class="ico" src="' + $img + '"/><span class="label">' + $windowName + '</span><ul class="buttons"><li><button id="minimize">_</button></li><li><button id="maximize">=</button></li><li><button id="close">x</button></li></ul></div><div class="window-menu"></div><div class="content"></div><div class="window-statusbar"></div></div>';
+			$windowInTaskbar = '<li id="' + $windowID + '"><img class="ico" src="' + $img + '"/><span>' + $windowName + '</span></li>';
 
 		//ADD NEW WINDOW TO DESKTOP ROOT SURFACE
-		$desktopRoot.append('<div class="window ' + $skin + '" id="' + $windowID + '" tabindex="0" data-url="' + $url + '" style="top:' + $windowTop + 'px;' + $xalign + ':' + $windowLeft + 'px;width:' + $windowWidth + 'px;height:' + $windowHeight + 'px;"><div class="titlebar" id="' + $windowID + '_titlebar"><img class="ico" src="' + $img + '"/><span class="label">' + $windowName + '</span><ul class="buttons"><li><button id="minimize">_</button></li><li><button id="maximize">=</button></li><li><button id="close">x</button></li></ul></div><div class="window-menu"></div><div class="content"></div></div>');
+		$desktopRoot.append($windowOnDesktop);
 
 		//ADD NEW WINDOW TO TASKBAR LIST
-		$taskbarList.append('<li id="' + $windowID + '"><img class="ico" src="' + $img + '"/><span>' + $windowName + '</span></li>')
+		$taskbarList.append($windowInTaskbar)
 
 		//SECLECT NEWLY CREATED WINDOW
 		var newWindow = document.getElementById($windowID)
@@ -195,19 +200,45 @@ $(document).ready(function () {
 		//ADD MENU TO NEW WINDOW
 		spawnWindowMenu(newWindow);
 
+		//ADD STATUSBAR TO NEW WINDOW
+		spawnWindowStatusbar(newWindow);
+
 		//ADD CONTENT TO NEW WINDOW
 		populateWindowContent(newWindow);
 	}
 
 	function spawnWindowMenu(newWindow) {
-		var whereToPutMenu = $(newWindow).find('.window-menu'),
-			windowMenuContent = "123";
-
-		console.log($menu);
+		var whereToPutMenu = $(newWindow).find('.window-menu');
 
 		if ($menu == 'true') {
-			console.log('123')
-			writeOut(whereToPutMenu, windowMenuContent);
+			generateAndWriteMenu($menuType,newWindow);			
+		}
+	}
+
+	function generateAndWriteMenu(menuType,newWindow) {
+		fetch(menuType)
+			.then((response) => response.json())
+			.then((data) => {
+				$.each(data, function(menu) {
+					var whereToPutMenuWrapper = $(newWindow).find('.window-menu'),
+						menuWrapper = '<div class="menu-wrapper"></div>';
+					writeOut(whereToPutMenuWrapper, menuWrapper);
+					$.each(data[menu], function(item) {
+						var whereToPutMenuItems = $(whereToPutMenuWrapper).find('.menu-wrapper'),
+							menuItemName = data[menu][item]['name'],
+							menuItem = '<div class="menu-item">' + menuItemName + '</div>';
+						
+						writeOut(whereToPutMenuItems, menuItem);
+					});
+				});
+			});	
+	}
+
+	function spawnWindowStatusbar(newWindow) {
+		var whereToPutStatusbar = $(newWindow).find('.window-statusbar');
+
+		if ($statusbar == 'true') {
+			writeOut(whereToPutStatusbar, $statusbarContent);
 		}
 	}
 
@@ -229,7 +260,7 @@ $(document).ready(function () {
     }
 
 	function writeOut(whereToPutContent, content) {
-        whereToPutContent.append(content)
+        whereToPutContent.append(content);
     }
 
     function spawnRightClickMenu() {

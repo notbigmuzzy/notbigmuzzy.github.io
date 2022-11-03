@@ -1,0 +1,38 @@
+.window {
+	.window-menu {
+		.menu-wrapper {
+			.menu-item {
+				display: inline-block;
+				font-size: 12px;
+				line-height: 1;
+				padding: 2px 4px;
+				border: 2px solid transparent;
+
+				&:hover {
+					cursor: pointer;
+					@include vapor-border-hovered;
+				}
+			}
+		}
+	}
+
+	&.menu-true {
+		.window-menu {
+			min-height: 20px;
+			background-color: $window-background;
+		}
+	}
+
+	.window-statusbar {
+		text-align: right;
+
+		.statusbar-text {
+			display: inline-block;
+			font-size: 10px;
+			font-weight: bold;
+			padding: 2px 4px;
+			@include vapor-border-hovered;
+		}
+	}
+}
+

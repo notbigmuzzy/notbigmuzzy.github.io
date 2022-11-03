@@ -1,0 +1,24 @@
+{
+	"menu": {
+			"item1": {
+					"name" : "File",
+					"action": "",
+					"launch": ""
+			},
+			"item2": {
+					"name" : "Edit",
+					"action": "",
+					"launch": ""
+			},
+			"item3": {
+					"name" : "View",
+					"action": "",
+					"launch": ""
+			},
+			"item4": {
+					"name" : "Help",
+					"action": "",
+					"launch": ""
+			}
+	}
+}

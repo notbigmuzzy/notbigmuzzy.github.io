@@ -11,6 +11,7 @@ $cyan: #1fdebc;
 $skin: #ffa58b;
 $pink: #c774e6;
 $sky: #92cffe;
+$blue: #00007a;
 
 .vapor {
     ::-moz-selection {
@@ -28,6 +29,7 @@ $sky: #92cffe;
     }
 }
 
+@import "vapor/window";
 @import "vapor/desktop";
 @import "vapor/taskbar";
 @import "vapor/menu";
