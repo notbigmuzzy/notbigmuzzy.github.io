@@ -170,6 +170,7 @@ $(document).ready(function () {
 			$width = element.attr('data-width') ? element.attr('data-width') : 600,
 			$height = element.attr('data-height') ? element.attr('data-height') : 400,
 			$skin = element.attr('data-skin') ? element.attr('data-skin') : 'default',
+			$menu = element.attr('data-menu') ? element.attr('data-menu') : "false",
 			$desktopRoot = $('.desktop .root'),
 			$taskbarList = $('.taskbar .tasks'),
 			$windowName = $name;
@@ -180,18 +181,34 @@ $(document).ready(function () {
 			$windowID = generateUniqueID(20);
 
 		//ADD NEW WINDOW TO DESKTOP ROOT SURFACE
-		$desktopRoot.append('<div class="window ' + $skin + '" id="' + $windowID + '" tabindex="0" data-url="' + $url + '" style="top:' + $windowTop + 'px;' + $xalign + ':' + $windowLeft + 'px;width:' + $windowWidth + 'px;height:' + $windowHeight + 'px;"><div class="titlebar" id="' + $windowID + '_titlebar"><img class="ico" src="' + $img + '"/><span class="label">' + $windowName + '</span><ul class="buttons"><li><button id="minimize">_</button></li><li><button id="maximize">=</button></li><li><button id="close">x</button></li></ul></div><div class="content"></div></div>');
+		$desktopRoot.append('<div class="window ' + $skin + '" id="' + $windowID + '" tabindex="0" data-url="' + $url + '" style="top:' + $windowTop + 'px;' + $xalign + ':' + $windowLeft + 'px;width:' + $windowWidth + 'px;height:' + $windowHeight + 'px;"><div class="titlebar" id="' + $windowID + '_titlebar"><img class="ico" src="' + $img + '"/><span class="label">' + $windowName + '</span><ul class="buttons"><li><button id="minimize">_</button></li><li><button id="maximize">=</button></li><li><button id="close">x</button></li></ul></div><div class="window-menu"></div><div class="content"></div></div>');
 
 		//ADD NEW WINDOW TO TASKBAR LIST
 		$taskbarList.append('<li id="' + $windowID + '"><img class="ico" src="' + $img + '"/><span>' + $windowName + '</span></li>')
 
+		//SECLECT NEWLY CREATED WINDOW
 		var newWindow = document.getElementById($windowID)
 
 		//SET NEW WINDOW TO BE DRAGGABLE
 		dragElement(newWindow);
 
-		//ADD CONTENT TO WINDOW
+		//ADD MENU TO NEW WINDOW
+		spawnWindowMenu(newWindow);
+
+		//ADD CONTENT TO NEW WINDOW
 		populateWindowContent(newWindow);
+	}
+
+	function spawnWindowMenu(newWindow) {
+		var whereToPutMenu = $(newWindow).find('.window-menu'),
+			windowMenuContent = "123";
+
+		console.log($menu);
+
+		if ($menu == 'true') {
+			console.log('123')
+			writeOut(whereToPutMenu, windowMenuContent);
+		}
 	}
 
 	function populateWindowContent(newWindow) {
