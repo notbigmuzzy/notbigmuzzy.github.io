@@ -112,7 +112,25 @@ $(document).ready(function () {
 		}
 	});
 
+	//BROWSER WINDOW CONTROL
+	$(document).on('click', '.the-browser .net-toolbar', function(e) {
+		e.preventDefault();
+		var address = $(this).attr('href'),
+			windowElement = $(this).parents('.window'),
+			windowID = windowElement.attr('id');
+
+		openNewBrowserWithURL(windowID, address);
+	});
+
 	//MISC FUNCTIONS
+	function openNewBrowserWithURL(windowID, address) {
+		setTimeout(function() {
+			$('#' + windowID).find('.the-browser input').attr("value", address);
+			$('#' + windowID).find('.the-browser iframe').attr("src", address);	
+		},50)
+
+	}
+
 	function setClock() {
 		var today = new Date();
 		var h = today.getHours();
@@ -195,7 +213,8 @@ $(document).ready(function () {
 			$statusbarContent = element.attr('data-statusbar-content') ? '<span class="statusbar-text">' + element.attr('data-statusbar-content') + '</span>' : '<span class="statusbar-text">' + $name + '</span>',
 			$desktopRoot = $('.desktop .root'),
 			$taskbarList = $('.taskbar .tasks'),
-			$windowName = $name;
+			$address = element.attr('data-address') ? element.attr('data-address') : '',
+			$windowName = element.attr('data-url') == "internet" ? $address : $name,
 			$windowTop = $top ? $top : 50,
 			$windowLeft = $position ? $position : 100,
 			$windowWidth = $width ? $width : 600,
@@ -227,6 +246,11 @@ $(document).ready(function () {
 
 		//ADD CONTENT TO NEW WINDOW
 		populateWindowContent(newWindow);
+
+		//OPEN BROWSER IF INTERNET AND ADDRESS
+		if (element.attr('data-url') == "internet") {
+			openNewBrowserWithURL($windowID, $address);
+		}
 	}
 
 	function spawnWindowMenu(newWindow) {

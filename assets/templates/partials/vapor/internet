@@ -1,0 +1,8 @@
+<div class="the-browser">
+	<div class="browser-toolbar">
+		<input disabled class="url" type="text" value=""></input>
+		<a href="http://68k.news" class="net-toolbar news-button"><img src="assets/images/ico/vapor/internet-home.png"/></a>
+		<a href="http://frogfind.com" class="net-toolbar go-button"><img src="assets/images/ico/vapor/internet-go	.png"/></a>
+	</div>
+	<div class="browser-window"><iframe src=""></iframe></div>
+</div>

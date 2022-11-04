@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: row;
     padding: 3px 0;
+    z-index: 99;
 
     i {
         display: flex;
@@ -152,7 +153,10 @@
             line-height: 1.25;
             padding: 0 10px;
             cursor: pointer;
-            min-width: 180px;
+            width: 180px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             font-size: 14px;
             font-weight: bold;
             background-color: #b3b3b3;
