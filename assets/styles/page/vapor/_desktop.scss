@@ -138,8 +138,14 @@
                 .buttons {
                     display: flex;
 
+                    li {
+                        min-width: 24px;
+                        
+                    }
+
                     button {
                         background-color: $window-background;
+                        padding: 0px 5px;
                         @include vapor-border;
 
                         &:hover {

@@ -15,9 +15,16 @@
 		}
 	}
 
-	.window.video {
+	.window.video,
+	.window.game {
 		.titlebar {
 			background-color: #000;
+
+			.buttons button {
+				    margin: 0 1px;
+				    border-radius: 50%;
+				    border: 2px solid transparent;
+			}
 		}
 
 		.content {
@@ -31,6 +38,10 @@
 			height: 100%;
 			background-color: #000;
 		}
+	}
+
+	.window.game .titlebar .buttons li:nth-child(2) {
+		display: none;
 	}
 
 	.window.browser {
