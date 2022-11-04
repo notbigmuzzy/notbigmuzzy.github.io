@@ -4,5 +4,5 @@
 		<a href="http://68k.news" class="net-toolbar news-button"><img src="assets/images/ico/vapor/internet-home.png"/></a>
 		<a href="http://frogfind.com" class="net-toolbar go-button"><img src="assets/images/ico/vapor/internet-go	.png"/></a>
 	</div>
-	<div class="browser-window"><iframe src=""></iframe></div>
+	<div class="browser-window"><iframe src="https://archive.org/embed/msdos_Prince_of_Persia_1990" width="560" height="384" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 </div>
