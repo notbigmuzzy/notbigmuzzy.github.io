@@ -51,7 +51,7 @@ $(document).ready(function () {
 	});
 
 	//DESKTOP ICONS + MENU ITEM LAUNCHER
-	$('.launch').click(function(e) {
+	$(document).on('click', '.launch', function(e) {
 		e.stopPropagation();
 		spawnNewWindow($(this))
 		closeMenu()

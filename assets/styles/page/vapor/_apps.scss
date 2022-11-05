@@ -82,4 +82,20 @@
 			}
 		}
 	}
+
+	.window .content .icons {
+		position: relative;
+		top: initial;
+		left: initial;
+		max-width: 100%;
+		padding: 10px 0 0 0;
+		text-align: center;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		.icon .label {
+			color: $black;
+		}
+	}
 }
