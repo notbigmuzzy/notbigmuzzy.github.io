@@ -1,0 +1,108 @@
+.the-cv {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	overflow: auto;
+	opacity: 1;
+	line-height: 1.25;
+	cursor: initial;
+	border: none;
+	@include hide-scrollbars;
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
+
+	.highlight {
+		font-weight: bold;
+		color: #CF1017;
+	}
+
+	.cv-experience,
+	.cv-education,
+	.cv-hoby {
+		padding: 0 10px;
+	}
+	
+	.cv-header,
+	.cv-experience,
+	.cv-education,
+	.cv-hoby {
+		margin-bottom: 30px;
+
+		@media (max-width: 768px) {
+			padding: 0;
+			margin-bottom: 20px;
+		}
+
+		& > * {
+			color: #000;
+		}	
+	}
+
+	.cv-header {
+		position: sticky;
+		top: 0;
+
+		@media (max-width: 540px) {
+			padding: 20px;
+		}
+
+		.name {
+			font-size: 20px;
+			font-weight: bold;
+			display: block;
+			margin-bottom: 5px;
+		}
+
+		.cv-header-top {
+			background-color: $sun;
+			padding: 10px;
+		}
+
+		.title-buttons {
+			display: flex;
+			flex-direction: row;
+
+			button {
+				padding: 5px 10px;
+				margin-right: 2px;
+				background-color: $window-background;
+				@include vapor-border;
+
+				&:hover {
+					@include vapor-border-hovered;
+				}
+			}
+		}
+
+		.ocupation {
+			display: block;
+			font-size: 14px;
+		}
+
+		.resume {
+			padding-top: 30px;
+			font-size: 50px;
+			font-weight: bold;
+			text-align: left;
+			text-transform: initial;
+
+			@media (max-width: 540px) {
+				font-size: 60px;
+				word-break: break-all;
+			}
+
+			@media (max-width: 540px) {
+				font-size: 40px;
+			}
+		}
+	}
+
+	hr {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		color: #fff;
+		opacity: .2;
+	}
+}

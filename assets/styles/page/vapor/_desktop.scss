@@ -160,6 +160,7 @@
                 background-color: #fff;
                 @include vapor-border-hovered;
                 padding: 2px;
+                overflow: hidden;
             }
         }
     }

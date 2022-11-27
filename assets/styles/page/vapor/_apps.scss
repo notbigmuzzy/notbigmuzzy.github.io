@@ -40,8 +40,17 @@
 		}
 	}
 
+	.window.calculator .titlebar .buttons li:nth-child(2),
 	.window.game .titlebar .buttons li:nth-child(2) {
 		display: none;
+	}
+
+	.window.pdf .titlebar {
+		background-color: $sun;
+
+		.label {
+			color: $black;
+		}
 	}
 
 	.window.browser {
