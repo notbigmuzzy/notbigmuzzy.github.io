@@ -154,13 +154,16 @@
             padding: 0 10px;
             cursor: pointer;
             width: 180px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
             font-size: 14px;
             font-weight: bold;
             background-color: #b3b3b3;
             @include vapor-border;
+
+            span {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
 
             .ico {
                 width: 16px;

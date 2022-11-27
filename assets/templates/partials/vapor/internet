@@ -1,8 +1,8 @@
 <div class="the-browser">
 	<div class="browser-toolbar">
+		<a href="https://theoldnet.com/lite" class="net-toolbar back-button"><img src="assets/images/ico/vapor/back-toolbar.png"/></a>
 		<input disabled class="url" type="text" value=""></input>
-		<a href="http://68k.news" class="net-toolbar news-button"><img src="assets/images/ico/vapor/internet-home.png"/></a>
-		<a href="http://frogfind.com" class="net-toolbar go-button"><img src="assets/images/ico/vapor/internet-go	.png"/></a>
+		<a href="https://theoldnet.com/lite" class="net-toolbar go-button"><img src="assets/images/ico/vapor/internet-go.png"/></a>
 	</div>
-	<div class="browser-window"><iframe src="https://archive.org/embed/msdos_Prince_of_Persia_1990" width="560" height="384" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
+	<div class="browser-window"><iframe src="" width="560" height="384" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 </div>

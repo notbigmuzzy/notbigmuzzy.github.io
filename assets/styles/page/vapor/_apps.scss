@@ -60,7 +60,10 @@
 				background-color: $window-background;
 				padding: 5px;
 
-				.news-button,
+				.back-button {
+					padding-right: 10px;
+				}
+				
 				.go-button {
 					padding-left: 10px;
 				}
