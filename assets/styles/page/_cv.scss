@@ -203,10 +203,8 @@ html, body {
 					width: 100%;
 				}
 
-				&:hover {
-					.highlight {
-						color: #CF1017;
-					}
+				.highlight {
+					color: #CF1017;
 				}
 
 				.cv-header,
@@ -214,8 +212,7 @@ html, body {
 				.cv-education,
 				.cv-hoby {
 					display: block;
-					padding: 0 30px;
-					margin-bottom: 30px;
+					padding: 30px;
 
 					@media (max-width: 768px) {
 						padding: 0;
@@ -227,17 +224,22 @@ html, body {
 					}	
 				}
 
+				.cv-header {
+					margin-bottom: 0;
+				}
+
 				.cv-cta {
 					display: block;
 				}
 
 				.cv-header {
 					padding: 30px;
-					height: 300px;
+					height: 250px;
 					background-image: url('assets/images/cv-header.jpg');
 
 					& > div {
 						margin-top: initial;
+						margin-bottom: 60px;
 					}
 
 					@media (max-width: 540px) {
@@ -272,8 +274,7 @@ html, body {
 				}
 
 				hr {
-					margin-top: 20px;
-					margin-bottom: 20px;
+					margin: 0;
 					color: #fff;
 					opacity: .2;
 				}
@@ -351,6 +352,22 @@ html, body {
 				display: none;
 			}
 
+			.cv-education {
+				background-color: #f7f7f7;
+
+				.company {
+					padding-bottom: 20px;
+					margin-bottom: 20px;
+					border-bottom: 1px dashed rgba(#000, 0.1);
+
+					&:last-child {
+						border-bottom: none;
+						margin-bottom: 0;
+						padding-bottom: 0;
+					}
+				}
+			}
+
 			@media (max-width: 768px) {
 				padding-bottom: 50px;
 				opacity: 1;
@@ -411,7 +428,6 @@ html, body {
 				background-color: #340100;
 				background-size: cover;
 				background-position: center right;
-				margin-bottom: 10px;
 
 				@media (max-width: 768px) {
 					display: none;
@@ -419,7 +435,7 @@ html, body {
 
 				& > div {
 					position: relative;
-					margin-top: -200px;
+					margin-top: -175px;
 				}
 
 				p,a {
@@ -439,6 +455,8 @@ html, body {
 					font-weight: bold;
 					text-align: center;
 					text-transform: uppercase;
+					font-size: 50px;
+					font-weight: bold;
 				}
 			}
 
@@ -455,8 +473,6 @@ html, body {
 				opacity: 0;
 
 				@media (max-width: 768px) {
-					margin-top: 20px;
-					margin-bottom: 20px;
 					color: #fff;
 					opacity: .2;
 				}
