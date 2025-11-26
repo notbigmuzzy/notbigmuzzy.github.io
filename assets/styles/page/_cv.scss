@@ -216,7 +216,6 @@ html, body {
 
 					@media (max-width: 768px) {
 						padding: 0;
-						margin-bottom: 20px;
 					}
 
 					& > * {
@@ -270,6 +269,12 @@ html, body {
 						@media (max-width: 540px) {
 							font-size: 40px;
 						}
+					}
+				}
+
+				.cv-hoby {
+					@media (max-width: 768px) {
+						margin-bottom: 0;
 					}
 				}
 
@@ -327,6 +332,21 @@ html, body {
 			opacity: 0.92;
 			overflow: hidden;
 
+			.init-cta {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				color: rgba(#fff, 0.25);
+				text-align: center;
+				font-style: italic;
+				font-size: 10px;
+				line-height: 2;
+				letter-spacing: 1px;
+				border-top: 1px dashed rgba(#fff, 0.25);
+			}
+
 			&:before {
 				content: "";
 				position: absolute;
@@ -369,10 +389,8 @@ html, body {
 			}
 
 			@media (max-width: 768px) {
-				padding-bottom: 50px;
 				opacity: 1;
 				cursor: initial;
-				padding: 20px 20px 0 20px;
 				border: none;
 
 				.cv-header,
@@ -381,6 +399,11 @@ html, body {
 				.cv-hoby,
 				.cv-cta {
 					display: block;
+					padding: 20px !important;
+
+					.highlight {
+						color: #CF1017;
+					}
 				}
 			}
 
@@ -405,7 +428,6 @@ html, body {
 
 				@media (max-width: 768px) {
 					padding: 0;
-					margin-bottom: 20px;
 				}
 
 				& > * {
@@ -470,6 +492,7 @@ html, body {
 			}
 
 			hr {
+				margin: 0;
 				opacity: 0;
 
 				@media (max-width: 768px) {
@@ -563,7 +586,6 @@ html, body {
 			background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
 
 			@media (max-width: 768px) {
-				left: -20px;
 				width: calc(100% + 40px);
 				padding: 40px 20px;
 
