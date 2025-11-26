@@ -1,0 +1,27 @@
+/* latin - 300 */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('open-sans-300-latin.woff2') format('truetype');
+}
+
+/* latin - 400 */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('open-sans-400-latin.woff2') format('truetype');
+}
+
+/* latin - 700 */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('open-sans-700-latin.woff2') format('truetype');
+}
+

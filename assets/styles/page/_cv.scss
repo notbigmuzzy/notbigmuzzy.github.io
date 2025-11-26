@@ -1,6 +1,7 @@
 .cv-portfolio {
 	display: flex;
 	height: 100%;
+	overflow: hidden;
 	background-color: #460002;
 	background-image: url('assets/images/cv-back.jpg');
 	background-size: cover;
@@ -200,6 +201,7 @@
 				.cv-experience,
 				.cv-education,
 				.cv-hoby {
+					display: block;
 					padding: 0 30px;
 					margin-bottom: 30px;
 
@@ -213,10 +215,18 @@
 					}	
 				}
 
+				.cv-cta {
+					display: block;
+				}
+
 				.cv-header {
 					padding: 30px;
 					height: 300px;
 					background-image: url('assets/images/cv-header.jpg');
+
+					& > div {
+						margin-top: initial;
+					}
 
 					@media (max-width: 540px) {
 						padding: 20px;
@@ -283,9 +293,9 @@
 				left: 0;
 				right: 0;
 				margin: 0 auto;
-				color: #4c0004;
+				color: #e2e2e2;
 				z-index: 9;
-				font-size: 100px;
+				font-size: 80px;
 				text-align: center;
 				font-weight: 300;
 				transform: translateY(-50%);
@@ -301,9 +311,17 @@
 			height: 100%;
 			cursor: pointer;
 			background-color: #fff;
-			opacity: 0.5;
+			opacity: 0.85;
 			border: 1px solid #000;
 			overflow: hidden;
+
+			.cv-header,
+			.cv-experience,
+			.cv-education,
+			.cv-hoby,
+			.cv-cta {
+				display: none;
+			}
 
 			@media (max-width: 768px) {
 				padding-bottom: 50px;
@@ -311,6 +329,14 @@
 				cursor: initial;
 				padding: 20px 20px 0 20px;
 				border: none;
+
+				.cv-header,
+				.cv-experience,
+				.cv-education,
+				.cv-hoby,
+				.cv-cta {
+					display: block;
+				}
 			}
 
 			&:hover {
@@ -345,11 +371,11 @@
 
 			.cv-header {
 				position: relative;
-				padding: 10px;
 				display: flex;
 				flex-direction: column;
-				justify-content: space-between;
-				height: auto;
+				justify-content: center;
+				height: 100%;
+				padding: 10px;
 				background-color: #340100;
 				background-size: cover;
 				background-position: center right;
@@ -357,6 +383,11 @@
 
 				@media (max-width: 768px) {
 					display: none;
+				}
+
+				& > div {
+					position: relative;
+					margin-top: -250px;
 				}
 
 				p,a {

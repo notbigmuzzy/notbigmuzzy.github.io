@@ -1,8 +1,19 @@
 .default-portfolio {
-    background-image: url('assets/images/darkmode.png');
-    background-position: center center;
-    background-size: cover;
-    background-color: #000;
+    .dark-background {
+        display: block;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        pointer-events: none;
+        box-sizing: border-box;
+        object-fit: cover;
+        object-position: center center;
+        background-color: #000;
+    }
 
     .main-page {
         background-color: transparent;

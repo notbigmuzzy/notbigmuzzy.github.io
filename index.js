@@ -1,10 +1,11 @@
 $(document).ready(function () {
     //INDEX
     shellToggle()
+    horizontalScrollWithWheel()
     window.onhashchange = urlEventListeners;
 
     //SANITIZE HASH ON PAGE LOAD - REMOVE ANY HASH ON PAGE LOAD 
-    history.pushState("", document.title, window.location.pathname);
+    // history.pushState("", document.title, window.location.pathname);
 
     //TEMPORARY DARK MODE
     $('.dark-mode').click(function() {
@@ -34,6 +35,19 @@ $(document).ready(function () {
             window.history.back();
         })
     }
+
+    function horizontalScrollWithWheel() {
+        const cardWrapper = document.querySelector('.card-wrapper');
+        if (cardWrapper) {
+            cardWrapper.addEventListener('wheel', function(e) {
+                if (e.deltaY !== 0) {
+                    e.preventDefault();
+                    cardWrapper.scrollLeft += e.deltaY;
+                }
+            });
+        }
+    }
+
     function urlEventListeners() {
         if (document.getElementById('portfolio')) {
             var e = location.hash;
