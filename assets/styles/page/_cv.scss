@@ -1,3 +1,10 @@
+html, body {
+	@media (max-width: 768px) {
+		scrollbar-width: thin;
+		scrollbar-color: #500003 #0a0000;
+	}
+}
+
 .cv-portfolio {
 	display: flex;
 	height: 100%;
@@ -9,6 +16,7 @@
 
 	@media (max-width: 768px) {
 		flex-direction: column;
+		overflow: visible;
 	}
     
     ::-moz-selection {
@@ -187,6 +195,10 @@
 				border: none;
 				@include hide-scrollbars;
 
+				&:before {
+					display: none;
+				}
+
 				@media (max-width: 768px) {
 					width: 100%;
 				}
@@ -289,7 +301,7 @@
 				pointer-events: none;
 				content: '⌘';
 				position: absolute;
-				top: 50%;
+				top: 55%;
 				left: 0;
 				right: 0;
 				margin: 0 auto;
@@ -311,9 +323,25 @@
 			height: 100%;
 			cursor: pointer;
 			background-color: #fff;
-			opacity: 0.85;
-			border: 1px solid #000;
+			opacity: 0.92;
 			overflow: hidden;
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				border-width: 0 50px 50px 0;
+				border-style: solid;
+				border-color: #460002 #4c0004;
+				box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.3);
+				z-index: 1;
+				transition: border-width 0.25s;
+
+				@media (max-width: 768px) {
+					display: none;
+				}
+			}
 
 			.cv-header,
 			.cv-experience,
@@ -340,8 +368,12 @@
 			}
 
 			&:hover {
-				opacity: 0.75;
+				opacity: 0.85;
 				transition: opacity 0.15s;
+
+				&:before {
+					border-width: 0 75px 75px 0;
+				}
 
 				@media (max-width: 768px) {
 					opacity: 1;
@@ -387,7 +419,7 @@
 
 				& > div {
 					position: relative;
-					margin-top: -250px;
+					margin-top: -200px;
 				}
 
 				p,a {

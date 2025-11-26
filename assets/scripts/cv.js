@@ -10,4 +10,13 @@ $(document).ready(function () {
         e.stopPropagation()
         $('.the-cv').scrollTop(0)    
     })
+
+    //CHANGE FILENAME FOR PDF PRINT
+    window.addEventListener('beforeprint', function() {
+        document.title = 'Ivan_Jovanovic_CV';
+    });
+    
+    window.addEventListener('afterprint', function() {
+        document.title = 'N B M ~~~ @( * O * )@';
+    });
 })

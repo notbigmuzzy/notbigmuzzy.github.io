@@ -5,7 +5,9 @@ $(document).ready(function () {
     window.onhashchange = urlEventListeners;
 
     //SANITIZE HASH ON PAGE LOAD - REMOVE ANY HASH ON PAGE LOAD 
-    // history.pushState("", document.title, window.location.pathname);
+    if (window.location.hash) {
+        history.replaceState(null, document.title, window.location.pathname);
+    }
 
     //TEMPORARY DARK MODE
     $('.dark-mode').click(function() {
