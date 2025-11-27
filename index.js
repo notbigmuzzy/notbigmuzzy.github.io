@@ -14,6 +14,14 @@ $(document).ready(function () {
         $('html').addClass('dark-mode')
     })
 
+    // CLOSE MAIN MENU ON CLICK OUTSIDE
+    $('.switcher').click(function() {
+        window.location.hash = '';
+    })
+    $('.card').click(function(e) {
+        e.stopPropagation();
+    })
+
     //FUNCTIONS
     function shellToggle() {
         document.addEventListener('keydown', (e) => {
