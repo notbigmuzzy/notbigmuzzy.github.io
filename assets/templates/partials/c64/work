@@ -3,43 +3,30 @@
 <span class="mega-title">« My work experience »</span> 
 
 <div class="exp">
-<div class="title highlight">Sigma Shop</div>
-<div class="date">2004-2007</div>
-<div class="place">Obrenovac, Serbia</div>
-<div class="descriptions">Assistant worker and salesperson in a small IT shop.</div>
-</div>
-<hr>
-<div class="exp">
-<div class="title highlight">Serbia Broadband, "SBB"</div>
-<div class="date">2009-2011</div>
-<div class="place">Belgrade, Serbia</div>
-<div class="description">Call agent / Coordinator / Technical support</div>
-<div class="description">Job consisted of registering inbound calls, quckly and precisely labeling them and preforming Tier 1 tech support. Later, I participated in coordination of technical teams and Tier 2 / in-office support.</div>
-</div>
-<hr>
-<div class="exp">
-<div class="title highlight">WebBay Solutions</div>
+<div class="title">WebBay Solutions</div>
 <div class="date">2016-2017</div>
 <div class="place">Belgrade, Serbia</div>
 <div class="description"><strong>Frontend / TYPO3 Developer</strong></div>
-<div class="description">I began my work as a <span class="highlight">Frontend developer</span> and for a good part of the first year that was my main focus. In parallel I was learning TYPO3 CMS and in that same period, I also performed the role of <span class="highlight">TYPO3 integrator and developer</span> where I wrote couple of smaller PHP / Extbase extensions for various projects. Also, on several occasions I was given the part of a <span class="highlight">Project lead</span> on several website which I saw through until their successful launch. Towards the end, I participated in <span class="highlight">client meetings, project conception and mock-ups / wireframes sessions</span> and I did a whole lot of other miscellaneous tasks.</div>
+<div class="description">Started as a Frontend Developer, quickly expanding into <span class="highlight">TYPO3 CMS integration</span> and backend development (PHP/Extbase extensions). Successfully bridged the gap between design and technical implementation. Actively participated in <span class="highlight">client consultation</span>, project planning, and wireframing sessions, ensuring technical solutions aligned perfectly with business goals.</div>
 </div>
 <hr>
 <div class="exp">
-<div class="title highlight">StuntCoders</div>
+<div class="title">StuntCoders</div>
 <div class="date">2017-2019</div>
 <div class="place">Belgrade, Serbia</div>
 <div class="description"><strong>Frontend / Magento Developer</strong></div>
-<div class="description">I worked as independent Frontend developer on various <span class="highlight">E-commerce</span> projects mainly focusing on <span class="highlight">Magento</span> (1 & 2) and <span class="highlight">Wordpress/Woocommerce</span> projects written from scratch. Also, I created number of customized standalone elements which were used across large number of projects including <span class="highlight">dashboards, calendars, sliders, onepage checkouts and logins</span>, etc. Similarly, I took part in creating number of <span class="highlight">Woocommerce plugins</span> and <span class="highlight">Magento modules</span> which were highly customized per client requests.</div>
+<div class="description">Specialized in high-end <span class="highlight">E-commerce development</span> on Magento (1 & 2) and WordPress/WooCommerce platforms. Delivered custom, pixel-perfect themes built from scratch, ensuring high performance and conversion optimization.</div>
+<div class="description">Engineered a suite of <span class="highlight">reusable UI components</span> (dashboards, complex calendars, sliders) and critical business features like <span class="highlight">one-page checkouts</span> and custom authentication flows. Developed bespoke <span class="highlight">WooCommerce plugins and Magento modules</span> to meet specific client business requirements.</div>
 </div>
 <hr>
 <div class="exp">
-<div class="title highlight">Wireless Media</div>
-<div class="date">2019- ... </div>
+<div class="title">Wireless Media Group</div>
+<div class="date">2019 - 2026 </div>
 <div class="place">Belgrade, Serbia</div>
-<div class="description"><strong>Frontend / Team Lead</strong></div>
-<div class="description">I was part of the team that was responsible for <span class="highlight">rethinking, redesigning and rewriting</span> one of the bigest media/news portals in Serbia - <span class="highlight">Mondo</span> (mondo.rs) in 2019.</div>
-<div class="description">Later on, we envisioned, planned and executed on an internal project codenamed <span class="highlight">Media theme</span> which allowed us to reuse big chunks of the codebase in other sites in WM/AMG portfolio (story.hr, wanted.rs, smartlife.rs, sensa.rs, lepaisrecna.rs, telekomserbia-production.com, etc..). <span class="highlight">Of interest</span> to note here is that the <span class="highlight">changes and improvements were bi-directional</span> meaning that any improvement in "child" site was <span class="highlight">automatically available to all other sites</span> in the network, which <span class="highlight">massively improved implementation times and cut major cost on maintenance</span>.</div>
-<div class="description">Large part of our efforts went into optimizing <span class="highlight">frontend performance</span>, focusing on <span class="highlight">Web vitals (LCP, TBT & CLS)</span> and a bunch of <span class="highlight">custom architecture and code</span> which enabled Mondo to jump and stay at top 3 visited news portals in the country.</div>
+<div class="description"><strong>Senior Frontend Engineer / Team Lead</strong></div>
+<div class="description">Spearheaded the frontend modernization and complete rewrite of <span class="highlight">Mondo.rs</span> and <span class="highlight">Kurir.rs</span>, the region's largest media portals. Successfully integrated modern <span class="highlight">Vue.js (2.7 & 3)</span> applications within a complex, legacy <span class="highlight">.NET/Spark</span> monolith, bridging the gap between 20-year-old infrastructure and modern reactive standards.</div>
+<div class="description">Architected and delivered a <span class="highlight">scalable Multi-Tenant Platform</span> ("Media Theme") that powers <span class="highlight">26+ digital portals</span> across the entire portfolio (Story.hr, Smartlife, Sensa, etc). Developed a robust <span class="highlight">Shared Component Library</span> utilized across all media properties, ensuring consistency and efficiency in UI/UX design and development.</div>
+<div class="description">Engineered high-performance solutions with a relentless focus on <span class="highlight">Core Web Vitals (LCP, TBT, CLS)</span>. Implemented custom hydration strategies and architectural optimizations that secured Mondo's position as a top-3 visited portal in the country.</div>
+<div class="description">As Team Lead, I <span class="highlight">mentored and grew a team of 6+ developers</span>, guiding them from junior roles to key contributors. Established code quality standards, conducted code reviews, and fostered a collaborative engineering culture.</div>
 </div>
 </div>

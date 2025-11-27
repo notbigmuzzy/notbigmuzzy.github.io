@@ -256,6 +256,12 @@
                         background: white;
                         margin: 25px 0;
                     }
+
+                    .highlight {
+                        background: #74342c;
+                        color: #f0a69c;
+                        padding: 0 5px;
+                    }
                 }
 
                 &.cv-experience {
@@ -407,7 +413,7 @@
         bottom: 10px;
         right: 10px;
         text-decoration: none;
-        font-size: 10px;
+        font-size: 15px;
         z-index: 2;
         cursor: pointer;
 
@@ -453,14 +459,17 @@
         display: none;
         position: fixed;
         z-index: 5;
-        top: 0;
+        top: 50%;
         left: 0;
-        height: 100%;
-        width: 100%;
+        height: calc(100% - 160px);
+        width: calc(100% - 240px);
         background: #000;
         flex-direction: column;
         justify-content: center;
-        padding: 40px 0;
+        max-width: 1200px;
+        right: 0;
+        margin: 0 auto;
+        transform: translateY(-50%);
 
         label {
             display: block;

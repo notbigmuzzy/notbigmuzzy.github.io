@@ -16,28 +16,42 @@ $(document).ready(function () {
     $(document).on('click', '.c64-portfolio', function () {
         inputFocus()
     })
+
+    // RUN COMMAND
     $(document).on('submit', '.editor-input .commandbox.active form', function (e) {
         e.preventDefault();
-        theBrain($(this));
+        var command = $(this).find('input').val();
+
+        theBrain(command);
+    })
+    $(document).on('click','.help-menu-item', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var command = $(this).data('help-item');
+
+        theBrain(command);
+    })
+    $(document).on('click','.hint-item', function (e) {
+        e.preventDefault();
+        $('#hb').prop('checked', false);
+
+        var command = $(this).data('hint-item');
+
+        theBrain(command);
     })
 
     //MAIN LOGIC
-    function theBrain(submitedForm) {
-        var $submitValue = submitedForm.find('input').val();
-
-        if ($submitValue.includes('"')) {
-            var $submitCondition = $submitValue.substring(0, $submitValue.indexOf('"')),
-                $submitSlice = $submitValue.substring($submitValue.indexOf('"') + 1, $submitValue.length),
+    function theBrain(command) {
+        if (command.includes('"')) {
+            var $submitCondition = command.substring(0, command.indexOf('"')),
+                $submitSlice = command.substring(command.indexOf('"') + 1, command.length),
                 $submitParam = $submitSlice.substring(0, $submitSlice.indexOf('"'));
         } else {
-            var $submitCondition = $submitValue;
+            var $submitCondition = command;
         }
 
         switch ($submitCondition.toLowerCase()) {
             case "help":
-                help()
-                break;
-            case "ls":
                 help()
                 break;
             case "?":
@@ -46,10 +60,7 @@ $(document).ready(function () {
             case "clear":
                 clearPrompt();
                 break;
-            case "c":
-                clearPrompt();
-                break;
-            case "shell":
+            case "menu":
                 window.location.hash = '#show-shell';
                 restartPromptAfterSuccess('shell')
                 break;

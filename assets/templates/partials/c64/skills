@@ -1,17 +1,11 @@
 <div class="prompt cv-experience">
 
 <span class="mega-title">« My skills so far »</span> 
-
-	<div class="description">Professional knowledge of <span class="highlight">HTML5</span>( XHTML ), <span class="highlight">CSS3</span>( CSS2 ) and front side JS ( <span class="highlight">JQUERY, AJAX</span> ). Strong experience in working with preprocessors, especially <span class="highlight">PUG</span> ( <span class="highlight">JADE</span> ) and <span class="highlight">SASS</span> ( <span class="highlight">SCSS, LESS</span> ). Hands-on experience with more popular frameworks such as <span class="highlight">Foundation</span> and <span class="highlight">Bootstrap</span>.</div>
+	<div class="description">Frontend developer with <span class="highlight">10+ years of experience</span>. Deep expertise in <span class="highlight">Vue.js, JavaScript (ES6+), HTML/CSS</span>, and modern build tools like <span class="highlight">Webpack & Vite</span>. Specialized in performance optimization and <span class="highlight">Core Web Vitals</span> for high-traffic sites serving <span class="highlight">tens of thousands of concurrent users</span>.</div>
 	<br>
-	<div class="description">Professional experience with <span class="highlight">TYPO3, Wordpress, Magento and various other custom CMS</span>, both with integration and development sides of these systems. Firm grasp of <span class="highlight">responsive design</span> and of the latest trends in web design.</div>
-
+	<div class="description">Expert in modernizing legacy codebases and integrating modern frameworks into existing architectures. Work with <span class="highlight">PHP, .NET, and monolithic systems</span>, bridging old code ( <span class="highlight">jQuery, vanilla JS</span> ) with modern reactive patterns. Strong focus on <span class="highlight">performance optimization</span> and delivering measurable improvements.</div>
 	<br>
-	<div class="description">Knowledge of version control systems ( <span class="highlight">SVN,GIT</span> ) and experience in using build tools ( <span class="highlight">Webpack,Composer,Grunt</span> ). Testing of <span class="highlight">cross-browser</span> i <span class="highlight">cross-device</span> compatibility. Experience in working with various tools for preparing and <span class="highlight">optimizing graphics</span> for web.</div>
+	<div class="description">Team lead experience with <span class="highlight">mentoring developers</span> and leading technical decisions. Focus on <span class="highlight">code quality, reviews</span>, and practical problem-solving. Work well with <span class="highlight">cross-functional teams</span> and enjoy sharing knowledge and best practices.</div>
 	<br>
-	<div class="description">Strong<span class="highlight"> background in IT</span>. Hardware and software installation, maintenance and upgrades. Working knowledge of <span class="highlight">Linux and CLI environment</span>.</div>
-	<br>
-	<div class="description">Professional <span class="highlight">working proficiency</span> in <span class="highlight">english language</span>.</div>
-	<br>
-	<div class="description">I subscribe to <span class="highlight">team spirit</span> while maintaining capability to complete large chunks of work on my own. Also, I am able to take the initiative to be <span class="highlight">productive</span> and <span class="highlight">efficient</span> and I consider myself <span class="highlight">responsible and goal oriented.</span></div>
+	<div class="description">Proficient with version control ( <span class="highlight">Git</span> ), build tools and CI/CD workflows. Strong command of <span class="highlight">Linux/CLI environments</span>. Fluent in <span class="highlight">English</span>. I combine over a decade of technical experience with a pragmatic, goal-oriented approach to solving complex business problems.</div>
 </div>
