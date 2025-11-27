@@ -16,7 +16,7 @@ $(document).ready(function () {
 
     // CLOSE MAIN MENU ON CLICK OUTSIDE
     $('.switcher').click(function() {
-        window.location.hash = '';
+        closeMainMenu();
     })
     $('.card').click(function(e) {
         e.stopPropagation();
@@ -24,25 +24,14 @@ $(document).ready(function () {
 
     //FUNCTIONS
     function shellToggle() {
-        document.addEventListener('keydown', (e) => {
-            if (e.code == "F1") {
-                e.preventDefault()
-                $('#f1').addClass('highlight');
-            }
-        });
         document.addEventListener('keyup', (e) => {
-            if (e.code == "F1") {
-                e.preventDefault()
-                window.location.hash = '#show-shell';
-                $('#f1').removeClass('highlight');
-            }
             if (e.code == "Escape" && window.location.hash == "#show-shell") {
-                window.history.back();
+                closeMainMenu();
             }
         });
         $('.shell-off').click(function (e) {
             e.preventDefault();
-            window.history.back();
+            closeMainMenu();
         })
     }
 
@@ -56,6 +45,14 @@ $(document).ready(function () {
                 }
             });
         }
+    }
+
+    function closeMainMenu () {
+        window.location.hash = '';
+        setTimeout(function() {
+            const cardWrapper = document.querySelector('.card-wrapper');
+            cardWrapper.scrollLeft = 0; 
+        }, 50);
     }
 
     function urlEventListeners() {
