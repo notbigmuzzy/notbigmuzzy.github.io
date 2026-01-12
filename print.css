@@ -85,3 +85,7 @@ body {
 .cv-cta {
 	display: none !important;
 }
+
+.full-card {
+	display: none !important;
+}

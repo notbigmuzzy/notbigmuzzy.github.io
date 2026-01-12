@@ -186,6 +186,10 @@ html, body {
 					display: none;
 				}
 
+				.init-cta {
+					display: none;
+				}
+
 			.the-cv {
 				width: 70%;
 				max-width: 1240px;
@@ -533,6 +537,42 @@ html, body {
 				padding-top: 6px;
 				padding-bottom: 3px;
 			}
+
+			.full-card {
+				display: block;
+    			padding: 30px;
+				background-color: #3e0003;
+				color: #fff;
+
+				.title {
+					font-size: 20px;
+					line-height: 1.25;
+					font-weight: 100;
+					margin-bottom: 20px;
+					text-align: right;
+					font-style: italic;
+				}
+
+				.tech-list {
+					li {
+						display: inline-block;
+						background-color: rgba(#fff, 0.2);
+						color: #fff;
+						text-transform: uppercase;
+						font-size: 12px;
+						font-weight: bold;
+						padding: 8px 12px;
+						margin: 0 8px 8px 0;
+						border-radius: 4px;
+
+						&:hover {
+							cursor: help;
+							background-color: rgba(#fff, 0.4);
+							transition: background-color 0.15s;
+						}
+					}
+				}
+			}
 		}
 
 		.cv-toggle-close  {
@@ -632,7 +672,7 @@ html, body {
 
 			.cv-actions {
 				display: block;
-				max-width: 500px;
+				max-width: 600px;
 
 				li {
 					display: inline-block;
