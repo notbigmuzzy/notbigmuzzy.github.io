@@ -1,25 +1,24 @@
-* { 
-    box-sizing: border-box;
+* {
+	box-sizing: border-box;
 }
 
 html,
 body {
-    height: 100%;
-    color:#333;
-    font-family: "Open Sans", sans-serif;
-    background-color: #333;
+	height: 100%;
+	color: #333;
+	font-family: "Open Sans", sans-serif;
 
-    .h-m {
-    	@media (max-width: 768px) {
-            display: none !important
-        }
-    }
+	.h-m {
+		@media (max-width: 768px) {
+			display: none !important
+		}
+	}
 
-    .h-d {
-    	@media (min-width: 769px) {
-            display: none !important
-        }
-    }
+	.h-d {
+		@media (min-width: 769px) {
+			display: none !important
+		}
+	}
 }
 
 a {
@@ -27,21 +26,25 @@ a {
 }
 
 @mixin hide-scrollbars() {
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    &::-webkit-scrollbar { display: none; }
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 @mixin vapor-border {
-    border-top: 2px solid rgba(#fff, 0.5);
-    border-left: 2px solid rgba(#fff, 0.5);
-    border-right: 2px solid rgba(#000, 0.5);
-    border-bottom: 2px solid rgba(#000, 0.5);
+	border-top: 2px solid rgba(#fff, 0.5);
+	border-left: 2px solid rgba(#fff, 0.5);
+	border-right: 2px solid rgba(#000, 0.5);
+	border-bottom: 2px solid rgba(#000, 0.5);
 }
+
 @mixin vapor-border-hovered {
-    border-top: 2px solid rgba(#000, 0.5);
-    border-left: 2px solid rgba(#000, 0.5);
-    border-right: 2px solid rgba(#fff, 0.5);
-    border-bottom: 2px solid rgba(#fff, 0.5);
+	border-top: 2px solid rgba(#000, 0.5);
+	border-left: 2px solid rgba(#000, 0.5);
+	border-right: 2px solid rgba(#fff, 0.5);
+	border-bottom: 2px solid rgba(#fff, 0.5);
 }

@@ -18,7 +18,7 @@ body {
 }
 
 .cv-toggle {
-	background-color: #fff;	
+	background-color: #fff;
 }
 
 .cv-toggle-close {
@@ -35,7 +35,7 @@ body {
 
 .cv-header {
 	margin-bottom: 20px !important;
-	-webkit-print-color-adjust: exact;	
+	-webkit-print-color-adjust: exact;
 }
 
 .highlight {
@@ -86,6 +86,12 @@ body {
 	display: none !important;
 }
 
-.full-card {
-	display: none !important;
+.tech-category {
+	page-break-inside: avoid;
+	break-inside: avoid;
+	margin-bottom: 15px;
+}
+
+.for-print-only {
+	display: block !important;
 }

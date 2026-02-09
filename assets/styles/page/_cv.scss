@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
 	@media (max-width: 768px) {
 		scrollbar-width: thin;
 		scrollbar-color: #500003 #0a0000;
@@ -18,16 +19,16 @@ html, body {
 		flex-direction: column;
 		overflow: visible;
 	}
-    
-    ::-moz-selection {
-        color: #460002;
-        background: #fff;
-    }
 
-    ::selection {
-        color: #460002;
-        background: #fff;
-    }
+	::-moz-selection {
+		color: #460002;
+		background: #fff;
+	}
+
+	::selection {
+		color: #460002;
+		background: #fff;
+	}
 
 	.wrapper-left,
 	.wrapper-right {
@@ -43,9 +44,9 @@ html, body {
 
 	.wrapper-right {
 		position: relative;
-	    display: flex;
-	    flex-direction: column;
-	    justify-content: space-between;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 
 		@media (max-width: 768px) {
 			order: 1;
@@ -63,14 +64,17 @@ html, body {
 			}
 		}
 
-	    & > div {
-	    	padding: 40px 20px;
-	    }
+		&>div {
+			padding: 40px 20px;
+		}
 
-		h1,h2,span {
+		h1,
+		h2,
+		span {
 			color: #fff;
 			display: block;
 		}
+
 		a {
 			display: inline-block;
 			color: #fff;
@@ -120,9 +124,9 @@ html, body {
 			color: #fff;
 			position: relative;
 			opacity: .7;
-    		font-size: 4vw;
-    		bottom: -20px;
-    		font-weight: 300;
+			font-size: 4vw;
+			bottom: -20px;
+			font-weight: 300;
 
 			@media (max-width: 768px) {
 				font-size: 6vw;
@@ -163,32 +167,32 @@ html, body {
 			display: none;
 		}
 
-		#cv-toggle:checked + .cv-toggle {
-				position: absolute;
-				left: 0;
-				top: 0;
-				z-index: 9;
-				margin: 0;
-				padding: 0;
-				height: 100%;
-				width: 200%;
-				background-color: rgba(#000, 0.9);
-				overflow: hidden;
-				transition: background-color 0.15s;
+		#cv-toggle:checked+.cv-toggle {
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 9;
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			width: 200%;
+			background-color: rgba(#000, 0.9);
+			overflow: hidden;
+			transition: background-color 0.15s;
 
-				@media (max-width: 768px) {
-					width: 100%;
-					height: auto;
-					position: relative;
-				}
+			@media (max-width: 768px) {
+				width: 100%;
+				height: auto;
+				position: relative;
+			}
 
-				&:after {
-					display: none;
-				}
+			&:after {
+				display: none;
+			}
 
-				.init-cta {
-					display: none;
-				}
+			.init-cta {
+				display: none;
+			}
 
 			.the-cv {
 				width: 70%;
@@ -223,9 +227,9 @@ html, body {
 						padding: 0;
 					}
 
-					& > * {
+					&>* {
 						color: #000;
-					}	
+					}
 				}
 
 				.cv-cta {
@@ -238,7 +242,7 @@ html, body {
 					background-image: url('assets/images/cv-header.jpg');
 					margin-bottom: 0;
 
-					& > div {
+					&>div {
 						margin-top: initial;
 						margin-bottom: 60px;
 					}
@@ -256,10 +260,12 @@ html, body {
 						font-size: 35px;
 						margin-bottom: 10px;
 					}
+
 					.ocupation {
 						display: block;
 						font-size: 14px;
 					}
+
 					.resume {
 						color: #fff;
 						font-size: 70px;
@@ -329,7 +335,7 @@ html, body {
 				}
 			}
 		}
-		
+
 		.the-cv {
 			position: relative;
 			height: 100%;
@@ -453,14 +459,14 @@ html, body {
 					padding: 0;
 				}
 
-				& > * {
+				&>* {
 					color: rgba(#000, 0.15);
 
 					@media (max-width: 768px) {
 						color: #000;
 						padding: 0;
 					}
-				}	
+				}
 			}
 
 			.cv-header {
@@ -479,12 +485,13 @@ html, body {
 					display: none;
 				}
 
-				& > div {
+				&>div {
 					position: relative;
 					margin-top: -175px;
 				}
 
-				p,a {
+				p,
+				a {
 					color: #fff;
 					font-weight: 300;
 				}
@@ -493,10 +500,12 @@ html, body {
 					display: none;
 					font-size: 14px;
 				}
+
 				.name,
 				.ocupation {
 					display: none;
 				}
+
 				.resume {
 					font-weight: bold;
 					text-align: center;
@@ -526,10 +535,10 @@ html, body {
 			}
 
 			.date {
-			    float: right;
-			    margin-top: -16px;
-			    color: #BFBFBF !important;
-			    min-width: 80px;
+				float: right;
+				margin-top: -16px;
+				color: #BFBFBF !important;
+				min-width: 80px;
 			}
 
 			.place {
@@ -540,7 +549,7 @@ html, body {
 
 			.full-card {
 				display: block;
-    			padding: 30px;
+				padding: 30px;
 				background-color: #3e0003;
 				color: #fff;
 
@@ -551,6 +560,11 @@ html, body {
 					margin-bottom: 20px;
 					text-align: right;
 					font-style: italic;
+
+					&.for-print-only {
+						margin-top: 20px;
+						display: none;
+					}
 				}
 
 				.tech-list {
@@ -572,10 +586,22 @@ html, body {
 						}
 					}
 				}
+
+				.tech-category {
+					display: block;
+					margin-top: 10px;
+
+					h3 {
+						display: block;
+						font-size: 16px;
+						font-weight: 100;
+						margin-bottom: 10px;
+					}
+				}
 			}
 		}
 
-		.cv-toggle-close  {
+		.cv-toggle-close {
 			display: none;
 			position: absolute;
 			top: 0;
@@ -639,7 +665,7 @@ html, body {
 			&:hover {
 				opacity: 0.75;
 				transition: opacity 0.15s;
-			}	
+			}
 		}
 
 		.cv-cta {
@@ -654,7 +680,8 @@ html, body {
 
 			}
 
-			p, span {
+			p,
+			span {
 				color: #fff;
 			}
 
