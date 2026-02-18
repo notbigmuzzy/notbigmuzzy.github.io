@@ -38,15 +38,15 @@
     .switcher {
         height: 100%;
 
-         .card-wrapper {
-             display: flex;
-             flex-direction: row;
-             justify-content: start;
-             align-items: center;
-             height: 100%;
-             padding: 20px;
-             overflow-x: auto;
-             @include hide-scrollbars;
+        .card-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            height: 100%;
+            padding: 20px;
+            overflow-x: auto;
+            @include hide-scrollbars;
 
             &:after {
                 content: '.';
@@ -57,7 +57,7 @@
                 pointer-events: none;
             }
 
-             .card {
+            .card {
                 position: relative;
                 height: 100%;
                 min-width: 320px;
@@ -77,7 +77,7 @@
                         position: absolute;
                         top: 30px;
                         right: -44px;
-                        background-color: rgba(255,0,0,0.5);
+                        background-color: rgba(255, 0, 0, 0.5);
                         color: #fff;
                         font-family: monospace;
                         display: inline-block;
@@ -213,7 +213,7 @@
 
                         &:hover {
                             span {
-                                color: #333;   
+                                color: #333;
                             }
 
                             &:after {
@@ -234,10 +234,10 @@
                             width: 100%;
                             transition: transform 0.25s;
                         }
-                    } 
+                    }
                 }
-             }
-         }
+            }
+        }
     }
 }
 
@@ -247,12 +247,40 @@
         opacity: 1;
         visibility: visible;
         z-index: 100;
-        pointer-events: initial;        
+        pointer-events: initial;
     }
 
     .the-shell .switcher .card-wrapper .card {
         opacity: 1;
         transform: translateX(0);
-        
+
     }
+}
+
+.default-portfolio~aside {
+    .the-shell .default-card {
+        display: none;
+    }
+
+}
+
+.cv-portfolio~aside {
+    .the-shell .cv-card {
+        display: none;
+    }
+
+}
+
+.c64-portfolio~aside {
+    .the-shell .c64-card {
+        display: none;
+    }
+
+}
+
+.vapor-portfolio~aside {
+    .the-shell .vapor-card {
+        display: none;
+    }
+
 }
