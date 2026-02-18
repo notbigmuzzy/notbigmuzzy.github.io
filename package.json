@@ -1,0 +1,35 @@
+{
+  "name": "notbigmuzzy.github.io",
+  "version": "1.0.0",
+  "description": "Portfolio Site",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "concurrently \"npm:watch:*\"",
+    "watch:sass": "sass --watch assets/styles/index.scss:index.css --style=compressed",
+    "watch:pug-index": "pug -w assets/templates/index.pug -o ./",
+    "watch:pug-c64": "pug -w assets/templates/c64.pug -o ./",
+    "watch:pug-vapor": "pug -w assets/templates/vapor.pug -o ./",
+    "watch:pug-cv": "pug -w assets/templates/cv.pug -o ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notbigmuzzy/notbigmuzzy.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/notbigmuzzy/notbigmuzzy.github.io/issues"
+  },
+  "homepage": "https://github.com/notbigmuzzy/notbigmuzzy.github.io#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.97.3"
+  }
+}
